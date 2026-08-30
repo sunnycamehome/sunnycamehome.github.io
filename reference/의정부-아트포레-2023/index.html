@@ -57,7 +57,7 @@
   --fs-nav:15px;--fs-meta:13px;--fs-eyebrow:11px;
   --ls-base:-.003em;--ls-display:-.02em;--ls-h1:-.015em;--ls-h2:-.015em;--ls-h3:-.01em;
   --ls-eyebrow:.08em;--ls-meta:.02em;
-  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.75;
+  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.55;
 
   /* 모서리 — shape.css. 기본 8px, 카드·사진 14px, 알약 26px. 각진 2px 은 더 쓰지 않습니다 */
   --radius-xs:4px;--radius-sm:8px;--radius-lg:14px;--radius-pill:26px;--radius-image-lg:14px;
@@ -72,7 +72,7 @@
   --grid-gap-y:clamp(20px,2vw,28px);
   --grid-gap-x:clamp(14px,1.4vw,20px);
   --flow-gap:clamp(12px,1.6vw,20px);
-  --say-gap:clamp(22px,2.6vw,34px);
+  --say-gap:clamp(16px,2vw,24px);
   --feature-gap:clamp(18px,2.4vw,36px);
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
@@ -258,9 +258,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
 .flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.flow table.spec{width:100%;max-width:var(--measure-say);margin:0 auto;border-collapse:collapse;
+  font-size:15px;line-height:1.5;background:var(--sf,#fff)}
+.flow table.spec th,.flow table.spec td{border:1px solid var(--line);padding:11px 16px;text-align:left}
+.flow table.spec th{width:130px;font-weight:700;color:var(--ink);white-space:nowrap}
+.flow table.spec td{color:var(--ink-2)}
 .flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
   line-height:var(--lh-say);color:var(--ink-2);text-align:center}
-.flow .say p{margin-top:var(--space-12)}
+.flow .say p{margin-top:2px}
 .flow .say p:first-child{margin-top:0}
 .flow .say h3.sh{margin:var(--space-25) 0 2px;font-size:19px;color:var(--ink);
   font-family:'MaruBuri',serif;font-weight:700;letter-spacing:-.01em}
@@ -354,7 +359,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   <a class="back" href="../">← Reference</a>
   <h1>의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례</h1>
   
-  <div class="meta"><span>경기도 의정부시</span><span>2023년 6월</span><span>유니슬렛 커튼</span><span>사진 20장</span></div>
+  <div class="meta"><span>경기도 의정부시</span><span>2023년 6월</span><span>유니슬렛 커튼</span><span>사진 28장</span></div>
 </div></main>
 <div class="wrap narrow"><div class="flow">
 <div class="say"><h3 class="sh">고산수자인디에스티지아트포레</h3><p>아파트 10층 시공사례입니다.</p><h3 class="sh">가장 많이 선호하는</h3><p>화이트 컬러로 진행했습니다.</p><h3 class="sh">유니슬렛은 각도 조절을 통해</h3><p>풀채광 및 사생활 보호가 가능합니다.</p><h3 class="sh">풀채광 모습</h3><h3 class="sh">플레인 패턴의 경우, 빛을 촘촘하게 여과시켜</h3><p>실내 분위기를 부드럽고 아늑하게 느끼게 합니다.</p></div>
@@ -377,8 +382,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="pair"><figure><img src="15.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure><figure><img src="16.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure></div>
 <div class="pair"><figure><img src="17.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure><figure><img src="18.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure></div>
 <div class="pair"><figure><img src="19.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure><figure><img src="20.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 화이트 컬러로 맞춤 제작 및 시공" loading="lazy"></figure></div>
-<div class="say"><h3 class="sh">아이들 방의 경우</h3><h3 class="sh">우드 블라인드 앞으로 추가로 쉬폰 커튼 시공</h3><h3 class="sh">주방의 경우</h3><h3 class="sh">타공 알리미늄 화이트 25mm 블라인드 시공</h3><h3 class="sh">허니콤 블라인드로 진행</h3><h3 class="sh">발코니도 허니콤으로 진행</h3></div>
-<figure><img src="01.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 발코니도 허니콤으로 진행" loading="lazy"></figure>
+<div class="say"><h3 class="sh">아이들 방의 경우</h3><h3 class="sh">우드 블라인드 앞으로 추가로 쉬폰 커튼 시공</h3></div>
+<figure><img src="21.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 우드 블라인드 앞으로 추가로 쉬폰 커튼 시공" loading="lazy"></figure>
+<div class="say"><h3 class="sh">주방의 경우</h3><h3 class="sh">타공 알리미늄 화이트 25mm 블라인드 시공</h3></div>
+<div class="pair"><figure><img src="22.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 타공 알리미늄 화이트 25mm 블라인드 시공" loading="lazy"></figure><figure><img src="23.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 타공 알리미늄 화이트 25mm 블라인드 시공" loading="lazy"></figure></div>
+<figure><img src="24.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 타공 알리미늄 화이트 25mm 블라인드 시공" loading="lazy"></figure>
+<div class="say"><h3 class="sh">허니콤 블라인드로 진행</h3></div>
+<figure><img src="25.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 허니콤 블라인드로 진행" loading="lazy"></figure>
+<div class="say"><h3 class="sh">발코니도 허니콤으로 진행</h3></div>
+<div class="pair"><figure><img src="26.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 발코니도 허니콤으로 진행" loading="lazy"></figure><figure><img src="27.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 발코니도 허니콤으로 진행" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="28.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 발코니도 허니콤으로 진행" loading="lazy"></figure><figure><img src="01.jpg" alt="의정부 아트포레 10층 유니슬렛 커튼 화이트 플레인 시공사례 — 발코니도 허니콤으로 진행" loading="lazy"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223146209870" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>

@@ -57,7 +57,7 @@
   --fs-nav:15px;--fs-meta:13px;--fs-eyebrow:11px;
   --ls-base:-.003em;--ls-display:-.02em;--ls-h1:-.015em;--ls-h2:-.015em;--ls-h3:-.01em;
   --ls-eyebrow:.08em;--ls-meta:.02em;
-  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.75;
+  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.55;
 
   /* 모서리 — shape.css. 기본 8px, 카드·사진 14px, 알약 26px. 각진 2px 은 더 쓰지 않습니다 */
   --radius-xs:4px;--radius-sm:8px;--radius-lg:14px;--radius-pill:26px;--radius-image-lg:14px;
@@ -72,7 +72,7 @@
   --grid-gap-y:clamp(20px,2vw,28px);
   --grid-gap-x:clamp(14px,1.4vw,20px);
   --flow-gap:clamp(12px,1.6vw,20px);
-  --say-gap:clamp(22px,2.6vw,34px);
+  --say-gap:clamp(16px,2vw,24px);
   --feature-gap:clamp(18px,2.4vw,36px);
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
@@ -258,9 +258,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
 .flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.flow table.spec{width:100%;max-width:var(--measure-say);margin:0 auto;border-collapse:collapse;
+  font-size:15px;line-height:1.5;background:var(--sf,#fff)}
+.flow table.spec th,.flow table.spec td{border:1px solid var(--line);padding:11px 16px;text-align:left}
+.flow table.spec th{width:130px;font-weight:700;color:var(--ink);white-space:nowrap}
+.flow table.spec td{color:var(--ink-2)}
 .flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
   line-height:var(--lh-say);color:var(--ink-2);text-align:center}
-.flow .say p{margin-top:var(--space-12)}
+.flow .say p{margin-top:2px}
 .flow .say p:first-child{margin-top:0}
 .flow .say h3.sh{margin:var(--space-25) 0 2px;font-size:19px;color:var(--ink);
   font-family:'MaruBuri',serif;font-weight:700;letter-spacing:-.01em}
@@ -363,28 +368,28 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="say"><p>망사가 정면을 바라보는 풀 채광 모습입니다.</p><h3 class="sh">낯 시간 동안 풀채광에서 내부에서 외부 조망이 가능하나</h3><p>외부에서 내부가 보이지 않습니다.</p></div>
 <figure><img src="02.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 낯 시간 동안 풀채광에서 내부에서 외부 조망이 가능하나" loading="lazy"></figure>
 <div class="say"><p>영상을 통해 유니슬렛의 장점을 확인해 보세요.</p><p>해당 거실의 커튼은 우측 창틀에 맞춰 분할했으며, 필요에 따라 좌우 영역의 각도 조절이 개별적으로 가능합니다. 아래 사진에서 왼쪽 창문은 사생활 보호 각도로 조절되어 있습니다. 오른쪽 창문은 풀채광입니다. 상황에 맞춰 채광량을 조절하시면 됩니다.</p><h3 class="sh">사생활 보호 모드 왼쪽 면에 살짝 노란톤이 보이네요~</h3></div>
-<figure><img src="12.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 사생활 보호 모드 왼쪽 면에 살짝 노란톤이 보이네요~" loading="lazy"></figure>
+<figure><img src="03.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 사생활 보호 모드 왼쪽 면에 살짝 노란톤이 보이네요~" loading="lazy"></figure>
 <div class="say"><h3 class="sh">메인 거실창문은 사생활 보호</h3><h3 class="sh">측면 창문은 채광 모드</h3></div>
-<figure><img src="03.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 측면 창문은 채광 모드" loading="lazy"></figure>
+<figure><img src="04.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 측면 창문은 채광 모드" loading="lazy"></figure>
 <div class="say"><h3 class="sh">90도 각도로 조절된 사생활 보호 모드는</h3><h3 class="sh">낮에 채광량을 많이 줄여주고</h3><p>밤에는 사생활을 완벽하게 보호합니다.</p></div>
-<figure><img src="13.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 낮에 채광량을 많이 줄여주고" loading="lazy"></figure>
+<figure><img src="05.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 낮에 채광량을 많이 줄여주고" loading="lazy"></figure>
 <div class="say"><h3 class="sh">낮 시간 동안 외부 조망이 되면서</h3><p>내부가 보이지 않는 점이 진짜 유니슬렛의 장점입니다.</p><p>이런 커튼은 유니슬렛이 유일합니다.</p></div>
 <figure><img src="06.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 낮 시간 동안 외부 조망이 되면서" loading="lazy"></figure>
 <div class="say"><h3 class="sh">각도를 45도로 조절한 반채광 모드</h3><p>채광량을 줄이면서 사생활 보호가 가능합니다.</p></div>
-<figure><img src="05.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 각도를 45도로 조절한 반채광 모드" loading="lazy"></figure>
+<figure><img src="07.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 각도를 45도로 조절한 반채광 모드" loading="lazy"></figure>
 <div class="say"><h3 class="sh">완벽하게 사생활을 보호</h3></div>
-<figure><img src="04.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
+<figure><img src="08.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
 <div class="say"><p>이 외에 장점으로 커튼은 손잡이 하나로 간단하게 조작할 수 있습니다. 필요에 따라 완전히 열거나 닫을 수 있습니다. 끈이나 체인 없이 조절하기 떄문에 안심하고 편하게 사용할 수 있습니다.</p></div>
-<figure><img src="14.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
+<figure><img src="09.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
 <div class="say"><p>커튼 슬랫이 각각 분리되어 있어, 커튼을 걷지 않아도 외부를 볼 수 있습니다.</p></div>
-<figure><img src="15.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
+<figure><img src="10.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 완벽하게 사생활을 보호" loading="lazy"></figure>
 <div class="say"><h3 class="sh">서브 침실도 유니슬렛 소프트 화이트로 진행</h3></div>
-<figure><img src="09.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 서브 침실도 유니슬렛 소프트 화이트로 진행" loading="lazy"></figure>
+<figure><img src="11.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 서브 침실도 유니슬렛 소프트 화이트로 진행" loading="lazy"></figure>
 <div class="say"><p>다른 침실은 도톰한 화이트 쉬폰 커튼으로 마무리 (차르르 커튼)</p></div>
-<figure><img src="07.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 서브 침실도 유니슬렛 소프트 화이트로 진행" loading="lazy"></figure>
+<figure><img src="12.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 서브 침실도 유니슬렛 소프트 화이트로 진행" loading="lazy"></figure>
 <div class="say"><h3 class="sh">주방은 화이트 알리미늄 블라인드로 시공</h3></div>
-<div class="pair"><figure><img src="11.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure><figure><img src="08.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure></div>
-<figure><img src="10.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure>
+<div class="pair"><figure><img src="13.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure><figure><img src="14.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure></div>
+<figure><img src="15.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) — 주방은 화이트 알리미늄 블라인드로 시공" loading="lazy"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223252949577" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>

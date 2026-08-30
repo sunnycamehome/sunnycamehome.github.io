@@ -57,7 +57,7 @@
   --fs-nav:15px;--fs-meta:13px;--fs-eyebrow:11px;
   --ls-base:-.003em;--ls-display:-.02em;--ls-h1:-.015em;--ls-h2:-.015em;--ls-h3:-.01em;
   --ls-eyebrow:.08em;--ls-meta:.02em;
-  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.75;
+  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.55;
 
   /* 모서리 — shape.css. 기본 8px, 카드·사진 14px, 알약 26px. 각진 2px 은 더 쓰지 않습니다 */
   --radius-xs:4px;--radius-sm:8px;--radius-lg:14px;--radius-pill:26px;--radius-image-lg:14px;
@@ -72,7 +72,7 @@
   --grid-gap-y:clamp(20px,2vw,28px);
   --grid-gap-x:clamp(14px,1.4vw,20px);
   --flow-gap:clamp(12px,1.6vw,20px);
-  --say-gap:clamp(22px,2.6vw,34px);
+  --say-gap:clamp(16px,2vw,24px);
   --feature-gap:clamp(18px,2.4vw,36px);
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
@@ -258,9 +258,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
 .flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.flow table.spec{width:100%;max-width:var(--measure-say);margin:0 auto;border-collapse:collapse;
+  font-size:15px;line-height:1.5;background:var(--sf,#fff)}
+.flow table.spec th,.flow table.spec td{border:1px solid var(--line);padding:11px 16px;text-align:left}
+.flow table.spec th{width:130px;font-weight:700;color:var(--ink);white-space:nowrap}
+.flow table.spec td{color:var(--ink-2)}
 .flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
   line-height:var(--lh-say);color:var(--ink-2);text-align:center}
-.flow .say p{margin-top:var(--space-12)}
+.flow .say p{margin-top:2px}
 .flow .say p:first-child{margin-top:0}
 .flow .say h3.sh{margin:var(--space-25) 0 2px;font-size:19px;color:var(--ink);
   font-family:'MaruBuri',serif;font-weight:700;letter-spacing:-.01em}
@@ -354,7 +359,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   <a class="back" href="../">← Reference</a>
   <h1>동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러</h1>
   
-  <div class="meta"><span>서울특별시 동작구</span><span>2022년 6월</span><span>유니슬렛 커튼</span><span>사진 20장</span></div>
+  <div class="meta"><span>서울특별시 동작구</span><span>2022년 6월</span><span>유니슬렛 커튼</span><span>사진 27장</span></div>
 </div></main>
 <div class="wrap narrow"><div class="flow">
 <div class="say"><h3 class="sh">스마트커튼 유니슬렛은</h3><p>커튼과 블라인드의 장점만 합친 커튼입니다.</p><h3 class="sh">다양한 각도로 채광량 조절이 가능하고</h3><p>동시에 사생활 보호가 완벽합니다.</p><p>이번은 아파트 2층에 시공을 진행했습니다.</p><h3 class="sh">거실의 경우</h3><h3 class="sh">가장 인기 많은 화이트 컬러 플레인 패턴으로 시공 진행</h3><h3 class="sh">Full 채광 모습</h3><p>플레인 패턴의 경우, 여러 패턴 중에 빛을 가장 부드럽게 여과시켜</p><p>실내를 부드럽고 우아하게 느끼게 해줍니다.</p></div>
@@ -383,6 +388,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="say"><p>모서리를 라운드로 처리한 라운드형입니다.</p></div>
 <div class="pair"><figure><img src="17.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure><figure><img src="18.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure></div>
 <div class="pair"><figure><img src="19.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure><figure><img src="20.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="21.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure><figure><img src="22.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="23.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure><figure><img src="24.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="25.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure><figure><img src="26.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure></div>
+<figure><img src="27.jpg" alt="동작구 상도로 힐스테이트상도센트럴파크 유니슬렛 커튼 시공사례 화이트, 커피 컬러 — 파쉬우드 우드 블라인드" loading="lazy"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222785477166" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>

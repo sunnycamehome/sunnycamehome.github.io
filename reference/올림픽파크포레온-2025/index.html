@@ -57,7 +57,7 @@
   --fs-nav:15px;--fs-meta:13px;--fs-eyebrow:11px;
   --ls-base:-.003em;--ls-display:-.02em;--ls-h1:-.015em;--ls-h2:-.015em;--ls-h3:-.01em;
   --ls-eyebrow:.08em;--ls-meta:.02em;
-  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.75;
+  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.55;
 
   /* 모서리 — shape.css. 기본 8px, 카드·사진 14px, 알약 26px. 각진 2px 은 더 쓰지 않습니다 */
   --radius-xs:4px;--radius-sm:8px;--radius-lg:14px;--radius-pill:26px;--radius-image-lg:14px;
@@ -72,7 +72,7 @@
   --grid-gap-y:clamp(20px,2vw,28px);
   --grid-gap-x:clamp(14px,1.4vw,20px);
   --flow-gap:clamp(12px,1.6vw,20px);
-  --say-gap:clamp(22px,2.6vw,34px);
+  --say-gap:clamp(16px,2vw,24px);
   --feature-gap:clamp(18px,2.4vw,36px);
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
@@ -258,9 +258,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
 .flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.flow table.spec{width:100%;max-width:var(--measure-say);margin:0 auto;border-collapse:collapse;
+  font-size:15px;line-height:1.5;background:var(--sf,#fff)}
+.flow table.spec th,.flow table.spec td{border:1px solid var(--line);padding:11px 16px;text-align:left}
+.flow table.spec th{width:130px;font-weight:700;color:var(--ink);white-space:nowrap}
+.flow table.spec td{color:var(--ink-2)}
 .flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
   line-height:var(--lh-say);color:var(--ink-2);text-align:center}
-.flow .say p{margin-top:var(--space-12)}
+.flow .say p{margin-top:2px}
 .flow .say p:first-child{margin-top:0}
 .flow .say h3.sh{margin:var(--space-25) 0 2px;font-size:19px;color:var(--ink);
   font-family:'MaruBuri',serif;font-weight:700;letter-spacing:-.01em}
@@ -354,7 +359,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   <a class="back" href="../">← Reference</a>
   <h1>기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례</h1>
   
-  <div class="meta"><span>서울특별시 강동구</span><span>2025년 3월</span><span>유니슬렛 커튼</span><span>사진 20장</span></div>
+  <div class="meta"><span>서울특별시 강동구</span><span>2025년 3월</span><span>유니슬렛 커튼</span><span>사진 33장</span></div>
 </div></main>
 <div class="wrap narrow"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/SawWsSe_ZQo" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
@@ -382,7 +387,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <figure><img src="19.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 풀 채광 / 각도조절 / 사생활 보호" loading="lazy"></figure>
 <div class="say"><h3 class="sh">커튼 봉 숨김 처리</h3></div>
 <figure><img src="20.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 커튼 봉 숨김 처리" loading="lazy"></figure>
-<div class="say"><p>세상에 완벽한 것은 없지만, 그래도 시공자 스스로 만족할 때 까지 완벽을 추구합니다.</p><p>옥수수는달빛에익는다.</p><h3 class="sh">blog.naver.com</h3><h3 class="sh">서브룸 3은 암막 커튼 라이트 베이지 컬러</h3><h3 class="sh">안방은 암막 + 쉬폰</h3><p>1)제목에업체명&amp;홍보문구를넣어서는안되며(ex: oo위치xxxx공정후기),본문에도홍보문구는글의맨마지막에달아야합니다.</p><p>2)본문에(시공을기술적으로설명하는) 5줄이상의글과사진3개이상을동시에충족해야하며, (중요)게시글은사례를통한기술적정</p><p>보전달목적에부합하도록충실하게작성되어야합니다.</p><p>해당글은삭제됩니다.</p><p>3.작성.게시한게시글은2.에부합하는지여부를종합적으로판단해,미흡하다고(운영자)판단시해당게시글은'삭제대상게시글'이되며</p><p>무통보삭제됩니다. (요건충족하라도기술적정보전달측면에서미흡하다고판단시적용됩니다.)</p><p>4.게시판에연달아3개이상글게시시경고없이삭제됩니다.</p></div>
+<div class="say"><p>세상에 완벽한 것은 없지만, 그래도 시공자 스스로 만족할 때 까지 완벽을 추구합니다.</p><p>옥수수는달빛에익는다.</p><h3 class="sh">blog.naver.com</h3><h3 class="sh">서브룸 3은 암막 커튼 라이트 베이지 컬러</h3></div>
+<figure><img src="21.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 서브룸 3은 암막 커튼 라이트 베이지 컬러" loading="lazy"></figure>
+<div class="say"><h3 class="sh">안방은 암막 + 쉬폰</h3></div>
+<div class="pair"><figure><img src="22.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="23.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="24.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="25.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
+<div class="say"><p>1)제목에업체명&amp;홍보문구를넣어서는안되며(ex: oo위치xxxx공정후기),본문에도홍보문구는글의맨마지막에달아야합니다.</p><p>2)본문에(시공을기술적으로설명하는) 5줄이상의글과사진3개이상을동시에충족해야하며, (중요)게시글은사례를통한기술적정</p><p>보전달목적에부합하도록충실하게작성되어야합니다.</p><p>해당글은삭제됩니다.</p><p>3.작성.게시한게시글은2.에부합하는지여부를종합적으로판단해,미흡하다고(운영자)판단시해당게시글은'삭제대상게시글'이되며</p><p>무통보삭제됩니다. (요건충족하라도기술적정보전달측면에서미흡하다고판단시적용됩니다.)</p><p>4.게시판에연달아3개이상글게시시경고없이삭제됩니다.</p></div>
+<div class="pair"><figure><img src="26.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="27.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="28.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="29.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="30.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="31.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
+<div class="pair"><figure><img src="32.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure><figure><img src="33.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 — 안방은 암막 + 쉬폰" loading="lazy"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223842754764" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>
