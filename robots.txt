@@ -55,4 +55,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://www.sunnycamehome.com/sitemap.xml
+Sitemap: https://sunnycamehome.com/sitemap.xml
