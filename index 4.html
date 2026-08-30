@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://hangeul.pstatic.net" crossorigin>
+<title>유니슬렛 커튼은 써니케임홈에서</title>
+<meta name="description" content="유니슬렛 커튼 실측·시공. 서울·경기·인천의 스마트커튼 유니슬렛 커튼 시공 사례를 사진으로 봅니다.">
+<link rel="canonical" href="https://sunnycamehome.com/">
+<!-- ⚠ 파비콘 자리는 비워 둡니다. 심볼(아치+나뭇가지, 시안3)을 못 받았고,
+     워드마크는 32px 에서 글자가 안 보입니다. 지어내지 않습니다. -->
+<meta property="og:type" content="website"><meta property="og:site_name" content="써니케임홈 SUNNY CAME HOME">
+<meta property="og:title" content="유니슬렛 커튼은 써니케임홈에서"><meta property="og:description" content="유니슬렛 커튼 실측·시공. 서울·경기·인천의 스마트커튼 유니슬렛 커튼 시공 사례를 사진으로 봅니다.">
+<meta property="og:locale" content="ko_KR"><meta property="og:url" content="https://sunnycamehome.com/"><meta property="og:image" content="https://sunnycamehome.com/hero1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "써니케임홈", "alternateName": "Sunny came home", "url": "https://sunnycamehome.com/", "image": "https://sunnycamehome.com/hero1.jpg", "description": "유니슬렛 커튼 실측·시공. 2020년부터 사장이 직접 실측하고 시공합니다.", "telephone": "+82-10-9667-5130", "priceRange": "₩₩", "areaServed": [{"@type": "State", "name": "서울특별시"}, {"@type": "State", "name": "경기도"}, {"@type": "State", "name": "인천광역시"}], "address": {"@type": "PostalAddress", "addressCountry": "KR", "addressRegion": "서울특별시"}, "sameAs": ["https://blog.naver.com/sunnycamehome", "https://smartstore.naver.com/sunnycamehome", "https://www.youtube.com/@unislat"]}</script>
+<style>
+/* ── 글꼴 ── 제목 마루 부리(네이버 CDN) · 본문 맑은 고딕(시스템).
+   출처: .claude/skills/sunnycamehome-design/tokens/fonts.css
+   맑은 고딕은 윈도우에만 있습니다. 맥·모바일은 Apple SD Gothic Neo 가 받습니다. */
+@font-face{font-family:'Malgun Gothic';src:local('Malgun Gothic'),local('맑은 고딕'),local('Apple SD Gothic Neo'),local('Noto Sans KR');font-weight:400;font-style:normal}
+@font-face{font-family:'Malgun Gothic';src:local('Malgun Gothic Bold'),local('맑은 고딕'),local('Apple SD Gothic Neo Bold'),local('Apple SD Gothic Neo');font-weight:700;font-style:normal}
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ══ 토막 ══ 값은 전부 스킬의 tokens/ 에서 옮겨온 것입니다.
+   여기서 임의로 고치지 않습니다 — tokens/ 를 먼저 고치고 그 값을 옮깁니다. */
+:root{
+  /* 색 — colors.css */
+  --ink:#222222;--ink-2:#555555;--ink-3:#767676;--ink-4:#a7a7a7;
+  --paper:#ffffff;--paper-2:#f8f8f8;--paper-3:#f2f2f2;
+  --line:#dedede;--line-soft:#ededed;--line-strong:#c9c9c9;
+  --accent:#ff602c;--tint-cool:#b4d7f8;
+  --kakao:#fee500;--kakao-ink:#191600;
+  --scrim-hero:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.14) 26%,rgba(0,0,0,.34) 60%,rgba(0,0,0,.78) 100%);
+  --bar-bg:rgba(248,248,248,.92);
+
+  /* 옛 이름 — 사이트생성.py 가 var(--ink3) 를 씁니다. 지우지 않습니다 */
+  --bg:var(--paper);--bg2:var(--paper-2);--ink2:var(--ink-2);--ink3:var(--ink-3);--line2:var(--line-strong);
+
+  /* 글꼴 — fonts.css · typography.css */
+  --font-display:'MaruBuri','Nanum Myeongjo','Apple SD Gothic Neo',serif;
+  --font-sans:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
+  --fw-light:300;--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
+  --fs-display:clamp(34px,5.4vw,88px);
+  --fs-h1:clamp(28px,3.2vw,46px);
+  --fs-h2:clamp(26px,2.9vw,42px);
+  --fs-h2-cta:clamp(28px,3.2vw,46px);
+  --fs-h2-prose:clamp(23px,2.2vw,30px);
+  --fs-h3-feature:clamp(23px,2.4vw,34px);
+  --fs-lead:clamp(16px,1.5vw,19px);
+  --fs-h3-prose:20px;--fs-h3-tile:20px;--fs-h3-card:19px;
+  --fs-prose:17px;--fs-say:17px;--fs-body:16px;--fs-body-sm:15px;--fs-caption:14px;
+  --fs-nav:15px;--fs-meta:13px;--fs-eyebrow:11px;
+  --ls-base:-.003em;--ls-display:-.02em;--ls-h1:-.015em;--ls-h2:-.015em;--ls-h3:-.01em;
+  --ls-eyebrow:.08em;--ls-meta:.02em;
+  --lh-display:1.12;--lh-head:1.2;--lh-h3:1.35;--lh-body:1.6;--lh-prose:1.75;--lh-say:1.75;
+
+  /* 모서리 — shape.css. 기본 8px, 카드·사진 14px, 알약 26px. 각진 2px 은 더 쓰지 않습니다 */
+  --radius-xs:4px;--radius-sm:8px;--radius-lg:14px;--radius-pill:26px;--radius-image-lg:14px;
+
+  /* 여백 — spacing.css */
+  --space-2:2px;--space-4:4px;--space-6:6px;--space-8:8px;--space-10:10px;
+  --space-12:12px;--space-14:14px;--space-16:16px;--space-20:20px;--space-25:25px;
+  --gutter:clamp(16px,2.4vw,32px);
+  --sec-y:clamp(40px,4.6vw,72px);
+  --sec-y-tight:clamp(28px,3vw,44px);
+  --sec-head-gap:clamp(18px,2vw,26px);
+  --grid-gap-y:clamp(20px,2vw,28px);
+  --grid-gap-x:clamp(14px,1.4vw,20px);
+  --flow-gap:clamp(12px,1.6vw,20px);
+  --say-gap:clamp(22px,2.6vw,34px);
+  --feature-gap:clamp(18px,2.4vw,36px);
+  --tile-pad:clamp(18px,2vw,26px);
+  --hero-pad-b:clamp(30px,4vw,56px);
+  --max:1420px;--narrow:820px;
+  --measure-lead:640px;--measure-say:720px;--measure-hero-p:490px;
+  --card-min:290px;--bar-h:60px;
+  /* 머리 사진 높이 — 사장님 지시 2026-08-30 「지금의 3/5 로」. 옛 값 min(94vh,860px) 의 3/5 입니다.
+     참고로 디자인 시스템의 --hero-h 는 min(55vh,480px) 라 거의 같은 자리입니다. */
+  --hero-h:min(56vh,516px);
+}
+/* 다크 테마는 없습니다 — 추출본에 없어 걷어냈습니다 (2026-08-30). 되살리지 않습니다. */
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper-2);color:var(--ink);font-family:var(--font-sans);font-size:var(--fs-body);
+  line-height:var(--lh-body);letter-spacing:var(--ls-base);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
+::selection{background:var(--ink);color:#fff}
+:focus-visible{outline:1px solid var(--ink-4);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:var(--narrow)}
+.eyebrow{font-family:var(--font-sans);font-size:var(--fs-eyebrow);font-weight:var(--fw-bold);
+  letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--ink-3)}
+
+/* ══ 상단바 ══ */
+.bar{position:fixed;inset:0 0 auto;z-index:70;transition:background .4s,border-color .4s;
+  border-bottom:1px solid transparent}
+.bar.solid{background:var(--bar-bg);border-bottom-color:var(--line);
+  backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px)}
+.bar-in{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);height:var(--bar-h);
+  display:flex;align-items:center;gap:28px;position:relative}
+/* ⭐ 워드마크를 상단바 «한가운데» 에 둡니다 (사장님 지시 2026-08-30).
+   자리를 차지하지 않게 띄워 두어야 메뉴가 밀리지 않습니다. */
+.brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  display:flex;align-items:center;white-space:nowrap;z-index:1}
+.brand img{height:22px;width:auto;display:block}
+.brand .w{display:none}
+.bar.over .brand .b{display:none}
+.bar.over .brand .w{display:block}
+@media(max-width:520px){.brand img{height:18px}}
+.bar nav{margin-left:auto;display:flex;gap:var(--space-25);align-items:center;z-index:2;
+  font-size:var(--fs-nav);font-weight:var(--fw-bold);color:var(--ink-2)}
+.bar nav a{transition:color .2s;white-space:nowrap;padding:6px 0}
+.bar nav a:hover{color:var(--ink)}
+.bar nav a[aria-current]{color:var(--ink)}
+/* ⛔ 상단바에는 전화번호도, 버튼·박스도 없습니다 (2026-08-30) */
+.bar.over{color:#fff}
+.bar.over .brand,.bar.over nav a{color:rgba(255,255,255,.88)}
+.bar.over nav a:hover,.bar.over nav a[aria-current]{color:#fff}
+.burger{display:none;margin-left:auto;background:none;border:0;color:inherit;font-size:20px;cursor:pointer;padding:var(--space-8);z-index:2}
+@media(max-width:900px){
+  .bar nav{position:fixed;inset:var(--bar-h) 0 auto;flex-direction:column;gap:0;align-items:stretch;
+    background:var(--paper-2);border-bottom:1px solid var(--line);padding:8px 0 16px;display:none}
+  .bar nav.open{display:flex}
+  .bar nav a{padding:14px var(--gutter);font-size:16px;color:var(--ink)}
+  .bar.over nav a{color:var(--ink)}
+  .burger{display:block}
+}
+
+/* ══ 머리 — 움직이는 사진 ══ */
+.hero{position:relative;height:var(--hero-h);overflow:hidden;background:var(--ink);
+  display:flex;align-items:flex-end}
+.hero .slides{position:absolute;inset:0;z-index:0}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;
+  animation:heroFade var(--dur) infinite;will-change:opacity,transform}
+@keyframes heroFade{
+   0%{opacity:0;transform:scale(1.10)}
+   4%{opacity:1}
+  30%{opacity:1}
+  36%{opacity:0;transform:scale(1.005)}
+ 100%{opacity:0;transform:scale(1.005)}
+}
+@media (prefers-reduced-motion:reduce){.hero .slides img{animation:none}
+  .hero .slides img:first-child{opacity:1}}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--scrim-hero)}
+.hero .in{position:relative;z-index:2;color:#fff;width:100%;max-width:var(--max);margin:0 auto;
+  padding:0 var(--gutter) var(--hero-pad-b)}
+.hero .eyebrow{color:rgba(255,255,255,.72)}
+.hero h1{margin-top:var(--space-12);font-size:var(--fs-display);font-weight:var(--fw-semibold);
+  letter-spacing:var(--ls-display);line-height:var(--lh-display);text-shadow:0 2px 30px rgba(0,0,0,.3)}
+.hero p{margin-top:var(--space-16);max-width:var(--measure-hero-p);font-size:var(--fs-lead);
+  line-height:1.6;color:rgba(255,255,255,.86)}
+.hero .btns{margin-top:var(--space-20);display:flex;gap:var(--space-8);flex-wrap:wrap}
+.hero .now{position:absolute;right:var(--gutter);bottom:var(--hero-pad-b);z-index:2;
+  text-align:right;color:rgba(255,255,255,.78);font-size:var(--fs-meta);letter-spacing:var(--ls-meta)}
+@media(max-width:760px){.hero .now{display:none}}
+
+/* ══ 단추 ══ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;
+  padding:0 var(--space-20);border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:15px;
+  font-weight:var(--fw-bold);transition:.22s;white-space:nowrap;border:1px solid transparent;cursor:pointer}
+.btn-p{background:#fff;color:var(--ink)}.btn-p:hover{background:var(--accent);color:#fff}
+.btn-g{border-color:rgba(255,255,255,.5);color:#fff}.btn-g:hover{background:rgba(255,255,255,.14);color:#fff}
+.btn-d{background:var(--ink);color:#fff}.btn-d:hover{background:var(--accent);color:#fff}
+.btn-o{border-color:var(--line);color:var(--ink);background:var(--paper)}
+.btn-o:hover{background:var(--paper-2);border-color:var(--line-strong);color:var(--ink)}
+.btn-k{background:var(--kakao);color:var(--kakao-ink)}.btn-k:hover{filter:brightness(.95);color:var(--kakao-ink)}
+
+/* ══ 섹션 ══ */
+.sec{padding:var(--sec-y) 0}
+.sec.alt{background:var(--paper)}
+.sec.tight{padding-top:var(--sec-y-tight)}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-20);
+  padding-bottom:var(--space-14);margin-bottom:var(--sec-head-gap);border-bottom:1px solid var(--line)}
+.sec-hd h2{font-size:var(--fs-h2);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
+.sec-hd .r{font-size:var(--fs-nav);font-weight:var(--fw-bold);color:var(--ink-3);white-space:nowrap}
+.sec-hd .r:hover{color:var(--accent)}
+.lead{max-width:var(--measure-lead);font-size:var(--fs-lead);line-height:1.6;color:var(--ink-2);margin-bottom:var(--space-20)}
+
+/* ══ 찾기 ══ */
+.find{position:relative;margin:0 0 var(--space-16)}
+.find input{width:100%;max-width:520px;height:46px;padding:0 42px 0 var(--space-16);
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);
+  font-family:var(--font-sans);font-size:16px;color:var(--ink);-webkit-appearance:none}
+.find input::placeholder{color:var(--ink-4)}
+.find input:focus{outline:0;border-color:var(--ink);background:var(--paper)}
+.find .x{position:absolute;left:min(478px,calc(100% - 42px));top:12px;width:22px;height:22px;
+  border:0;border-radius:99px;background:var(--paper-3);color:var(--ink-2);
+  font-size:12px;line-height:1;cursor:pointer;font-family:inherit}
+.find .x:hover{background:var(--ink);color:#fff}
+.found{margin:0 0 var(--space-12);font-size:var(--fs-body-sm);color:var(--ink-3)}
+
+/* ══ 사례 격자 ══ */
+.filters{display:flex;gap:var(--space-6);flex-wrap:wrap;margin-bottom:var(--space-20)}
+.chip{font-family:var(--font-sans);font-size:14px;font-weight:var(--fw-bold);padding:8px var(--space-14);
+  border-radius:var(--radius-pill);border:1px solid var(--line);background:var(--paper);
+  color:var(--ink-2);cursor:pointer;transition:.16s}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--card-min),1fr));gap:var(--grid-gap-y) var(--grid-gap-x)}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--paper-3);border-radius:var(--radius-lg)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .85s cubic-bezier(.19,.9,.25,1)}
+.card:hover .ph img{transform:scale(1.05)}
+.card .tx{padding:var(--space-10) 0 0}
+.card .k{font-family:var(--font-sans);font-size:var(--fs-meta);font-weight:var(--fw-bold);color:var(--ink-3)}
+.card h3{margin-top:var(--space-4);font-size:var(--fs-h3-card);font-weight:var(--fw-semibold);
+  letter-spacing:var(--ls-h3);line-height:var(--lh-h3);color:var(--ink)}
+.card:hover h3{color:var(--accent)}
+.card p{margin-top:var(--space-2);font-size:var(--fs-caption);color:var(--ink-3);line-height:1.5}
+.more{margin-top:var(--space-25);text-align:center}
+.empty{text-align:center;color:var(--ink-3);padding:60px 0}
+
+/* ══ 큰 한 장 ══ */
+.feature{display:grid;grid-template-columns:1.35fr 1fr;gap:var(--feature-gap);align-items:center}
+@media(max-width:900px){.feature{grid-template-columns:1fr}}
+.feature .ph{aspect-ratio:3/2;overflow:hidden;background:var(--paper-3);border-radius:var(--radius-lg)}
+.feature .ph img{width:100%;height:100%;object-fit:cover}
+.feature h3{font-size:var(--fs-h3-feature);letter-spacing:var(--ls-h2);line-height:1.25}
+.feature p{margin-top:var(--space-12);font-size:var(--fs-body);color:var(--ink-2);line-height:1.65}
+.feature .btn{margin-top:var(--space-20)}
+
+/* ══ 타일 ══ 1px 헤어라인 격자는 더 쓰지 않습니다 — 8px 틈 + 14px 모서리 ══ */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-8)}
+.tile{background:var(--paper);border-radius:var(--radius-lg);padding:var(--tile-pad);
+  display:flex;flex-direction:column;transition:background .3s}
+.tile:hover{background:var(--tint-cool)}
+.tile h3{font-size:var(--fs-h3-tile);font-weight:var(--fw-semibold);letter-spacing:var(--ls-h3);color:var(--ink)}
+.tile p{margin-top:var(--space-6);font-size:var(--fs-body-sm);color:var(--ink-2);line-height:1.6;flex:1}
+.tile .go{margin-top:var(--space-14);font-size:var(--fs-meta);font-weight:var(--fw-bold);color:var(--ink)}
+
+/* ══ 숫자 ══ */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-8)}
+.stats div{background:var(--paper);border-radius:var(--radius-lg);padding:var(--tile-pad) var(--space-14);text-align:center}
+.stats b{display:block;font-family:var(--font-display);font-size:clamp(28px,3vw,42px);
+  font-weight:var(--fw-semibold);letter-spacing:var(--ls-display);line-height:1.1}
+.stats span{display:block;margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3)}
+
+/* ══ 사례 낱장 ══ */
+.art-hd{padding:calc(var(--bar-h) + clamp(24px,3.4vw,48px)) 0 clamp(16px,2vw,26px)}
+.back{font-size:var(--fs-meta);font-weight:var(--fw-bold);color:var(--ink-3)}
+.back:hover{color:var(--accent)}
+/* ⚠ 제목 크기는 사장님 지시로 줄인 값입니다 (2026-08-30 「너무 커」).
+   토큰 --fs-h1 은 더 크지만 여기서는 쓰지 않습니다. */
+.art-hd h1{margin-top:var(--space-10);font-size:clamp(21px,2.9vw,32px);
+  letter-spacing:var(--ls-h1);line-height:var(--lh-head)}
+.art-hd .sub{margin-top:var(--space-12);font-size:var(--fs-lead);color:var(--ink-2);line-height:1.6;max-width:620px}
+.art-hd .meta{margin-top:var(--space-16);padding-top:var(--space-12);border-top:1px solid var(--line);
+  font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:var(--ls-meta);color:var(--ink-3);
+  display:flex;gap:var(--space-14);flex-wrap:wrap}
+.flow{padding-bottom:clamp(40px,5vw,72px)}
+.flow figure{margin:0 0 var(--flow-gap)}
+.flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
+.flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
+  line-height:var(--lh-say);color:var(--ink-2);text-align:center}
+.flow .say p{margin-top:var(--space-12)}
+.flow .say p:first-child{margin-top:0}
+.flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
+  letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
+.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
+@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+.vid{position:relative;padding-top:56.25%;overflow:hidden;background:#000;border-radius:var(--radius-image-lg)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ══ 글 ══ */
+.prose{font-size:var(--fs-prose);line-height:var(--lh-prose);color:var(--ink-2)}
+.prose h2{margin-top:40px;font-size:var(--fs-h2-prose);color:var(--ink);letter-spacing:var(--ls-h1);
+  line-height:1.3;padding-bottom:var(--space-10);border-bottom:1px solid var(--line)}
+.prose h3{margin-top:28px;font-size:var(--fs-h3-prose);color:var(--ink);letter-spacing:var(--ls-h3)}
+.prose p{margin-top:var(--space-14)}
+.prose ul,.prose ol{margin-top:var(--space-14);padding-left:22px}
+.prose li{margin-top:var(--space-6)}
+.prose strong{color:var(--ink);font-weight:var(--fw-bold)}
+.prose a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.prose img{border-radius:var(--radius-image-lg)}
+.prose table{width:100%;margin-top:0;border-collapse:collapse;font-size:var(--fs-body)}
+.prose th,.prose td{padding:var(--space-12) var(--space-14);border-bottom:1px solid var(--line);text-align:left}
+.prose th{color:var(--ink);font-weight:var(--fw-bold);background:var(--paper-3);
+  font-size:var(--fs-meta);letter-spacing:var(--ls-meta)}
+.prose tr:last-child td{border-bottom:0}
+.tblwrap{overflow-x:auto;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-lg);margin-top:var(--space-16)}
+
+/* ══ 원단 견본 ══ 마우스를 올리면 컬러명이 뜹니다 ══ */
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:6px;
+  max-width:640px;margin-top:var(--space-16)}
+.swatch{position:relative;display:block;aspect-ratio:1/1;border-radius:var(--radius-sm);
+  overflow:hidden;background:var(--paper-3)}
+.swatch img{width:100%;height:100%;object-fit:cover}
+.swatch span{position:absolute;inset:auto 0 0 0;background:rgba(34,34,34,.84);color:#fff;
+  font-family:var(--font-sans);font-size:11px;font-weight:var(--fw-bold);text-align:center;
+  padding:5px 2px;opacity:0;transition:opacity .15s ease}
+.swatch:hover span{opacity:1}
+
+/* ══ 글 안의 사진 ══ */
+.prose figure{margin:var(--space-16) 0 0}
+.prose figure img{width:100%;border-radius:var(--radius-image-lg);background:var(--paper-3)}
+.prose figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
+.prose .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);margin-top:var(--space-16)}
+.prose .pair figure{margin:0}
+@media(max-width:700px){.prose .pair{grid-template-columns:1fr}}
+.prose .vid{margin-top:var(--space-16)}
+
+/* ══ 문의 띠 ══ */
+.cta{background:var(--ink);color:var(--paper);padding:clamp(36px,4.6vw,72px) 0}
+.cta h2{font-size:var(--fs-h2-cta);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
+.cta p{margin-top:var(--space-12);font-size:var(--fs-lead);opacity:.78;max-width:540px;line-height:1.6}
+.cta .btns{margin-top:var(--space-20);display:flex;gap:var(--space-8);flex-wrap:wrap}
+.cta .btn-p{background:var(--paper);color:var(--ink)}
+.cta .btn-p:hover{background:var(--accent);color:#fff}
+.cta .btn-g{border-color:rgba(255,255,255,.42);color:var(--paper)}
+.cta .btn-g:hover{background:rgba(255,255,255,.12)}
+
+/* ══ 꼬리 ══ */
+.foot{border-top:1px solid var(--line);padding:clamp(34px,4vw,56px) 0 28px;
+  font-size:var(--fs-body-sm);color:var(--ink-2)}
+.foot-top{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:clamp(20px,2.6vw,40px)}
+@media(max-width:820px){.foot-top{grid-template-columns:1fr 1fr}.foot-top>div:first-child{grid-column:1/-1}}
+@media(max-width:520px){.foot-top{grid-template-columns:1fr}}
+.foot h4{font-size:18px;color:var(--ink);letter-spacing:-.01em}
+.foot h5{font-family:var(--font-sans);font-size:var(--fs-eyebrow);color:var(--ink-3);
+  font-weight:var(--fw-bold);letter-spacing:var(--ls-eyebrow);text-transform:uppercase}
+.foot ul{list-style:none;margin-top:var(--space-10)}
+.foot li{margin-top:var(--space-8)}
+.foot li a:hover{color:var(--accent)}
+.foot .co{margin-top:var(--space-10);font-size:14px;line-height:1.65;max-width:480px;color:var(--ink-3)}
+.foot .biz{margin-top:var(--space-12);font-size:var(--fs-meta);line-height:1.8;color:var(--ink-3)}
+.foot .biz b{color:var(--ink-2);font-weight:var(--fw-bold)}
+.foot .btm{margin-top:28px;padding-top:var(--space-14);border-top:1px solid var(--line);
+  display:flex;gap:var(--space-16);flex-wrap:wrap;justify-content:space-between;
+  font-size:var(--fs-meta);color:var(--ink-3)}
+</style>
+</head><body>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="/" aria-label="써니케임홈 Sunny came home">
+    <img class="b" src="/wordmark-black.png" alt="써니케임홈" width="1945" height="387">
+    <img class="w" src="/wordmark-white.png" alt="" width="1945" height="387" aria-hidden="true">
+  </a>
+  <button class="burger" aria-label="메뉴" aria-expanded="false">☰</button>
+  <nav><a href="/reference/">Reference</a><a href="/unislat/">Unislat</a><a href="/contact/">문의</a></nav>
+</div></header>
+<style>@keyframes heroFade{0%{opacity:0;transform:scale(1.06)}0.89%{opacity:1}2.81%{opacity:1}3.70%{opacity:0;transform:scale(1.002)}100%{opacity:0;transform:scale(1.002)}}</style>
+<section class="hero">
+  <div class="slides" style="--dur:135.0s;--step:5.0">
+    <img src="hero1.jpg" alt="유니슬렛 전동 커튼 화이트 헬리오시티 시공사례 유니슬렛 커튼 시공" style="animation-delay:0.0s" fetchpriority=high>
+    <img src="hero2.jpg" alt="유니슬렛 전동 커튼 화이트 헬리오시티 시공사례 유니슬렛 커튼 시공" style="animation-delay:5.0s" loading=lazy>
+    <img src="hero3.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 유니슬렛 커튼 시공" style="animation-delay:10.0s" loading=lazy>
+    <img src="hero4.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 유니슬렛 커튼 시공" style="animation-delay:15.0s" loading=lazy>
+    <img src="hero5.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 유니슬렛 커튼 시공" style="animation-delay:20.0s" loading=lazy>
+    <img src="hero6.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 유니슬렛 커튼 시공" style="animation-delay:25.0s" loading=lazy>
+    <img src="hero7.jpg" alt="유니슬렛 전동 커튼 화이트 헬리오시티 시공사례 유니슬렛 커튼 시공" style="animation-delay:30.0s" loading=lazy>
+    <img src="hero8.jpg" alt="강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:35.0s" loading=lazy>
+    <img src="hero9.jpg" alt="강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:40.0s" loading=lazy>
+    <img src="hero10.jpg" alt="광진구 래미안프리미어팰리스 거실 유니슬렛 화이트 안방 유니슬렛 슬림 다크그레이 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:45.0s" loading=lazy>
+    <img src="hero11.jpg" alt="기역자 거실 유니슬렛 커튼 슬림, 한남아이파크 시공사례 유니슬렛 커튼 시공" style="animation-delay:50.0s" loading=lazy>
+    <img src="hero12.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:55.0s" loading=lazy>
+    <img src="hero13.jpg" alt="서대문 DMC센트럴아이파크 유니슬렛 커튼 슬림 소프트화이트 거실 안방 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:60.0s" loading=lazy>
+    <img src="hero14.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:65.0s" loading=lazy>
+    <img src="hero15.jpg" alt="수지 벽산블루밍 2차 유니슬렛 슬림 커튼 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:70.0s" loading=lazy>
+    <img src="hero16.jpg" alt="청라자이 더테라스 아파트1층 유니슬렛 커튼 소프트화이트 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:75.0s" loading=lazy>
+    <img src="hero17.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) 유니슬렛 커튼 시공" style="animation-delay:80.0s" loading=lazy>
+    <img src="hero18.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) 유니슬렛 커튼 시공" style="animation-delay:85.0s" loading=lazy>
+    <img src="hero19.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례 유니슬렛 커튼 시공" style="animation-delay:90.0s" loading=lazy>
+    <img src="hero20.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례 유니슬렛 커튼 시공" style="animation-delay:95.0s" loading=lazy>
+    <img src="hero21.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례 유니슬렛 커튼 시공" style="animation-delay:100.0s" loading=lazy>
+    <img src="hero22.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례 유니슬렛 커튼 시공" style="animation-delay:105.0s" loading=lazy>
+    <img src="hero23.jpg" alt="유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월) 유니슬렛 커튼 시공" style="animation-delay:110.0s" loading=lazy>
+    <img src="hero24.jpg" alt="일원동 샘터마을 유니슬렛 커튼 거실 안방 화이트,작은방 유니슬렛 슬림 소프트화이트 시공사례 유니슬렛 커튼 시공" style="animation-delay:115.0s" loading=lazy>
+    <img src="hero25.jpg" alt="거실 유니슬렛 전동 커튼, 침실 알리미늄 화이트 송파구 갤러리아팰리스 시공사례 써니케임홈 유니슬렛 커튼 시공" style="animation-delay:120.0s" loading=lazy>
+    <img src="hero26.jpg" alt="광진구 세양아파트 유니슬렛 커튼, 쉬폰 커튼 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:125.0s" loading=lazy>
+    <img src="hero27.jpg" alt="청라자이 더테라스 아파트1층 유니슬렛 커튼 소프트화이트 써니케임홈 시공사례 유니슬렛 커튼 시공" style="animation-delay:130.0s" loading=lazy>
+  </div>
+  <div class="in">
+    <div class="eyebrow">Unislat · Sunny came home</div>
+    <h1>아침부터 밤까지<br>내 맘대로 다루는 햇살</h1>
+    <p>공간의 품격을 높이는 유니슬렛 커튼.<br>섬세한 각도 조절로 원하는 만큼의 햇살을 들이고<br>필요할 땐 완벽하게 나만의 일상을 보호하세요.</p>
+    <div class="btns">
+      <a class="btn btn-p" href="/reference/">Reference 126</a>
+      <a class="btn btn-g" href="tel:01096675130">010-9667-5130</a>
+    </div>
+  </div>
+  <div class="now"><span style="opacity:.6">지금 보시는 곳</span><br><b>유니슬렛 전동 커튼 화이트 헬리오시티 시공사례</b><b hidden>유니슬렛 전동 커튼 화이트 헬리오시티 시공사례</b><b hidden>나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례</b><b hidden>나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례</b><b hidden>나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례</b><b hidden>나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례</b><b hidden>유니슬렛 전동 커튼 화이트 헬리오시티 시공사례</b><b hidden>강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례</b><b hidden>강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례</b><b hidden>광진구 래미안프리미어팰리스 거실 유니슬렛 화이트 안방 유니슬렛 슬림 다크그레이 써니케임홈 시공사례</b><b hidden>기역자 거실 유니슬렛 커튼 슬림, 한남아이파크 시공사례</b><b hidden>기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례</b><b hidden>서대문 DMC센트럴아이파크 유니슬렛 커튼 슬림 소프트화이트 거실 안방 써니케임홈 시공사례</b><b hidden>송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례</b><b hidden>수지 벽산블루밍 2차 유니슬렛 슬림 커튼 써니케임홈 시공사례</b><b hidden>청라자이 더테라스 아파트1층 유니슬렛 커튼 소프트화이트 써니케임홈 시공사례</b><b hidden>유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월)</b><b hidden>유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월)</b><b hidden>용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례</b><b hidden>용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례</b><b hidden>용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례</b><b hidden>용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례</b><b hidden>유니슬렛 커튼 소프트화이트 컬러 반포래미안원베일리 기역자 거실, 침실 등 시공 사례 서초구 (서초구 2023년 10월)</b><b hidden>일원동 샘터마을 유니슬렛 커튼 거실 안방 화이트,작은방 유니슬렛 슬림 소프트화이트 시공사례</b><b hidden>거실 유니슬렛 전동 커튼, 침실 알리미늄 화이트 송파구 갤러리아팰리스 시공사례 써니케임홈</b><b hidden>광진구 세양아파트 유니슬렛 커튼, 쉬폰 커튼 써니케임홈 시공사례</b><b hidden>청라자이 더테라스 아파트1층 유니슬렛 커튼 소프트화이트 써니케임홈 시공사례</b></div>
+</section>
+
+
+<section class="sec tight"><div class="wrap">
+  <div class="sec-hd"><h2>Reference</h2><a class="r" href="/reference/">모두 보기 →</a></div>
+  <p class="lead">사진은 손보지 않았습니다. 밝기와 색만 고르게 맞췄습니다.
+     창이 놓인 자리와 앞에 무엇이 있는지가 집마다 다릅니다.</p>
+  <div class="grid">
+  <a class="card" href="/reference/일원동-샘터마을-2026/" data-sido="서울특별시" data-year="2026" data-q="일원동 샘터마을 유니슬렛 커튼 거실 안방 화이트 작은방 유니슬렛 슬림 소프트화이트 시공사례 서울특별시 강남구 2026년 2026 8월 슬림 거실 복도에 바라본 거실과 좌우 침실 공간마다 쓰임이 달라 커튼도 다르게 고르곤 합니다. 하지만 방문을 열어두는 집이라면 이야기가 다릅니다. 복도에서 바라보는 세 공간이 하나의 풍경으로 이어져야 합니다. 이 현장이 모든 창을 유니슬렛으로 통일한 이유입니다. 거실과 안방은 '유니슬렛 화이트' 작은방은 '유니슬렛 슬림 소프트화이트'. 시선이 끊기지 않는 단정하고 우아한 집을 완성했습니다. 영상을 통해 유니슬렛의 좋은 점을 확인해 주세요. 서울 강남구 일원동 샘터마을 거실 유니슬렛 커튼 시공사례입니다. 가로 3.21m 창을 분할 없이 원레일로 제작했습니다. 커튼봉을 돌리면 슬랫이 좌우 180도로 돕니다. 세우면 풀 채광 눕히면 사생활 보호입니다. 그 사이 어느 지점에서든 멈춥니다. 앞 동이 가까운 거실이라 커튼을 걷으면 시선이 걸리고 치면 낮에도 어두워지는 자리였습니다. 써니케임홈은 유니슬렛 오리지널만 취급합니다. ▶ 실측 견적 문의 전화 010 9667 5130 네이버 톡톡 상담 가능 거실이 집의 첫인상이라면 유니슬렛 커튼은 그 공간의 표정을 완성합니다. 가로 3.21m의 거실. 벽 한 면을 온전히 덮는 커튼은 소파나 바닥을 넘어 이 공간에서 가장 넓은 면">
+    <div class="ph"><img src="/reference/일원동-샘터마을-2026/thumb.jpg" alt="일원동 샘터마을 유니슬렛 커튼 거실 안방 화이트,작은방 유니슬렛 슬림 소프트화이트 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 강남구</div><h3>일원동 샘터마을 유니슬렛 커튼 거실 안방 화이트,작은방 유니슬렛 슬림 소프트화이트 시공사례</h3>
+    <p>2026년 8월 · 사진 20장</p></div>
+  </a>
+  <a class="card" href="/reference/힐스테이트삼성-2026/" data-sido="서울특별시" data-year="2026" data-q="힐스테이트 삼성 유니슬렛 커튼 화이트 앞 건물이 가까운 남향 거실 시공사례 서울특별시 강남구 2026년 2026 8월 [시공 정보] 커튼의 우아함과 블라인드의 실용성을 하나로 유니슬렛은 커튼 특유의 풍성한 볼륨감에 블라인드의 정교한 각도 조절 기능을 결합한 혁신적인 스마트커튼입니다. 번거롭게 열고 닫을 필요 없이 슬랫을 가볍게 회전시키는 것만으로 화사한 자연광 유입부터 확실한 사생활 보호까지 자유롭게 연출할 수 있습니다. 1 000번의 경험이 만드는 디테일 써니케임홈 써니케임홈은 2020년부터 1 000곳 이상의 현장을 직접 실측하고 시공해 온 전문 브랜드입니다. 지금 보시는 공간 역시 써니케임홈의 꼼꼼한 손길로 직접 완성한 현장입니다. 남향 거실인데 앞 건물이 가깝습니다. 커튼을 걷자니 사생활이 걱정되고 치자니 한낮에도 집안이 어둡고 답답해집니다. 동간 거리가 가까운 아파트에서는 흔히 둘 중 하나를 포기하며 '앞 동이 가까우니 어쩔 수 없지'라고 타협하곤 합니다. 하지만 유니슬렛은 그 타협에 동의하지 않습니다. 커튼을 닫아둔 상태에서도 따스한 햇살은 온전히 들이고 외부의 시선은 완벽하게 차단합니다. 채광과 프라이버시 이제 어느 것 하나 포기하지 마세요. 우선 영상을 통해 조작과 채광별 모습을 확인해 보세요. 커튼에 바라는 것은 두 가지입니다. 빛과 시선. 보통 커">
+    <div class="ph"><img src="/reference/힐스테이트삼성-2026/thumb.jpg" alt="힐스테이트 삼성 유니슬렛 커튼 화이트 앞 건물이 가까운 남향 거실 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 강남구</div><h3>힐스테이트 삼성 유니슬렛 커튼 화이트 앞 건물이 가까운 남향 거실 시공사례</h3>
+    <p>2026년 8월 · 사진 20장</p></div>
+  </a>
+  <a class="card" href="/reference/역삼래미안-2026/" data-sido="서울특별시" data-year="2026" data-q="역삼 래미안 거실 유니슬렛 커튼 화이트 이분할 시공사례 서울특별시 강남구 2026년 2026 4월 [역삼 래미안 거실 시공 사례] 빛을 다스리는 가장 우아한 방법 유니슬렛 커튼의 우아함과 블라인드의 실용성을 하나로 패브릭 커튼 특유의 풍성한 볼륨감은 살리고 블라인드의 섬세한 빛 조절 기능까지 모두 담았습니다. 무겁게 치고 걷을 필요가 없습니다. 슬랫의 각도를 가볍게 돌려주는 것만으로 기분 좋은 햇살은 실내로 들이고 외부의 불필요한 시선은 완벽하게 차단합니다. 1000개 이상 현장이 증명하는 써니케임홈의 디테일 커튼은 누가 어떻게 실측하고 시공하느냐에 따라 완성도가 달라집니다. 본 포스팅은 2020년부터 지금까지 총 1000개 이상 현장을 오직 '직접 실측하고 시공'해 온 써니케임홈의 생생한 리얼 시공 사례입니다. 우선 영상으로 조작 방법과 채광별 모습을 확인해 보세요. 각도가 돌아가는 모습은 사진보다 영상이 정확합니다. 공간에 빛을 들이고 불필요한 시선은 지워내는 것. 커튼의 본질은 이 두 가지에 있습니다. 지금까지 우리는 얇은 속커튼과 두꺼운 겉커튼 두 개의 레일로 창가를 무겁게 채워왔습니다. 유니슬렛은 이 공식을 우아하게 깹니다. 단 하나의 레일 단 하나의 커튼으로 충분합니다. 커튼을 활짝 걷어내지 않아도 괜찮습니다. 슬랫을 살짝 돌려주는">
+    <div class="ph"><img src="/reference/역삼래미안-2026/thumb.jpg" alt="역삼 래미안 거실 유니슬렛 커튼 화이트 이분할 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 강남구</div><h3>역삼 래미안 거실 유니슬렛 커튼 화이트 이분할 시공사례</h3>
+    <p>2026년 4월 · 사진 11장</p></div>
+  </a>
+  <a class="card" href="/reference/영등포-2026/" data-sido="서울특별시" data-year="2026" data-q="유니슬렛 화이트 커튼 아파트 시공사례 영등포 20평대 써니케임홈 서울특별시 영등포구 2026년 2026 4월 스마트커튼 유니슬렛 커튼은 #unislat 커튼의 부드러움과 블라인드의 편의성이 합쳐진 커튼입니다. 가로 길이 약 350 cm 거실입니다. 먼저 영상을 통해 유니슬렛의 장점을 확인해 보세요. 풀채광 모습입니다. 정중앙 이분할 시공. 상담 및 문의는 010 9667 5130 카카오톡 아이디 : sch2010 아래 네이버 톡톡을 통해 가능합니다. #스마트커튼 #유니슬렛 #유니슬렛커튼 #유니슬랫 거실창문 가운데 기준으로 분할 했습니다. 상황에 맞게 좌우면 각각 채광량을 조절합니다. 왼쪽 사생활 보호 오른쪽 풀 채광. 왼쪽 풀 채광 오른쪽 사생활 보호. 사생활 보호 외부에서 내부가 절대로 보이지 않습니다. 가까이에서 바라 본 유니슬렛 영상으로 확인하세요. 풀 채광 모습 왼쪽 각도 조절 / 오른쪽 사생활 보호. 안방의 경우 도톰한 쉬폰 커튼 시공">
+    <div class="ph"><img src="/reference/영등포-2026/thumb.jpg" alt="유니슬렛 화이트 커튼 아파트 시공사례, 영등포 20평대 써니케임홈 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 영등포구</div><h3>유니슬렛 화이트 커튼 아파트 시공사례, 영등포 20평대 써니케임홈</h3>
+    <p>2026년 4월 · 사진 10장</p></div>
+  </a>
+  <a class="card" href="/reference/경희궁자이-2026/" data-sido="서울특별시" data-year="2026" data-q="경희궁 자이 서울특별시 종로구 2026년 2026 1월 오랜만에 종로구 경희궁 자이에서 실측과 시공 모두 직접 진행했습니다. 먼저 영상을 통해 유니슬렛 확인해 보세요. 왼쪽 샤시 기준으로 분할을 진행했습니다. 거실 가로 길이가 3.5미터이기 떄문에 정중앙 분할 보다 샤시 기준분할을 선택했습니다. 실제로 보면 거실이 조금 더 넓어 보입니다. 상담 및 문의는 010 9667 5130 카카오톡 아이디 : sch2010 아래 네이버 톡톡을 통해 가능합니다. #스마트커튼 #유니슬렛 #유니슬렛커튼 #유니슬랫 #유니슬랫커튼 #써니케임홈 왼쪽은 사생활 보호 오른쪽 풀 채광. 왼쪽은 풀 채광 오른쪽은 사생활 보호. 상황에 맞게 좌우 각도를 조절하시면 됩니다. 이에 대한 자세한 설명은 방문 실측 시에 모두 설명해 드립니다. 사생활 보호 모드에서는 외부에서나 내부가 절대 보이지 않습니다. 가까이에 본 유니슬렛 풀채광 모습 각도 조절 / 사생활 보호. 유니슬렛만의 투명한 볼륨감. 침실1은 허니콤 라이트 블루 컬러 드레스룸은 허니콤 화이트로 간단하게. 주방은 타공 알리미늄 화이트. 안방은 암막 커튼.">
+    <div class="ph"><img src="/reference/경희궁자이-2026/thumb.jpg" alt="경희궁 자이 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 종로구</div><h3>경희궁 자이</h3>
+    <p>2026년 1월 · 사진 17장</p></div>
+  </a>
+  <a class="card" href="/reference/서초힐스-2026/" data-sido="서울특별시" data-year="2026" data-q="유니슬렛 화이트 써니케임홈 거실 안방 커튼 시공사례 서초구 서초힐스 서울특별시 서초구 2026년 2026 1월 슬림 유니슬렛 커튼 거실과 안방 시공사례 입니다. 아래 영상을 통해 유니슬렛의 장점을 확인해 보세요. 전화 010 9667 5130 혹은 아래 네이버 톡톡을 통해 가격 상담 및 문의 가능합니다. #유니슬렛 #유니슬렛커튼 #유니슬랫 #유니슬랫커튼 #써니케임홈 유니슬렛의 장점은 빛을 컨트롤 합니다. 풀 채광 / 반채광 / 사생활 보호 근접 촬영한 영상을 보시면 유니슬랫의 채광 컨트롤과 사생활 보호 등을 더 확실히 알 수 있습니다. 유니슬렛의 장점은 빛을 컨트롤 합니다. 써니케임홈은 디테일하게 마감을 위해 노력합니다. 분할 부분은 커튼봉 숨김처리. 분할은 오른쪽 샤시 기준으로 좌우 분할 왼쪽 사생활 보호 / 오른쪽 풀 채광 사생활 보호 모습 슬랫 각도 조절을 통해 낮에는 과도한 직사광을 효과적으로 차단하여 채광량을 한층 부드럽게 낮추고 외부 시선으로부터 실내를 완벽하게 보호합니다. 안방은 유니슬렛 슬림 소프트화이트로 진행. 각도 조절한 모습 사생활 보호. 창틀에 맞춰 제작 시공하여 깔끔한 시공 및 생활 공간 확보. 주방과 발코니 사이에 쉬폰 커튼 시공. 침싱은 허니콤 베이직으로 시공.">
+    <div class="ph"><img src="/reference/서초힐스-2026/thumb.jpg" alt="유니슬렛 화이트 써니케임홈 거실 안방 커튼 시공사례, 서초구 서초힐스 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 서초구</div><h3>유니슬렛 화이트 써니케임홈 거실 안방 커튼 시공사례, 서초구 서초힐스</h3>
+    <p>2026년 1월 · 사진 17장</p></div>
+  </a>
+  <a class="card" href="/reference/광진구-래미안프리미어팰리스-2025/" data-sido="서울특별시" data-year="2025" data-q="광진구 유니슬렛 전동커튼 화이트 래미안프리미어팰리스아 시공사례 써니케임홈 서울특별시 광진구 2025년 2025 12월 전동">
+    <div class="ph"><img src="/reference/광진구-래미안프리미어팰리스-2025/thumb.jpg" alt="광진구 유니슬렛 전동커튼 화이트 래미안프리미어팰리스아 시공사례 써니케임홈 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 광진구</div><h3>광진구 유니슬렛 전동커튼 화이트 래미안프리미어팰리스아 시공사례 써니케임홈</h3>
+    <p>2025년 12월 · 사진 20장</p></div>
+  </a>
+  <a class="card" href="/reference/답십리-래미안위브-2025/" data-sido="서울특별시" data-year="2025" data-q="유니슬렛 전동커튼 시공 사례 답십리 래미안위브 1층 서울특별시 동대문구 2025년 2025 12월 전동 아파트 1층 유니슬렛 전동 커튼 사례 소프트화이트 컬러 플레인 아파트 거실은 유니슬렛 전동 안방은 암막커튼 주방과 침실은 블라인드로 시공. 가로 4.6 m 전동이며 양개(양쪽으로 열림)으로 시공했습니다. 리모컨으로 조작하고 스마트폰으로 컨트롤 및 스케줄링 가능합니다. 먼저 영상으로 확인해 주세요. 근접 촬영입니다. 거실의 경우 정중앙 이분할로 제작 시공했습니다. 유니슬렛 전동 커튼 답십리 래미안위브 1층 사례 아파트 1층은 어둡기 때문에 채광이 중요하고 또 밤이 되면 사생활 보호가 중요합니다. 여러모로 고민이 되는 층이지만 제대로만 선택하면 편하고 안락하게 생활하실 수 있습니다. 밝을 때는 풀채광 망사가 정면을 보고 있기에 외부 조망 가능. 낮에는 외부에서 내부가 잘 안보입니다. 애매할 때는 각도 조절. 채광과 사생활 보호 둘다 가능. 밤에는 사생활 보호. 전동은 오직 리모컨과 스마트폰 앱으로만 컨트롤 가능합니다. 수동 조작 X 열기와 닫기 좌우 180도 범위로 각도 조절. 그리고 양개 뿐만 아니라 편개로 선택이 가능합니다. 가까이에서 바라 본 유니슬렛 커튼 유니슬렛 전동 커튼 근접 촬영 답십리래… ">
+    <div class="ph"><img src="/reference/답십리-래미안위브-2025/thumb.jpg" alt="유니슬렛 전동커튼 시공 사례, 답십리 래미안위브 1층 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 동대문구</div><h3>유니슬렛 전동커튼 시공 사례, 답십리 래미안위브 1층</h3>
+    <p>2025년 12월 · 사진 14장</p></div>
+  </a>
+  <a class="card" href="/reference/광진구구의동-아파트-2025/" data-sido="서울특별시" data-year="2025" data-q="광진구 세양아파트 유니슬렛 커튼 쉬폰 커튼 써니케임홈 시공사례 서울특별시 광진구 2025년 2025 11월">
+    <div class="ph"><img src="/reference/광진구구의동-아파트-2025/thumb.jpg" alt="광진구 세양아파트 유니슬렛 커튼, 쉬폰 커튼 써니케임홈 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 광진구</div><h3>광진구 세양아파트 유니슬렛 커튼, 쉬폰 커튼 써니케임홈 시공사례</h3>
+    <p>2025년 11월 · 사진 9장</p></div>
+  </a>
+  <a class="card" href="/reference/위례-호반써밋에비뉴-2025/" data-sido="경기도" data-year="2025" data-q="유니슬렛 소프트화이트 위례 호반써밋 에비뉴 시공사례 경기도 ⚠️확인필요(위례=성남 하남 송파 경계) 2025년 2025 11월 슬림 위례 호반써밋 에비뉴 유니슬렛 슬림 소프트화이트 거실 가로 5미터입니다. 이번 사례는 디테일에서 시작해 보겠습니다. 커튼박스 폭이 약 18cm 여서 유니슬렛 대폭 보다 소폭을 선택했습니다. 풀 채광 상태에서 커튼박스 안에 쏙 들어갑니다. 인테리어 공사를 고려하신다면 그리고 일반 유니슬렛을 고려하신다면 커튼박스 폭을 꼭 20cm로 해주세요. 전동 유니슬렛을 고려하신다면 폭을 약 23 cm로 보통 거실의 경우 바닥에서 2 cm 정도 띄워줍니다. 원하시면 더 내릴 수도 올릴 수도 있습니다만 거실은 2 cm 추천드립니다. 거실 전체 사진을 보면 저 망사 부분이 잘 안보이게 되더라고요. 아래와 같이 투명한 볼륨감이... 정말 이쁩니다. 분할 부분 커튼봉은 숨김 처리해 드립니다. 실제 사용 현장에서는 봉이 잘 안보입니다. 아래 영상 확인해 보세요~ 유니슬렛 소프트화이트 위례 호반써밋 에비뉴 써니케임홈 시공사례 1년간 무상 AS 진행하며 1년 후에는 출장비 발생합니다. 이사로 인한 이전설치도 가능합니다. 사실 AS 요청이 거의 없습니다. 실측 시공하는 과정에서 AS 발생 안되도록 꼼꼼히 진행합니다. 전체적인 모습을 영상">
+    <div class="ph"><img src="/reference/위례-호반써밋에비뉴-2025/thumb.jpg" alt="유니슬렛 소프트화이트 위례 호반써밋 에비뉴 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">경기도 ⚠️확인필요(위례=성남·하남·송파 경계)</div><h3>유니슬렛 소프트화이트 위례 호반써밋 에비뉴 시공사례</h3>
+    <p>2025년 11월 · 사진 10장</p></div>
+  </a>
+  <a class="card" href="/reference/개포자이-2025/" data-sido="서울특별시" data-year="2025" data-q="강남구 개포자이 거실 및 침실 유니슬렛 슬림 커튼 써니케임홈 시공 사례 서울특별시 강남구 2025년 2025 10월 슬림 유니슬렛 커튼 슬림 거실과 침실 시공사례입니다. 거실 가로 390 cm. 침실 가로 232 cm 먼저 영상을 통해 유니슬렛의 장점을 확인해 보세요. 풀채광 모습입니다. 소프트화이트 컬터는 주간에 햇빛을 받으면 아이보리 컬러로 변하며 저녁에는 차분하고 따뜻한 화이트로 보이는 컬러입니다. 유니슬렛 슬림을 선택한 이유는 커튼박스에 쏙 집어 넣어 시공하기 위해. 상담 및 문의는 010 9667 5130 카카오톡 아이디 : sch2010 아래 네이버 톡톡을 통해 가능합니다. #스마트커튼 #유니슬렛 #유니슬렛커튼 #유니슬랫 #유니슬렛슬림 우츳 샷시 기준으로 분할 했습니다. 상황에 맞게 좌우면 각각 채광량을 조절합니다. 사생활 보호 커튼박스 폭이 약 17cm 이기 떄문에 커튼박스 안에 시공하기 위해서 유니슬렛이 아니라 유니슬렛 슬림으로 선택했습니다. 유니슬렛 만의 투명한 볼륨감. 가까이에서 바라 본 유니슬렛 좌우 각각 90도 각도 조절 및 이동 가능합니다. 분할 부분은 커튼봉 숨김 처리했습니다. 침심은 분할 없이 원레일로 시공.">
+    <div class="ph"><img src="/reference/개포자이-2025/thumb.jpg" alt="강남구 개포자이 거실 및 침실 유니슬렛 슬림 커튼 써니케임홈 시공 사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 강남구</div><h3>강남구 개포자이 거실 및 침실 유니슬렛 슬림 커튼 써니케임홈 시공 사례</h3>
+    <p>2025년 10월 · 사진 8장</p></div>
+  </a>
+  <a class="card" href="/reference/고덕센트럴아이파크-2025/" data-sido="서울특별시" data-year="2025" data-q="유니슬렛 화이트 강동구 고덕센트럴아이파크 30평대 시공사례 서울특별시 강동구 2025년 2025 9월 고덕 센트럴 아이파크 스마트커튼 유니슬렛 화이트 플레인 시공사례 가로 4.5 m 거실 시공사례입니다. 먼저 영상을 통해 유니슬렛의 장점을 확인해 주세요. 정중앙 이분할로 시공했으며 분할 부분만 커튼봉 숨김 처리. 전화 010 9667 5130 혹은 아래 네이버 톡톡을 통해 가격 상담 및 문의 가능합니다. #스마트커튼 #유니슬렛 #유니슬렛커튼 #유니슬랫 #써니케임홈 왼쪽 사생활 보호 오른쪽 풀 채광 모습. 왼쪽 풀채광 오른쪽 사생활 보호 모습. 사생활 보호. 유니슬렛 만의 투명한 볼륨감. 가까이에서 바라 본 유니슬렛 커튼 풀 채광 / 각도조절 / 사생활 보호. 분할 부분은 커튼봉 숨김.">
+    <div class="ph"><img src="/reference/고덕센트럴아이파크-2025/thumb.jpg" alt="유니슬렛 화이트 강동구 고덕센트럴아이파크 30평대 시공사례 유니슬렛 커튼 시공사례" loading="lazy" width="780" height="585"></div>
+    <div class="tx"><div class="k">서울특별시 강동구</div><h3>유니슬렛 화이트 강동구 고덕센트럴아이파크 30평대 시공사례</h3>
+    <p>2025년 9월 · 사진 11장</p></div>
+  </a>
+  </div>
+  <div class="more">
+    <p class="lead" style="max-width:none;text-align:center;margin:0 0 var(--space-16)">여기에는 열두 곳만 놓았습니다. 나머지는 지역과 연도로 골라 보실 수 있습니다.</p>
+    <a class="btn btn-o" href="/reference/">시공사례 126곳 모두 보기</a>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-hd"><h2>Unislat</h2><a class="r" href="/unislat/">제품 보기 →</a></div>
+  <div class="feature">
+    <div class="ph"><img src="hero1.jpg" alt="유니슬렛 커튼" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">Product</div>
+      <h3 style="margin-top:12px">공간의 품격을 높이는 유려한 실루엣</h3>
+      <p>눈길을 사로잡는 부드럽고 세련된 라인이 공간에 입체적인 볼륨감을 선사합니다.</p><p>자연스럽게 떨어지는 패브릭의 질감은 어떤 인테리어와도 조화롭게 어우러지며, 거실이나 침실을 한층 더 고급스럽고 아늑한 공간으로 탈바꿈시킵니다. 커튼 하나만으로 확 달라지는 인테리어 효과를 경험해 보세요.</p>
+      <a class="btn btn-o" href="/unislat/">유니슬렛 알아보기</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-hd"><h2>이런 집에는</h2></div>
+  <div class="tiles">
+    <a class="tile" href="/unislat/"><h3>앞 동이 가까운 집</h3><p>빛은 들이고 시선은 가립니다. 커튼을 걷지 않아도 됩니다.</p><div class="go">보기</div></a>
+    <a class="tile" href="/unislat/"><h3>1층 · 저층</h3><p>낮에는 밖에서 안 보이고, 안에서는 밖이 보입니다.</p><div class="go">보기</div></a>
+    <a class="tile" href="/unislat/"><h3>커튼박스가 좁은 집</h3><p>슬림이면 더 얕은 곳에도 들어갑니다.</p><div class="go">보기</div></a>
+    <a class="tile" href="/unislat/"><h3>거실이 넓은 집</h3><p>5m가 넘어도 나눠서 각각 조작합니다.</p><div class="go">보기</div></a>
+    <a class="tile" href="/unislat/"><h3>손이 안 닿는 창</h3><p>전동으로 각도와 여닫이를 함께 씁니다.</p><div class="go">보기</div></a>
+    <a class="tile" href="/unislat/"><h3>관리가 걱정이신 분</h3><p>한 장씩 떼어 세탁하고, 한 장만 바꿉니다.</p><div class="go">보기</div></a>
+  </div>
+</div></section>
+<section class="cta"><div class="wrap">
+  <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>
+  <h2 style="margin-top:14px">실측 및 상담</h2><p>실측은 사장이 직접 나갑니다. 창을 보고, 커튼박스를 재고, 되는 것과 안 되는 것을 말씀드립니다.</p>
+  <div class="btns"><a class="btn btn-p" href="tel:01096675130">010-9667-5130 전화</a><span class="btn btn-k" style="cursor:default">카카오톡 아이디 sch2010</span><a class="btn btn-g" href="/contact/">문의 방법 보기</a></div>
+</div></section>
+<footer class="foot"><div class="wrap">
+ <div class="foot-top">
+  <div>
+    <h4>Sunny came home</h4>
+    <p class="co">유니슬렛 유사 제품이 아닌, ㈜유니커튼에서 제작한 오리지널 유니슬렛만 취급합니다.
+    「블라인드형 커튼용 연결구와 이를 포함하는 블라인드형 커튼」으로 특허가 등록된 제품입니다
+    (등록특허 10-2318082). 중국과 영국에도 같은 발명이 등록돼 있습니다.</p>
+    <p class="co">국내(경기도) 생산 · 1년 무상 A/S · 이사 시 이전 설치 가능.<br>
+    2020년부터 1,000곳 이상의 현장을 사장이 직접 실측하고 시공했습니다.</p>
+    <p class="co" style="color:var(--ink)"><b>010-9667-5130</b> · 서울 전 지역 · 경기 · 인천</p>
+    <p class="biz"><b>상호명</b> 써니케임홈<br><b>대표자명</b> 이상수<br><b>사업장 주소</b> 서울시 서대문구 가재울미래로2 DMC파크뷰자이 123동<br><b>사업자 등록번호</b> 8927300994<br></p>
+  </div>
+  <div><h5>Menu</h5><ul><li><a href="/reference/">Reference</a></li><li><a href="/unislat/">Unislat</a></li><li><a href="/contact/">문의</a></li></ul></div>
+  <div><h5>Channels</h5><ul><li><a href="https://blog.naver.com/sunnycamehome" target="_blank" rel="noopener">Blog</a></li><li><a href="https://smartstore.naver.com/sunnycamehome" target="_blank" rel="noopener">Store</a></li><li><a href="https://www.youtube.com/@unislat" target="_blank" rel="noopener">YouTube</a></li><li style="color:var(--ink3)">Instagram 준비 중</li></ul></div>
+ </div>
+ <div class="btm"><span>© 써니케임홈 SUNNY CAME HOME</span><span>유니슬렛 커튼 실측 · 시공</span></div>
+</div></footer>
+<script>
+(function(){
+ var b=document.querySelector('.bar'),h=document.querySelector('.hero');
+ function s(){var y=window.scrollY;b.classList.toggle('solid',y>14);
+   if(h)b.classList.toggle('over',y<h.offsetHeight-80);}
+ s();addEventListener('scroll',s,{passive:true});
+ var g=document.querySelector('.burger'),n=document.querySelector('.bar nav');
+ if(g)g.onclick=function(){n.classList.toggle('open');
+   g.setAttribute('aria-expanded',n.classList.contains('open'));};
+ var nm=document.querySelectorAll('.hero .now b'),sl=document.querySelectorAll('.hero .slides img');
+ if(nm.length&&sl.length>1){var i=0,d=parseFloat(getComputedStyle(document.querySelector('.hero .slides')).getPropertyValue('--step'))*1000||5000;
+   setInterval(function(){i=(i+1)%nm.length;nm.forEach(function(e,k){e.hidden=k!==i;});},d);}
+})();
+</script>
+</body></html>
