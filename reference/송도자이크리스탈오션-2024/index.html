@@ -183,6 +183,19 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .sec-hd .r:hover{color:var(--accent)}
 .lead{max-width:var(--measure-lead);font-size:var(--fs-lead);line-height:1.6;color:var(--ink-2);margin-bottom:var(--space-20)}
 
+/* ══ 찾기 ══ */
+.find{position:relative;margin:0 0 var(--space-16)}
+.find input{width:100%;max-width:520px;height:46px;padding:0 42px 0 var(--space-16);
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);
+  font-family:var(--font-sans);font-size:16px;color:var(--ink);-webkit-appearance:none}
+.find input::placeholder{color:var(--ink-4)}
+.find input:focus{outline:0;border-color:var(--ink);background:var(--paper)}
+.find .x{position:absolute;left:min(478px,calc(100% - 42px));top:12px;width:22px;height:22px;
+  border:0;border-radius:99px;background:var(--paper-3);color:var(--ink-2);
+  font-size:12px;line-height:1;cursor:pointer;font-family:inherit}
+.find .x:hover{background:var(--ink);color:#fff}
+.found{margin:0 0 var(--space-12);font-size:var(--fs-body-sm);color:var(--ink-3)}
+
 /* ══ 사례 격자 ══ */
 .filters{display:flex;gap:var(--space-6);flex-wrap:wrap;margin-bottom:var(--space-20)}
 .chip{font-family:var(--font-sans);font-size:14px;font-weight:var(--fw-bold);padding:8px var(--space-14);
