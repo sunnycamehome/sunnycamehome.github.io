@@ -72,6 +72,9 @@
   --grid-gap-y:clamp(20px,2vw,28px);
   --grid-gap-x:clamp(14px,1.4vw,20px);
   --flow-gap:clamp(12px,1.6vw,20px);
+  /* 규격표가 사진과 붙어 테두리가 사진 모서리에 닿았습니다 (2026-08-31 지시).
+     사진 사이보다 한 칸 더 띄웁니다. */
+  --spec-gap:clamp(20px,2.4vw,30px);
   --say-gap:clamp(16px,2vw,24px);
   --feature-gap:clamp(18px,2.4vw,36px);
   --tile-pad:clamp(18px,2vw,26px);
@@ -258,7 +261,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
 .flow figcaption{margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3);text-align:center}
-.flow table.spec{width:100%;max-width:var(--measure-say);margin:0 auto;border-collapse:collapse;
+.flow table.spec{width:100%;max-width:var(--measure-say);margin:var(--spec-gap) auto;border-collapse:collapse;
   font-size:15px;line-height:1.5;background:var(--sf,#fff)}
 .flow table.spec th,.flow table.spec td{border:1px solid var(--line);padding:11px 16px;text-align:left}
 .flow table.spec th{width:130px;font-weight:700;color:var(--ink);white-space:nowrap}
