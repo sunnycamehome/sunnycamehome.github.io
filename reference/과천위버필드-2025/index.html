@@ -277,6 +277,25 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
 .flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
 @media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
+.chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
+  margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
+  padding-top:var(--space-16);border-top:1px solid var(--line)}
+.chips-t{font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:var(--ls-meta);
+  color:var(--ink-3);margin-right:4px}
+.chips a{border:1px solid var(--line);border-radius:99px;padding:6px 13px;
+  font-size:13px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.chips a:hover{border-color:var(--ink);color:var(--ink)}
+.mo-h{margin:clamp(28px,3vw,42px) 0 var(--space-12);font-size:var(--fs-h3-prose);
+  letter-spacing:var(--ls-h3);color:var(--ink)}
+.mo-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--space-10)}
+.mo{display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 16px;
+  transition:border-color .15s,background .15s}
+.mo:hover{border-color:var(--ink);background:var(--paper-3)}
+.mo b{font-weight:var(--fw-bold);color:var(--ink);font-size:15px}
+.mo span{font-size:var(--fs-meta);color:var(--ink-3);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
 .vid{position:relative;padding-top:56.25%;overflow:hidden;background:#000;border-radius:var(--radius-image-lg)}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -389,6 +408,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <figure><img src="15.jpg" alt="과천 위버필드 아파트 거실 유니슬렛 커튼 화이트 플레인 시공 사례 — blog.naver.com" loading="lazy"></figure>
 <div class="say"><p>1)제목에업체명&amp;홍보문구를넣어서는안되며(ex: oo위치xxxx공정후기),본문에도홍보문구는글의맨마지막에달아야합니다.</p><p>2)본문에(시공을기술적으로설명하는) 5줄이상의글과사진3개이상을동시에충족해야하며, (중요)게시글은사례를통한기술적정</p><p>보전달목적에부합하도록충실하게작성되어야합니다.</p><p>해당글은삭제됩니다.</p><p>3.작성.게시한게시글은2.에부합하는지여부를종합적으로판단해,미흡하다고(운영자)판단시해당게시글은'삭제대상게시글'이되며</p><p>무통보삭제됩니다. (요건충족하라도기술적정보전달측면에서미흡하다고판단시적용됩니다.)</p><p>4.게시판에연달아3개이상글게시시경고없이삭제됩니다.</p><p>1)제목에업체명&amp;홍보문구를넣어서는안되며(ex: oo위치xxxx공정후기),본문에도홍보문구는글의맨마지막에달아야합니다.</p><p>2)본문에(시공을기술적으로설명하는) 5줄이상의글과사진3개이상을동시에충족해야하며, (중요)게시글은사례를통한기술적정</p><p>보전달목적에부합하도록충실하게작성되어야합니다.</p><p>해당글은삭제됩니다.</p><p>3.작성.게시한게시글은2.에부합하는지여부를종합적으로판단해,미흡하다고(운영자)판단시해당게시글은'삭제대상게시글'이되며</p><p>무통보삭제됩니다. (요건충족하라도기술적정보전달측면에서미흡하다고판단시적용됩니다.)</p><p>4.게시판에연달아3개이상글게시시경고없이삭제됩니다.</p><p>1)제목에업체명&amp;홍보문구를넣어서는안되며(ex: oo위치xxxx공정후기),본문에도홍보문구는글의맨마지막에달아야합니다.</p><p>2)본문에(시공을기술적으로설명하는) 5줄이상의글과사진3개이상을동시에충족해야하며, (중요)게시글은사례를통한기술적정</p><p>보전달목적에부합하도록충실하게작성되어야합니다.</p><p>해당글은삭제됩니다.</p><p>3.작성.게시한게시글은2.에부합하는지여부를종합적으로판단해,미흡하다고(운영자)판단시해당게시글은'삭제대상게시글'이되며</p><p>무통보삭제됩니다. (요건충족하라도기술적정보전달측면에서미흡하다고판단시적용됩니다.)</p><p>4.게시판에연달아3개이상글게시시경고없이삭제됩니다.</p></div>
 <figure><img src="16.jpg" alt="과천 위버필드 아파트 거실 유니슬렛 커튼 화이트 플레인 시공 사례 — blog.naver.com" loading="lazy"></figure>
+
 
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>

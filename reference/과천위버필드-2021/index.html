@@ -277,6 +277,25 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
 .flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
 @media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
+.chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
+  margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
+  padding-top:var(--space-16);border-top:1px solid var(--line)}
+.chips-t{font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:var(--ls-meta);
+  color:var(--ink-3);margin-right:4px}
+.chips a{border:1px solid var(--line);border-radius:99px;padding:6px 13px;
+  font-size:13px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.chips a:hover{border-color:var(--ink);color:var(--ink)}
+.mo-h{margin:clamp(28px,3vw,42px) 0 var(--space-12);font-size:var(--fs-h3-prose);
+  letter-spacing:var(--ls-h3);color:var(--ink)}
+.mo-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--space-10)}
+.mo{display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 16px;
+  transition:border-color .15s,background .15s}
+.mo:hover{border-color:var(--ink);background:var(--paper-3)}
+.mo b{font-weight:var(--fw-bold);color:var(--ink);font-size:15px}
+.mo span{font-size:var(--fs-meta);color:var(--ink-3);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
 .vid{position:relative;padding-top:56.25%;overflow:hidden;background:#000;border-radius:var(--radius-image-lg)}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -393,6 +412,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="pair"><figure><img src="03.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure><figure><img src="04.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure></div>
 <div class="pair"><figure><img src="05.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure><figure><img src="06.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure></div>
 <div class="pair"><figure><img src="07.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure><figure><img src="08.jpg" alt="과천 위버필드, 스마트커튼 유니슬렛 시공사례, 화이트컬러, 갤럭시 패턴 시공" loading="lazy"></figure></div>
+
 
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>

@@ -277,6 +277,25 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
 .flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
 @media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
+.chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
+  margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
+  padding-top:var(--space-16);border-top:1px solid var(--line)}
+.chips-t{font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:var(--ls-meta);
+  color:var(--ink-3);margin-right:4px}
+.chips a{border:1px solid var(--line);border-radius:99px;padding:6px 13px;
+  font-size:13px;color:var(--ink-2);transition:border-color .15s,color .15s}
+.chips a:hover{border-color:var(--ink);color:var(--ink)}
+.mo-h{margin:clamp(28px,3vw,42px) 0 var(--space-12);font-size:var(--fs-h3-prose);
+  letter-spacing:var(--ls-h3);color:var(--ink)}
+.mo-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--space-10)}
+.mo{display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 16px;
+  transition:border-color .15s,background .15s}
+.mo:hover{border-color:var(--ink);background:var(--paper-3)}
+.mo b{font-weight:var(--fw-bold);color:var(--ink);font-size:15px}
+.mo span{font-size:var(--fs-meta);color:var(--ink-3);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
 .vid{position:relative;padding-top:56.25%;overflow:hidden;background:#000;border-radius:var(--radius-image-lg)}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -385,6 +404,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="say"><p>관리는 생각보다 간단합니다</p><h3 class="sh">낱장으로 되어 있어</h3><p>더러워진 한 장만 빼서 빨면 됩니다.</p><h3 class="sh">커튼 전체를 떼어 세탁소에 맡기는</h3><p>그 번거로움이 없습니다.</p><p>평소에는 한 달에 한 번,</p><h3 class="sh">청소기 매트리스 툴로</h3><p>약한 바람에 먼지만 걷어내면 충분합니다.</p><p>물세탁은 정말 오염됐을 때만 하시면 됩니다.</p><p>▷ 세탁 방법을 사진으로 정리해 두었습니다</p><p>https://blog.naver.com/sunnycamehome/222015003413</p><h3 class="sh">이 집은 얼마였을까</h3><p>유니슬렛은 면적으로 계산합니다.</p><h3 class="sh">가로(m) × 세로(m) = ㎡</h3><h3 class="sh">1㎡당 7만원 (화이트·플레인 기준)</h3><h3 class="sh">이 집을 예로 들면</h3><h3 class="sh">메인창 4.62 × 2.43 = 11.23㎡</h3><h3 class="sh">확장창 2.5 × 2.42 = 6.08㎡</h3><h3 class="sh">합계 [강조] 17.3㎡ → 약 121만원</h3><h3 class="sh">경기 지역은 실측·시공비 15만원이 붙지만</h3><p>구매 고객은 무료로 진행합니다.</p><p>최종 118만원대로 마무리됐습니다.</p><p>창 개수와 크기에 따라 달라집니다.</p><h3 class="sh">만약 인테리어를 앞두고 계시다면</h3><h3 class="sh">이상적인 시공을 위해</h3><h3 class="sh">풀 채광일 때 슬랫이</h3><h3 class="sh">커튼박스 안으로 완전히 들어가려면</h3><p>폭 22cm 정도가 필요합니다.</p><p>전동을 생각하신다면 23cm 이상.</p><h3 class="sh">천장 공사가 끝난 뒤에는</h3><p>바꿀 수 없는 숫자입니다.</p><p>참고로 13cm 이상이어야 유니슬렛 시공이 가능합니다.</p><h3 class="sh">▷ 커튼박스 기준과 실측 방법</h3><p>https://blog.naver.com/sunnycamehome/224367870447</p><h3 class="sh">직접 재보고 싶으시면</h3><h3 class="sh">▪ 가로 — 좌측 벽에서 우측 벽까지</h3><h3 class="sh">▪ 세로 — 천장에서 바닥까지</h3><h3 class="sh">▪ 커튼박스 높이</h3><h3 class="sh">▪ 커튼박스 폭</h3><h3 class="sh">▷ 실측 방법 자세히 보기</h3><p>https://blog.naver.com/sunnycamehome/222062111180</p><p>확장형 거실은 집마다 창 구조가 다릅니다.</p><p>단차, 코너 각도, 창틀 위치.</p><h3 class="sh">도면으로는 안 보이고</h3><p>가서 봐야 압니다.</p><p>그래서 실측을 직접 갑니다.</p><h3 class="sh">좋은아침창에서 제작한</h3><p>오리지널 유니슬렛만 취급합니다.</p><p>1년간 무상 AS,</p><p>이후에는 출장비가 발생합니다.</p><h3 class="sh">시공 과정에서 AS가 생기지 않도록</h3><p>꼼꼼히 진행합니다.</p><h3 class="sh">시공 사례는</h3><h3 class="sh">사장이 직접 실측하고 시공한 현장만</h3><p>올리고 있습니다.</p><p>https://blog.naver.com/sunnycamehome</p><p>https://smartstore.naver.com/sunnycamehome</p></div>
 <div class="pair"><figure><img src="12.jpg" alt="확장형 거실 커튼 나누는 기준 – 일산 원흥동일스위트 유니슬렛 화이트 — 사장이 직접 실측하고 시공한 현장만" loading="lazy"></figure><figure><img src="13.jpg" alt="확장형 거실 커튼 나누는 기준 – 일산 원흥동일스위트 유니슬렛 화이트 — 사장이 직접 실측하고 시공한 현장만" loading="lazy"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/224373099029" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
+<nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/경기도-고양시/">경기도 고양시</a><a href="../../모아보기/분할-시공/">분할 시공</a></nav>
 </div></div><section class="cta"><div class="wrap">
   <div class="eyebrow" style="color:inherit;opacity:.5">Contact</div>
   <h2 style="margin-top:14px">실측 및 상담</h2><p>실측은 사장이 직접 나갑니다. 창을 보고, 커튼박스를 재고, 되는 것과 안 되는 것을 말씀드립니다.</p>
