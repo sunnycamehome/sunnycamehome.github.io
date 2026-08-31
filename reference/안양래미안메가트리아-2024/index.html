@@ -45,7 +45,9 @@
   --font-display:'MaruBuri','Nanum Myeongjo','Apple SD Gothic Neo',serif;
   --font-sans:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
   --fw-light:300;--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
-  --fs-display:clamp(34px,5.4vw,88px);
+  /* 2026-09-01 사장님 지시 — 「메인 헤드카피 2/3 사이즈로, 폰트는 조금 더 얇게」 */
+  --fs-display:clamp(23px,3.6vw,59px);
+  --fw-display:400;                 /* MaruBuri Regular — 600(SemiBold)에서 한 단 얇게 */
   --fs-h1:clamp(28px,3.2vw,46px);
   --fs-h2:clamp(26px,2.9vw,42px);
   --fs-h2-cta:clamp(28px,3.2vw,46px);
@@ -156,7 +158,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .hero .in{position:relative;z-index:2;color:#fff;width:100%;max-width:var(--max);margin:0 auto;
   padding:0 var(--gutter) var(--hero-pad-b)}
 .hero .eyebrow{color:rgba(255,255,255,.72)}
-.hero h1{margin-top:var(--space-12);font-size:var(--fs-display);font-weight:var(--fw-semibold);
+.hero h1{margin-top:var(--space-12);font-size:var(--fs-display);font-weight:var(--fw-display);
   letter-spacing:var(--ls-display);line-height:var(--lh-display);text-shadow:0 2px 30px rgba(0,0,0,.3)}
 .hero p{margin-top:var(--space-16);max-width:var(--measure-hero-p);font-size:var(--fs-lead);
   line-height:1.6;color:rgba(255,255,255,.86)}
