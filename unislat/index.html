@@ -287,6 +287,34 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .chips a{border:1px solid var(--line);border-radius:99px;padding:6px 13px;
   font-size:13px;color:var(--ink-2);transition:border-color .15s,color .15s}
 .chips a:hover{border-color:var(--ink);color:var(--ink)}
+/* ── 컬러 미리보기 /color/ (2026-09-02) — 위에 사진, 아래 20종 팔레트 ── */
+.cintro{max-width:640px;margin:0 auto 18px;text-align:center}
+.cviz{max-width:1100px;margin:0 auto}
+.ctabs,.cseg{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 12px}
+.ctabs button,.cseg button{border:1px solid var(--line);background:var(--paper);color:var(--ink-2);
+  border-radius:99px;padding:7px 14px;font-size:var(--fs-meta);font-family:inherit;cursor:pointer;transition:all .12s}
+.ctabs button[aria-pressed=true],.cseg button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cstage{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.cstage canvas{display:block;width:100%;height:auto}
+.cload{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(248,248,248,.6);font-size:var(--fs-meta);color:var(--ink-3)}
+.cseg{margin-top:12px}
+.cnow{text-align:center;font-size:var(--fs-meta);color:var(--ink-3);margin:6px 0 14px}
+.cpal{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.cpal .cc{display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid var(--line);
+  background:var(--paper);border-radius:var(--radius-sm);padding:10px 6px 8px;cursor:pointer;font-family:inherit;transition:all .12s}
+.cpal .cc .dot{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);display:block}
+.cpal .cc .nm{font-size:var(--fs-meta);color:var(--ink);font-weight:var(--fw-bold)}
+.cpal .cc .cd{font-size:11px;color:var(--ink-4)}
+.cpal .cc[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.cnote{max-width:640px;margin:18px auto 0;text-align:center;font-size:var(--fs-meta);color:var(--ink-3)}
+@media (max-width:640px){.cpal{grid-template-columns:repeat(4,1fr);gap:6px}.cpal .cc .dot{width:34px;height:34px}.cpal .cc .cd{display:none}}
+/* 관리자 보정 칸 */
+.ctune{margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.ctune .row{display:grid;grid-template-columns:28px 1fr 1fr 52px 84px 70px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line-soft);font-size:13px}
+.ctune .row .dot{width:24px;height:24px;border-radius:50%;border:1px solid var(--line-strong)}
+.ctune .row small{color:var(--ink-3)}.ctune .row code{font-size:12px;color:var(--ink-3)}
+.ctune input[type=color]{width:48px;height:30px;border:1px solid var(--line);background:none;padding:0;cursor:pointer}
 .mo-h{margin:clamp(28px,3vw,42px) 0 var(--space-12);font-size:var(--fs-h3-prose);
   letter-spacing:var(--ls-h3);color:var(--ink)}
 .mo-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:var(--space-10)}
@@ -392,6 +420,7 @@ L그레이, 네이비, 파치먼트, Y그린 새로운 13종이 추가되었습�
 <p><strong>비슷한 톤의 컬러를 믹스해서 선택 가능합니다.
 믹스를 원하실 경우, 카카오톡(sch2010) 혹은 전화로 상담 가능합니다.</strong></p>
 <div class="swatches"><span class="swatch" title="화이트"><img src="../unislat/img/plain-01-white.jpg" alt="유니슬렛 플레인 화이트 원단" loading="lazy" width="300" height="300"><span>화이트</span></span><span class="swatch" title="소프트화이트"><img src="../unislat/img/plain-08-softwhite.jpg" alt="유니슬렛 플레인 소프트화이트 원단" loading="lazy" width="300" height="300"><span>소프트화이트</span></span><span class="swatch" title="아이보리"><img src="../unislat/img/plain-02-ivory.jpg" alt="유니슬렛 플레인 아이보리 원단" loading="lazy" width="300" height="300"><span>아이보리</span></span><span class="swatch" title="베이지"><img src="../unislat/img/plain-03-beige.jpg" alt="유니슬렛 플레인 베이지 원단" loading="lazy" width="300" height="300"><span>베이지</span></span><span class="swatch" title="플레티넘"><img src="../unislat/img/plain-13-platinum.jpg" alt="유니슬렛 플레인 플레티넘 원단" loading="lazy" width="300" height="300"><span>플레티넘</span></span><span class="swatch" title="코튼우드"><img src="../unislat/img/plain-16-cottonwood.jpg" alt="유니슬렛 플레인 코튼우드 원단" loading="lazy" width="300" height="300"><span>코튼우드</span></span><span class="swatch" title="파치먼트"><img src="../unislat/img/plain-19-parchment.jpg" alt="유니슬렛 플레인 파치먼트 원단" loading="lazy" width="300" height="300"><span>파치먼트</span></span><span class="swatch" title="L그레이"><img src="../unislat/img/plain-17-lgrey.jpg" alt="유니슬렛 플레인 L그레이 원단" loading="lazy" width="300" height="300"><span>L그레이</span></span><span class="swatch" title="그레이"><img src="../unislat/img/plain-09-grey.jpg" alt="유니슬렛 플레인 그레이 원단" loading="lazy" width="300" height="300"><span>그레이</span></span><span class="swatch" title="W그레이"><img src="../unislat/img/plain-15-wgrey.jpg" alt="유니슬렛 플레인 W그레이 원단" loading="lazy" width="300" height="300"><span>W그레이</span></span><span class="swatch" title="노르딕"><img src="../unislat/img/plain-11-nordic.jpg" alt="유니슬렛 플레인 노르딕 원단" loading="lazy" width="300" height="300"><span>노르딕</span></span><span class="swatch" title="D그레이"><img src="../unislat/img/plain-06-dgrey.jpg" alt="유니슬렛 플레인 D그레이 원단" loading="lazy" width="300" height="300"><span>D그레이</span></span><span class="swatch" title="슬레이트"><img src="../unislat/img/plain-10-slate.jpg" alt="유니슬렛 플레인 슬레이트 원단" loading="lazy" width="300" height="300"><span>슬레이트</span></span><span class="swatch" title="차콜"><img src="../unislat/img/plain-07-charcoal.jpg" alt="유니슬렛 플레인 차콜 원단" loading="lazy" width="300" height="300"><span>차콜</span></span><span class="swatch" title="커피"><img src="../unislat/img/plain-04-coffee.jpg" alt="유니슬렛 플레인 커피 원단" loading="lazy" width="300" height="300"><span>커피</span></span><span class="swatch" title="브라운"><img src="../unislat/img/plain-05-brown.jpg" alt="유니슬렛 플레인 브라운 원단" loading="lazy" width="300" height="300"><span>브라운</span></span><span class="swatch" title="네이비"><img src="../unislat/img/plain-18-navy.jpg" alt="유니슬렛 플레인 네이비 원단" loading="lazy" width="300" height="300"><span>네이비</span></span><span class="swatch" title="메탈네이비"><img src="../unislat/img/plain-12-metalnavy.jpg" alt="유니슬렛 플레인 메탈네이비 원단" loading="lazy" width="300" height="300"><span>메탈네이비</span></span><span class="swatch" title="그린"><img src="../unislat/img/plain-14-green.jpg" alt="유니슬렛 플레인 그린 원단" loading="lazy" width="300" height="300"><span>그린</span></span><span class="swatch" title="Y그린"><img src="../unislat/img/plain-20-ygreen.jpg" alt="유니슬렛 플레인 Y그린 원단" loading="lazy" width="300" height="300"><span>Y그린</span></span></div>
+
 
 <h2>180도 각도 조절</h2>
 <p>180도 각도 조절이 가능하기 때문에 빛의 각도와 양을 조절할 수 있고,
