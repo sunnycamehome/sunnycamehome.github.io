@@ -293,13 +293,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .cgrp{display:flex;flex-direction:column;gap:8px;margin:0 0 14px}
 .clabel{font-size:var(--fs-eyebrow);font-weight:var(--fw-bold);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--ink-3);text-align:center}
 .ctabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.ctabs button{display:flex;flex-direction:column;gap:8px;align-items:stretch;padding:6px 6px 8px;border:1px solid var(--line);
+.ctabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;height:110px;border:1px solid var(--line);
   background:var(--paper);border-radius:var(--radius-sm);font-family:inherit;cursor:pointer;transition:all .12s;text-align:center}
-.ctabs button img{display:block;width:100%;aspect-ratio:18/11;object-fit:cover;border-radius:5px;background:var(--paper-3)}
-.ctabs button span{font-size:var(--fs-body-sm);font-weight:var(--fw-bold);color:var(--ink-2);line-height:1.3}
+.ctabs .cnum{display:flex;align-items:baseline;font-family:var(--font-display);font-weight:var(--fw-regular);font-size:34px;line-height:1;
+  letter-spacing:-.02em;color:var(--ink-3)}
+.ctabs .cnum small{font-size:15px;margin-left:2px}
+.ctabs .cline{display:block;width:64px;height:1px;background:var(--line-strong)}
+.ctabs .cname{font-size:var(--fs-meta);letter-spacing:var(--ls-meta);color:var(--ink-3)}
 .ctabs button:hover{border-color:var(--ink)}
 .ctabs button[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.ctabs button[aria-pressed=true] span{color:var(--ink)}
+.ctabs button[aria-pressed=true] .cnum,.ctabs button[aria-pressed=true] .cname{color:var(--ink)}
+.ctabs button[aria-pressed=true] .cline{background:var(--ink)}
 .cseg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:560px;margin:0 auto}
 .cseg button{height:46px;border:1px solid var(--line);background:var(--paper);color:var(--ink-2);border-radius:var(--radius-sm);
   font-size:var(--fs-body-sm);font-weight:var(--fw-bold);font-family:inherit;cursor:pointer;transition:all .12s}
@@ -320,7 +324,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .cpal .cc .cd{font-size:11px;color:var(--ink-4)}
 .cpal .cc[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
 .cnote{max-width:640px;margin:18px auto 0;text-align:center;font-size:var(--fs-meta);color:var(--ink-3)}
-@media (max-width:640px){.cpal{grid-template-columns:repeat(4,1fr);gap:6px}.cpal .cc .dot{width:34px;height:34px}.cpal .cc .cd{display:none}.ctabs{grid-template-columns:repeat(2,minmax(0,1fr))}.ctabs button span{font-size:13px}.cseg button{height:42px;font-size:13px}}
+@media (max-width:640px){.cpal{grid-template-columns:repeat(4,1fr);gap:6px}.cpal .cc .dot{width:34px;height:34px}.cpal .cc .cd{display:none}.ctabs{grid-template-columns:repeat(2,minmax(0,1fr))}.ctabs button{height:96px}.ctabs .cnum{font-size:30px}.cseg button{height:42px;font-size:13px}}
 /* 관리자 보정 칸 */
 .ctune{margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
 .ctune .row{display:grid;grid-template-columns:28px 1fr 1fr 52px 84px 70px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line-soft);font-size:13px}
@@ -422,7 +426,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 <div class="prose cintro"><p>원하는 공간과 채광 상태를 설정한 뒤, 20가지 컬러 팔레트를 자유롭게 클릭해 보세요. 우리 집에 가장 잘 어울리는 유니슬렛을 미리 확인하실 수 있습니다.</p></div>
 
 <div class="cviz" id="cviz">
-  <div class="cgrp"><div class="clabel">공간</div><div class="ctabs" role="tablist" aria-label="사진 유형"><button type="button" class="ct" data-t="0" aria-pressed="false"><img src="img/thumb0.jpg" alt="" loading="lazy"><span>단독주택 거실</span></button><button type="button" class="ct" data-t="1" aria-pressed="false"><img src="img/thumb1.jpg" alt="" loading="lazy"><span>아파트 20평대 거실</span></button><button type="button" class="ct" data-t="2" aria-pressed="true"><img src="img/thumb2.jpg" alt="" loading="lazy"><span>아파트 30평대 거실</span></button><button type="button" class="ct" data-t="3" aria-pressed="false"><img src="img/thumb3.jpg" alt="" loading="lazy"><span>아파트 40평대 거실</span></button></div></div>
+  <div class="cgrp"><div class="clabel">공간</div><div class="ctabs" role="tablist" aria-label="사진 유형"><button type="button" class="ct" data-t="0" aria-pressed="false"><span class="cnum">단독<small></small></span><span class="cline"></span><span class="cname">주택 거실</span></button><button type="button" class="ct" data-t="1" aria-pressed="false"><span class="cnum">20<small>평대</small></span><span class="cline"></span><span class="cname">아파트 거실</span></button><button type="button" class="ct" data-t="2" aria-pressed="true"><span class="cnum">30<small>평대</small></span><span class="cline"></span><span class="cname">아파트 거실</span></button><button type="button" class="ct" data-t="3" aria-pressed="false"><span class="cnum">40<small>평대</small></span><span class="cline"></span><span class="cname">아파트 거실</span></button></div></div>
   <div class="cstage"><canvas id="cv" width="1600" height="900" aria-label="컬러 미리보기"></canvas>
     <div class="cload" id="cload">불러오는 중…</div></div>
   <div class="cgrp"><div class="clabel">채광 상태</div><div class="cseg" role="group" aria-label="채광 상태"><button type="button" class="cs" data-s="0" aria-pressed="true">풀채광</button><button type="button" class="cs" data-s="1" aria-pressed="false">반채광</button><button type="button" class="cs" data-s="2" aria-pressed="false">사생활보호</button></div></div>
