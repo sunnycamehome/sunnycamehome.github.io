@@ -248,17 +248,21 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .stats span{display:block;margin-top:var(--space-6);font-size:var(--fs-meta);color:var(--ink-3)}
 
 /* ══ 사례 낱장 ══ */
-.art-hd{padding:calc(var(--bar-h) + clamp(24px,3.4vw,48px)) 0 clamp(16px,2vw,26px)}
+/* 쪽 상단 제목은 가운데 (사장님 지시 2026-09-03) — 눈썹말·이끄는 글·잔글까지 함께 */
+.art-hd{padding:calc(var(--bar-h) + clamp(24px,3.4vw,48px)) 0 clamp(16px,2vw,26px);text-align:center}
+.art-hd .back{display:inline-block}
 .back{font-size:var(--fs-meta);font-weight:var(--fw-bold);color:var(--ink-3)}
 .back:hover{color:var(--accent)}
 /* ⚠ 제목 크기는 사장님 지시로 줄인 값입니다 (2026-08-30 「너무 커」).
    토큰 --fs-h1 은 더 크지만 여기서는 쓰지 않습니다. */
 .art-hd h1{margin-top:var(--space-10);font-size:clamp(21px,2.9vw,32px);
   letter-spacing:var(--ls-h1);line-height:var(--lh-head)}
-.art-hd .sub{margin-top:var(--space-12);font-size:var(--fs-lead);color:var(--ink-2);line-height:1.6;max-width:620px}
+.art-hd h1{text-wrap:balance}
+.art-hd .sub{margin:var(--space-12) auto 0;font-size:var(--fs-lead);color:var(--ink-2);line-height:1.6;
+  max-width:620px;text-wrap:pretty}
 .art-hd .meta{margin-top:var(--space-16);padding-top:var(--space-12);border-top:1px solid var(--line);
   font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:var(--ls-meta);color:var(--ink-3);
-  display:flex;gap:var(--space-14);flex-wrap:wrap}
+  display:flex;gap:var(--space-14);flex-wrap:wrap;justify-content:center}
 .flow{padding-bottom:clamp(40px,5vw,72px)}
 .flow figure{margin:0 0 var(--flow-gap)}
 .flow img{width:100%;background:var(--paper-3);border-radius:var(--radius-image-lg)}
