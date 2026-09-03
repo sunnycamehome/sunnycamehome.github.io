@@ -9,7 +9,8 @@
 <!-- 파비콘 — 사장님 로고 심볼(아치 + 나뭇가지)입니다. 사장님이 원본을 주시고 「파비콘으로」 하셨습니다 (2026-09-03).
      구글은 모바일 검색결과에 이 그림을 띄웁니다 — 없으면 회색 지구본이 뜹니다.
      ⭐ 끄는 법 — tools/사이트생성.py 의 «파비콘_컨펌» 을 False 로. 파일도 함께 지워집니다. -->
-
+<link rel="icon" href="/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website"><meta property="og:site_name" content="써니케임홈 SUNNY CAME HOME">
 <meta property="og:title" content="다산앤푸르지오 스마트커튼 유니슬렛 커튼, 허니콤 블라인드 시공사례, 화이트 컬러, 플레인 패턴 — 써니케임홈"><meta property="og:description" content="유니슬렛을 이용 중인 고객께서 다산앤푸르지오에 새로 입주하는 가족을 위해 선물해 주신 유니슬렛 시공사례입니다. 고객께서 가장 많이 선택하는 화이트 컬러 플레인 패턴입니다. 플레인 패턴은 채광의 느낌이 가장 좋습니다. 빛을 부드럽고 은은하게 실내로 비춰 줍니다.">
 <meta property="og:locale" content="ko_KR"><meta property="og:url" content="https://sunnycamehome.com/reference/%EB%8B%A4%EC%82%B0%EC%95%A4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2021/"><meta property="og:image" content="https://sunnycamehome.com/reference/%EB%8B%A4%EC%82%B0%EC%95%A4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2021/01.jpg">
@@ -358,7 +359,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .cpal{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
 .cpal .cc{display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid var(--line);
   background:var(--paper);border-radius:var(--radius-sm);padding:10px 6px 8px;cursor:pointer;font-family:inherit;transition:all .12s}
-.cpal .cc .dot{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);display:block}
+.cpal .cc .dot{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);
+  display:block;overflow:hidden;position:relative}
+/* 원단 사진이 못 오면 뒤에 깔린 색이 그대로 보입니다 */
+.cpal .cc .dot img{width:100%;height:100%;object-fit:cover;display:block}
 .cpal .cc .nm{font-size:var(--fs-meta);color:var(--ink);font-weight:var(--fw-bold)}
 .cpal .cc .cd{font-size:11px;color:var(--ink-4)}
 .cpal .cc[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
@@ -403,8 +407,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   border-radius:var(--radius-lg);margin-top:var(--space-16)}
 
 /* ══ 원단 견본 ══ 마우스를 올리면 컬러명이 뜹니다 ══ */
-.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:6px;
-  max-width:640px;margin-top:var(--space-16)}
+/* ⭐ 2026-09-03 사장님 지시 — 「원단 컬러 이미지를 10%만 더 키워주고, 페이지 가로 크기에 반응형으로」.
+   640px 로 못박아 두었더니 글 칸(759px)이 남는데도 견본이 66px 에 머물렀습니다.
+   칸을 꽉 채우고 «칸 수» 로 크기를 정합니다 — 20종이 10칸이면 두 줄로 딱 떨어집니다. */
+.swatches{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;
+  width:100%;margin-top:var(--space-16)}
+@media (max-width:900px){.swatches{grid-template-columns:repeat(7,minmax(0,1fr))}}
+@media (max-width:560px){.swatches{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}}
 .swatch{position:relative;display:block;aspect-ratio:1/1;border-radius:var(--radius-sm);
   overflow:hidden;background:var(--paper-3)}
 .swatch img{width:100%;height:100%;object-fit:cover}
