@@ -10,7 +10,7 @@
 
 ## 쪽
 
-- [시공사례 149곳](https://sunnycamehome.com/reference/) — 단지 · 지역 · 연월로 찾습니다. 집마다 사진과 그날의 기록이 있습니다
+- [시공사례 150곳](https://sunnycamehome.com/reference/) — 단지 · 지역 · 연월로 찾습니다. 집마다 사진과 그날의 기록이 있습니다
 - [유니슬렛 제품](https://sunnycamehome.com/unislat/) — 플레인 20종 · 180도 각도 조절 · 분할 4가지 · 커튼박스 처리 · 특허
 - [컬러 미리보기](https://sunnycamehome.com/visualize/) — 실제 거실 사진에 컬러 20종을 얹어 봅니다
 - [자주 묻는 질문](https://sunnycamehome.com/faq/) — 시공한 사람이 답한 27가지
@@ -19,12 +19,12 @@
 ## 조건으로 모아 보기
 
 - [분할 시공 — 45곳](https://sunnycamehome.com/모아보기/분할-시공/)
-- [유니슬렛 슬림 — 30곳](https://sunnycamehome.com/모아보기/유니슬렛-슬림/)
+- [유니슬렛 슬림 — 31곳](https://sunnycamehome.com/모아보기/유니슬렛-슬림/)
 - [서울특별시 강남구 — 13곳](https://sunnycamehome.com/모아보기/서울-강남구/)
+- [서울특별시 강동구 — 12곳](https://sunnycamehome.com/모아보기/서울-강동구/)
 - [유니슬렛 전동 — 12곳](https://sunnycamehome.com/모아보기/유니슬렛-전동/)
 - [경기도 성남시 — 11곳](https://sunnycamehome.com/모아보기/경기도-성남시/)
-- [서울특별시 강동구 — 11곳](https://sunnycamehome.com/모아보기/서울-강동구/)
-- [1층·저층 — 9곳](https://sunnycamehome.com/모아보기/1층-저층/)
+- [1층·저층 — 10곳](https://sunnycamehome.com/모아보기/1층-저층/)
 - [기역자 거실 — 9곳](https://sunnycamehome.com/모아보기/기역자-거실/)
 - [서울특별시 서초구 — 9곳](https://sunnycamehome.com/모아보기/서울-서초구/)
 - [경기도 수원시 — 8곳](https://sunnycamehome.com/모아보기/경기도-수원시/)
