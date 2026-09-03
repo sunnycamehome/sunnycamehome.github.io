@@ -312,6 +312,18 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .qa p{margin-top:var(--space-10);font-size:var(--fs-prose);line-height:var(--lh-prose);
   color:var(--ink-2);text-wrap:pretty}
 .qa p + p{margin-top:var(--space-12)}
+/* 문답 하나하나를 나눌 수 있게 (사장님 지시 2026-09-03) */
+.qa{scroll-margin-top:80px;border-radius:var(--radius-sm);transition:background .4s ease}
+.qa.lit{background:var(--paper-3)}
+.qa h3 .qa-a{color:inherit}
+.qa h3 .qa-a:hover{text-decoration:underline;text-underline-offset:4px}
+.qa-share{display:flex;gap:8px;margin-top:var(--space-10)}
+.qa-b{border:1px solid var(--line);background:var(--paper);color:var(--ink-3);
+  font-family:var(--font-sans);font-size:12px;line-height:1;padding:7px 11px;
+  border-radius:var(--radius-pill);cursor:pointer;transition:border-color .15s,color .15s}
+.qa-b:hover{border-color:var(--line-strong);color:var(--ink)}
+.qa-b.done{border-color:var(--ink);color:var(--ink)}
+@media (max-width:560px){.qa-b{font-size:11px;padding:6px 10px}}
 .faq-end{max-width:var(--narrow);margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
   border-top:1px solid var(--line);text-align:center}
 .faq-end p{font-size:var(--fs-body);color:var(--ink-2)}
