@@ -87,7 +87,7 @@
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
   --max:1420px;--narrow:820px;
-  --measure-lead:640px;--measure-say:720px;--measure-hero-p:490px;
+  --measure-lead:640px;--measure-case:760px;--measure-say:720px;--measure-hero-p:490px;
   --card-min:290px;--bar-h:60px;
   /* 머리 사진 높이 — 사장님 지시 2026-08-30 「지금의 3/5 로」. 옛 값 min(94vh,860px) 의 3/5 입니다.
      참고로 디자인 시스템의 --hero-h 는 min(55vh,480px) 라 거의 같은 자리입니다. */
@@ -110,6 +110,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 :focus-visible{outline:1px solid var(--ink-4);outline-offset:2px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .narrow{max-width:var(--narrow)}
+/* ⭐ 2026-09-03 사장님 지시 — 「시공사례 글 가로 최대 사이즈를, 스탠다드가 더 넓다면 고쳐줘. 반응형으로」.
+   글칸은 한 줄 42자로 이미 알맞았습니다(한글은 35~45자가 편합니다). 좁았던 것은 «사진» 입니다 —
+   1440px 화면에서 큰 사진이 756px 에 묶여 있었습니다.
+   → 낱장의 «칸» 만 넓히고, 글은 읽던 너비 그대로 가운데에 둡니다. 사진·표·비슷한 집이 칸을 다 씁니다. */
+.case{max-width:min(1080px,100%)}
+.case .say,.case .spec,.case .chips{max-width:var(--measure-case);margin-left:auto;margin-right:auto}
+@media (max-width:900px){.case .say,.case .spec,.case .chips{max-width:100%}}
 .eyebrow{font-family:var(--font-sans);font-size:var(--fs-eyebrow);font-weight:var(--fw-bold);
   letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--ink-3)}
 
@@ -494,7 +501,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   
   <div class="meta"><span>서울특별시 강남구</span><span>2025년 2월</span><span>유니슬렛 커튼</span><span>사진 14장</span></div>
 </div></main>
-<div class="wrap narrow"><div class="flow">
+<div class="wrap narrow case"><div class="flow">
 <div class="say"><p>유니슬렛 전동 커튼은 리모콘과 와이파이 연동 스마트폰 앱으로 컨트롤 가능합니다. 열기, 닫기, 각도 조절 등 모든 기능을 간편하게 사용할 수 있습니다. 또한,스마트폰 전용앱을 통해 스케줄링 가능합니다.</p><p>동작은 양개(양쪽으로 열림)와 편개(한쪽으로 열림) 중에 선택가능하며, 보통 거실은 양개로 하시는 게 좋습니다.</p><p>기존 유니슬렛 커튼과 동일하게, 풀 채광 상태에서는 마치 얇은 쉬폰처럼 보이고, 직사광선을 부드럽게 굴절시켜 실내를 아늑하고 편안한 분위기로 연출합니다. 풀 채광 상태에서 쉬폰보다 더 선명하게 외부 조망도 가능합니다. 물론 낮에는 외부에서 집 내부가 보이지 않습니다.</p></div>
 <figure><img src="02.jpg" alt="삼성동 현대아파트 유니슬렛 전동커튼 소프트화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>각도 조절을 통해 채광량 및 사생활 보호가 가능합니다.</p></div>

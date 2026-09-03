@@ -87,7 +87,7 @@
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
   --max:1420px;--narrow:820px;
-  --measure-lead:640px;--measure-say:720px;--measure-hero-p:490px;
+  --measure-lead:640px;--measure-case:760px;--measure-say:720px;--measure-hero-p:490px;
   --card-min:290px;--bar-h:60px;
   /* 머리 사진 높이 — 사장님 지시 2026-08-30 「지금의 3/5 로」. 옛 값 min(94vh,860px) 의 3/5 입니다.
      참고로 디자인 시스템의 --hero-h 는 min(55vh,480px) 라 거의 같은 자리입니다. */
@@ -110,6 +110,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 :focus-visible{outline:1px solid var(--ink-4);outline-offset:2px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .narrow{max-width:var(--narrow)}
+/* ⭐ 2026-09-03 사장님 지시 — 「시공사례 글 가로 최대 사이즈를, 스탠다드가 더 넓다면 고쳐줘. 반응형으로」.
+   글칸은 한 줄 42자로 이미 알맞았습니다(한글은 35~45자가 편합니다). 좁았던 것은 «사진» 입니다 —
+   1440px 화면에서 큰 사진이 756px 에 묶여 있었습니다.
+   → 낱장의 «칸» 만 넓히고, 글은 읽던 너비 그대로 가운데에 둡니다. 사진·표·비슷한 집이 칸을 다 씁니다. */
+.case{max-width:min(1080px,100%)}
+.case .say,.case .spec,.case .chips{max-width:var(--measure-case);margin-left:auto;margin-right:auto}
+@media (max-width:900px){.case .say,.case .spec,.case .chips{max-width:100%}}
 .eyebrow{font-family:var(--font-sans);font-size:var(--fs-eyebrow);font-weight:var(--fw-bold);
   letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--ink-3)}
 
@@ -494,7 +501,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   
   <div class="meta"><span>서울특별시 구로구</span><span>2021년</span><span>유니슬렛 커튼</span><span>사진 9장</span></div>
 </div></main>
-<div class="wrap narrow"><div class="flow">
+<div class="wrap narrow case"><div class="flow">
 <div class="say"><p>가장 인기가 많은</p><p>스마트커튼 유니슬렛</p><p>화이트 컬러 플레인 시공사례입니다.</p><p>채광과 사생활 보호를</p><p>커튼봉 하나로 쉽게 바꿀 수 있는 게</p><p>유니슬렛의 강정입니다.</p><p>그러나 실제 강점은</p><p>스마트커튼 유니슬렛의</p><p>아름다운 채광 연출입니다.</p><p>빛을 부드럽게 여과시켜</p><p>거실을 우아한 분위기로 연출합니다.</p><p>아래는 풀채광 모습</p></div>
 <div class="pair"><figure><img src="02.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="1280" height="960"></figure><figure><img src="03.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="738" height="1280"></figure></div>
 <div class="say"><p>슬랫을 45도 각도로 눕혔을 때</p><p>반 채광 느낌입니다.</p></div>

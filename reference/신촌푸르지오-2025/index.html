@@ -87,7 +87,7 @@
   --tile-pad:clamp(18px,2vw,26px);
   --hero-pad-b:clamp(30px,4vw,56px);
   --max:1420px;--narrow:820px;
-  --measure-lead:640px;--measure-say:720px;--measure-hero-p:490px;
+  --measure-lead:640px;--measure-case:760px;--measure-say:720px;--measure-hero-p:490px;
   --card-min:290px;--bar-h:60px;
   /* 머리 사진 높이 — 사장님 지시 2026-08-30 「지금의 3/5 로」. 옛 값 min(94vh,860px) 의 3/5 입니다.
      참고로 디자인 시스템의 --hero-h 는 min(55vh,480px) 라 거의 같은 자리입니다. */
@@ -110,6 +110,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 :focus-visible{outline:1px solid var(--ink-4);outline-offset:2px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .narrow{max-width:var(--narrow)}
+/* ⭐ 2026-09-03 사장님 지시 — 「시공사례 글 가로 최대 사이즈를, 스탠다드가 더 넓다면 고쳐줘. 반응형으로」.
+   글칸은 한 줄 42자로 이미 알맞았습니다(한글은 35~45자가 편합니다). 좁았던 것은 «사진» 입니다 —
+   1440px 화면에서 큰 사진이 756px 에 묶여 있었습니다.
+   → 낱장의 «칸» 만 넓히고, 글은 읽던 너비 그대로 가운데에 둡니다. 사진·표·비슷한 집이 칸을 다 씁니다. */
+.case{max-width:min(1080px,100%)}
+.case .say,.case .spec,.case .chips{max-width:var(--measure-case);margin-left:auto;margin-right:auto}
+@media (max-width:900px){.case .say,.case .spec,.case .chips{max-width:100%}}
 .eyebrow{font-family:var(--font-sans);font-size:var(--fs-eyebrow);font-weight:var(--fw-bold);
   letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--ink-3)}
 
@@ -494,7 +501,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   
   <div class="meta"><span>서울특별시 서대문구</span><span>2025년 4월</span><span>유니슬렛 커튼</span><span>사진 11장</span></div>
 </div></main>
-<div class="wrap narrow"><div class="flow">
+<div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/PqTySPGVLbo" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>신촌푸르지오</p><p>스마트커튼유니슬렛시공사례</p><p>밝고 세련된 거실 분위기를 원하시고, 외부 시선으로부터 프라이버시를 보호할 수 있는 솔루션을 찾고 계셨다면. 유니슬렛을 선택하시면 됩니다.</p><p>이번 시공은 화사하고 고급스러운 느낌의 '유니슬렛 커튼 화이트'입니다. 이 제품은 쉬폰 같은 투명함과 뛰어난 볼륨감을 동시에 갖추어 낮에는 햇빛을 부</p><p>드럽게 실내로 들여 아늑하고 환한 분위기를 만들어 줍니다.</p><p>가로 4.5 m 화이트 컬러 플레인 패턴 시공사례입니다.</p><p>우선 영상을 통해 간편한 조작과 채광별 모습을 확인해 보세요.</p><p>유니슬랫 커튼 화이트 컬러, 신촌 푸르지오 거실 시공 사례</p><p>좌측 샷시 기준으로 제작 및 시공했습니다.</p><p>기후 및 상황에 맞게 좌우면의 채광 컨트롤 할 수 있습니다.</p></div>
 <div class="pair"><figure><img src="02.jpg" alt="신촌 푸르지오 스마트커튼 유니슬렛 화이트 컬러 시공 사례 — 유니슬랫 커튼 화이트 컬러, 신촌 푸르지오 거실 시공 사례" loading="lazy" width="1280" height="720"></figure><figure><img src="03.jpg" alt="신촌 푸르지오 스마트커튼 유니슬렛 화이트 컬러 시공 사례 — 유니슬랫 커튼 화이트 컬러, 신촌 푸르지오 거실 시공 사례" loading="lazy" width="1280" height="720"></figure></div>
