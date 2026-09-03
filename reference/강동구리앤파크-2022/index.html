@@ -350,6 +350,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .sit-g .sit span{font-size:var(--fs-meta);color:var(--ink-4);white-space:nowrap}
 @media (max-width:560px){.sit-g{grid-template-columns:1fr 1fr;gap:var(--space-8)}
   .sit-g .sit{padding:12px 13px;flex-direction:column;align-items:flex-start;gap:4px}}
+/* 주소 복사 단추 (사장님 지시 2026-09-03) */
+.cp{border:1px solid var(--line);background:var(--paper);color:var(--ink-3);
+  font-family:var(--font-sans);font-size:12px;line-height:1;padding:5px 10px;
+  border-radius:var(--radius-pill);cursor:pointer;transition:border-color .15s,color .15s}
+.cp:hover{border-color:var(--line-strong);color:var(--ink)}
+.cp.done{border-color:var(--ink);color:var(--ink)}
+@media (max-width:560px){.cp{font-size:11px;padding:5px 9px}}
 .faq-end{max-width:var(--narrow);margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
   border-top:1px solid var(--line);text-align:center}
 .faq-end p{font-size:var(--fs-body);color:var(--ink-2)}
@@ -515,7 +522,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
   <a class="back" href="../">← Reference</a>
   <h1>강동구 리앤파크 아파트2층 유니슬렛 커튼 시공사례</h1>
   
-  <div class="meta"><span>서울특별시 강동구</span><span>2022년 6월</span><span>유니슬렛 커튼</span><span>사진 13장</span></div>
+  <div class="meta"><span>서울특별시 강동구</span><span>2022년 6월</span><span>유니슬렛 커튼</span><span>사진 13장</span>
+    <button type="button" class="cp" data-u="https://sunnycamehome.com/t/gangdongguriaenpakeu-2022">주소 복사</button></div>
 </div></main>
 <div class="wrap narrow case"><div class="flow">
 <div class="say"><p>아파트 2층 시공사례입니다.</p><p>아파트 저층의 경우</p><p>사생활 보호가 많이 신경쓰이는 편입니다.</p><p>커튼이나 블라인드를 선택시에</p><p>사생활 보호가 반드시 필요하기도 하죠.</p><p>유니슬렛 커튼의 경우</p><p>완벽한 사생활 보호 뿐만 아니라</p><p>각도 조절을 통해 채광까지 가능합니다.</p><p>유니슬렛의 채광은</p><p>실내를 부드럽고 우아하게 만들어줍니다.</p><p>풀채광 모습</p><p>화이트 컬러, 플레인 패턴</p></div>
@@ -575,6 +583,21 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
  var nm=document.querySelectorAll('.hero .now b'),sl=document.querySelectorAll('.hero .slides img');
  if(nm.length&&sl.length>1){var i=0,d=parseFloat(getComputedStyle(document.querySelector('.hero .slides')).getPropertyValue('--step'))*1000||5000;
    setInterval(function(){i=(i+1)%nm.length;nm.forEach(function(e,k){e.hidden=k!==i;});},d);}
+ // 주소 복사 (사장님 지시 2026-09-03) — 한글 주소는 붙여넣는 곳에서 깨지므로 영문 짧은 주소를 담습니다
+ document.querySelectorAll('.cp').forEach(function(x){
+   x.addEventListener('click',function(){
+     var u=x.dataset.u, 옛=x.textContent;
+     function 됨(){x.textContent='복사했습니다';x.classList.add('done');
+       setTimeout(function(){x.textContent=옛;x.classList.remove('done');},1400);}
+     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(됨,function(){옛식(u,됨);});}
+     else 옛식(u,됨);
+   });
+ });
+ function 옛식(u,뒤){var t=document.createElement('textarea');t.value=u;
+   t.setAttribute('readonly','');t.style.position='fixed';t.style.left='-9999px';
+   document.body.appendChild(t);t.select();
+   try{document.execCommand('copy');뒤();}catch(e){}
+   document.body.removeChild(t);}
 })();
 </script>
 </body></html>
