@@ -335,6 +335,22 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--fw-semibold)}
 .qa-b:hover{border-color:var(--line-strong);color:var(--ink)}
 .qa-b.done{border-color:var(--ink);color:var(--ink)}
 @media (max-width:560px){.qa-b{font-size:11px;padding:6px 10px}}
+/* 상황 칩 줄 (사장님 지시 2026-09-03) */
+.filters.sit{margin-top:var(--space-10);align-items:center}
+.filters.sit .filt-t{font-family:var(--font-sans);font-size:var(--fs-meta);color:var(--ink-4);
+  margin-right:var(--space-6);white-space:nowrap}
+.filters.sit .chip i{font-style:normal;color:var(--ink-4);font-size:11px;margin-left:3px}
+.filters.sit .chip[aria-pressed=true] i{color:inherit;opacity:.7}
+/* 첫 화면 「상황으로 고르기」 (사장님 지시 2026-09-03) */
+.sit-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:var(--space-10)}
+.sit-g .sit{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-10);
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;background:var(--paper);
+  transition:border-color .15s,background .15s}
+.sit-g .sit:hover{border-color:var(--ink);background:var(--paper-2)}
+.sit-g .sit b{font-family:var(--font-sans);font-size:var(--fs-body-sm);font-weight:var(--fw-bold);color:var(--ink)}
+.sit-g .sit span{font-size:var(--fs-meta);color:var(--ink-4);white-space:nowrap}
+@media (max-width:560px){.sit-g{grid-template-columns:1fr 1fr;gap:var(--space-8)}
+  .sit-g .sit{padding:12px 13px;flex-direction:column;align-items:flex-start;gap:4px}}
 .faq-end{max-width:var(--narrow);margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
   border-top:1px solid var(--line);text-align:center}
 .faq-end p{font-size:var(--fs-body);color:var(--ink-2)}
