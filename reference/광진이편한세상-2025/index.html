@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -531,7 +534,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/MiqRkGK8z_0" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>가로 길이 5.1 거실은 유니슬렛 커튼, 안방은 암막 허니콤 &amp; 쉬폰 커튼, 서재와 아이방은 L자형 알리미늄 블라인드로 시공했습니다.</p><p>풀채광 모습</p></div>
-<div class="pair"><figure><img src="02.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 풀채광 모습" loading="lazy" width="1280" height="720"></figure><figure><img src="01.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 풀채광 모습" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="02.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 풀채광 모습" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="01.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 풀채광 모습" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>오른쪽 샷시 기준으로 분할, 샷시 기준으로 분할할 경우, 보통 쇼파쪽에사 가까운 쪽으로 분할 합니다.</p><p>왼쪽 풀채광, 오른쪽은 사생활 보호.</p></div>
 <figure><img src="03.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 풀채광 모습" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>왼쪽 사생활 보호, 오른쪽은 풀 채광.</p></div>
@@ -539,29 +542,29 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>사생활 보호</p></div>
 <figure><img src="05.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>커튼박스 부분.</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="1280"></figure><figure><img src="07.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="06.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="07.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>유니슬렛을 가까이에서 찍은 영상, 유니슬렛의 질감과 각도조절을 더 상세하게 확인하세요.</p></div>
 <div class="vid"><iframe src="https://www.youtube.com/embed/KWA8lE6yuZM" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>etc...</p></div>
-<div class="pair"><figure><img src="08.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure><img src="09.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure></div>
-<div class="pair"><figure><img src="10.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure><img src="11.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="08.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="09.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="10.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="11.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>분할 부분 커튼봉 숨김 처리.</p></div>
 <figure><img src="12.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>유니슬렛 커튼만의 투명한 볼륨감.</p></div>
 <figure><img src="13.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>안방은 허니콤 암막 블라인드</p></div>
-<div class="pair"><figure><img src="14.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure><img src="15.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="14.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="15.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
 <figure><img src="16.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>우측 부분은 쉬폰 커튼 하드 도톰 원단으로 시공.</p></div>
-<div class="pair"><figure><img src="17.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure><img src="18.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="17.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="18.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>아이방은 L자형 알리미늄 블라인드(매직 블라인드)로 시공.</p></div>
-<div class="pair"><figure><img src="19.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure><img src="20.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="19.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="20.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>알리미늄 슬랫을 닫았을 떄, 수직 라인이 평평해 지기 때문에 간이 암막으로 활용 가능합니다.</p></div>
-<div class="pair"><figure><img src="21.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure><img src="22.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="1280"></figure></div>
-<div class="pair"><figure><img src="23.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure><img src="24.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="21.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.0000"><img src="22.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="23.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.0000"><img src="24.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>서재방도 L자형 매직블라인드로 시공. 정중앙 이분할.</p></div>
-<div class="pair"><figure><img src="25.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure><img src="26.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="27.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure><img src="28.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="25.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="26.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="27.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="28.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="1280" height="960"></figure></div>
 <figure><img src="29.jpg" alt="광진구 이편한세상 유니슬렛 커튼, 허니콤 암막, 쉬폰커튼, L자형 블라인드 써니케임홈 시공 사례 — 안방은 허니콤 암막 블라인드" loading="lazy" width="960" height="1280"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223994078819" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EA%B4%91%EC%A7%84%EA%B5%AC-%EB%9E%98%EB%AF%B8%EC%95%88%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4-2025/"><span class="ph"><img src="../%EA%B4%91%EC%A7%84%EA%B5%AC-%EB%9E%98%EB%AF%B8%EC%95%88%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4-2025/thumb.jpg" alt="광진구 래미안프리미어팰리스 거실 유니슬렛 화이트 안방 유니슬렛 슬림 다크그레이 써니케임홈 시공사례" loading="lazy"></span><b>광진구 래미안프리미어팰리스 거실</b><small>서울특별시 광진구</small></a><a href="../%EC%9E%90%EC%96%91%EA%B2%BD%EB%82%A8%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%8A%AC%EB%A6%BC-2024/"><span class="ph"><img src="../%EC%9E%90%EC%96%91%EA%B2%BD%EB%82%A8%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%8A%AC%EB%A6%BC-2024/thumb.jpg" alt="광진구 자양 경남아파트 유니슬랫 슬림 소프트화이트, 암막커튼, 쉬폰커튼, 알리미늄 블라인드 써니케임홈 시공사례" loading="lazy"></span><b>광진구 자양 경남아파트</b><small>서울특별시 광진구</small></a><a href="../%EA%B4%91%EC%A7%84%EA%B5%AC-%EB%9E%98%EB%AF%B8%EC%95%88%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%ED%8C%B0%EB%A6%AC%EC%8A%A4-2025/"><span class="ph"><img src="../%EA%B4%91%EC%A7%84%EA%B5%AC-%EB%9E%98%EB%AF%B8%EC%95%88%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%ED%8C%B0%EB%A6%AC%EC%8A%A4-2025/thumb.jpg" alt="광진구 유니슬렛 전동커튼 화이트 래미안프리미어팰리스 시공사례 써니케임홈" loading="lazy"></span><b>광진구</b><small>서울특별시 광진구</small></a></div></nav>

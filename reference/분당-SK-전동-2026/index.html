@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -531,7 +534,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/KMnjPs_rS3U" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>유니슬렛 전동 커튼 사례입니다.</p><p>화이트 컬러 플레인 패턴</p><p>가로 길이 4.8 높이 2.4 미터 기준입니다.</p><p>먼저 근접 영상으로 시작해 봅니다.</p><p>저는 풀채광 상태의 모습을 개인적으로 좋아합니다.</p><p>열림은 양개(양쪽 열림)과 편개(왼쪽에서 오른쪽 열리고 닫힘) 중 선택 가능합니다.</p><p>천정이 콘크리트라 칼블럭을 10개를 했습니다. 전동이 수동 보다 많이 무겁습니다.</p></div>
-<div class="pair"><figure><img src="02.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 화이트 컬러 플레인 패턴" loading="lazy" width="1280" height="720"></figure><figure><img src="03.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 화이트 컬러 플레인 패턴" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="02.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 화이트 컬러 플레인 패턴" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="03.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 화이트 컬러 플레인 패턴" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>유니슬랫 커튼은 커튼의 우아함과 블라인드의 편리함을 결합한 국내 최초의 제품으로, 해외로도 수출되는 국내 유일의 커튼입니다. 단순한 상표 등록이 아닌, 디자인 특허를 보유한 제품으로, 유사 카피 제품들과는 품질에서 확연한 차이가 있습니다. 써니케임홈은 스마트커튼 유니슬렛 정품만을 사용합니다. 1년간 무상 AS이며, 기간 외에도 유상 AS 및 이사로 인한 이전설치 가능합니다.</p><p>전체 뷰 영상을 확인해 주세요.</p><p>좌우 180도 범위로 각도 조절이 가능합니다.</p><p>당연히 리모컨 외에도 스마트폰 앱으로 컨트롤 가능하여</p><p>스케줄러 기능도 지원합니다.</p><p>자칭 유니슬렛 정품이라 주장하는 타사 카피 제품의 경우도 호환 안됩니다.</p><p>저작권이 있기 때문에, 이걸 피하려고 규격을 바꿔서 그럴 겁니다.</p><p>무슨 이유인지 저에게 연락 주셨지만, 사실 부품 호환이 안되어 제가 해드릴 수 있는 게 없습니다.</p><p>구매 시공하셨던 원 업체에게 맡기셔야 합니다.</p><p>제 고객님의 경우, 유니슬렛을 사용하는 마지막 날까지 책임져 드립니다.</p></div>
 <figure><img src="04.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 당연히 리모컨 외에도 스마트폰 앱으로 컨트롤 가능하여" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>사생활 보호.</p><p>자주 물어보시는 질문인데,</p><p>밤에도 외부에서 내부가 절대 보이지 않습니다.</p></div>
@@ -541,7 +544,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>각도 조절.</p></div>
 <figure><img src="07.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 당연히 리모컨 외에도 스마트폰 앱으로 컨트롤 가능하여" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>사생활 보호.ㅋ</p></div>
-<div class="pair"><figure><img src="08.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 사생활 보호.ㅋ" loading="lazy" width="1280" height="960"></figure><figure><img src="01.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 사생활 보호.ㅋ" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="08.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 사생활 보호.ㅋ" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.7778"><img src="01.jpg" alt="유니슬렛 전동 커튼 분당 SK 파크뷰 시공 사례 — 사생활 보호.ㅋ" loading="lazy" width="1280" height="720"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/224152089684" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%84%B1%EB%82%A8-%EC%9D%B4%ED%8E%B8%ED%95%9C%EC%84%B8%EC%83%81%EA%B8%88%EB%B9%9B%EA%B7%B8%EB%9E%91%EB%A9%94%EC%A2%85-2025/"><span class="ph"><img src="../%EC%84%B1%EB%82%A8-%EC%9D%B4%ED%8E%B8%ED%95%9C%EC%84%B8%EC%83%81%EA%B8%88%EB%B9%9B%EA%B7%B8%EB%9E%91%EB%A9%94%EC%A2%85-2025/thumb.jpg" alt="24평 거실 유니슬렛 슬림 성남 e편한세상 금빛그랑메종 써니케임홈 시공 사례" loading="lazy"></span><b>24평 거실</b><small>경기도 성남시</small></a><a href="../%EB%B6%84%EB%8B%B9%EC%84%A0%EA%B2%BD%EC%95%84%ED%8C%8C%ED%8A%B8-2025/"><span class="ph"><img src="../%EB%B6%84%EB%8B%B9%EC%84%A0%EA%B2%BD%EC%95%84%ED%8C%8C%ED%8A%B8-2025/thumb.jpg" alt="분당 아름마을 선경아파트 유니슬렛 커튼 화이트 플레인 패턴 써니케임홈 시공사례" loading="lazy"></span><b>분당 아름마을 선경아파트</b><small>경기도 성남시</small></a><a href="../%EC%9D%B4%EB%A7%A4%EA%B8%88%EA%B0%95%EC%95%84%ED%8C%8C%ED%8A%B8-2024/"><span class="ph"><img src="../%EC%9D%B4%EB%A7%A4%EA%B8%88%EA%B0%95%EC%95%84%ED%8C%8C%ED%8A%B8-2024/thumb.jpg" alt="분당 이매 금강 아파트3층 유니슬렛 커튼 화이트 슬림 소프트화이트 타공 알리미늄 써니케임홈 시공사례" loading="lazy"></span><b>분당 이매 금강 아파트3층</b><small>경기도 성남시</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/경기도-성남시/">경기도 성남시</a><a href="../../모아보기/유니슬렛-전동/">유니슬렛 전동</a></nav>

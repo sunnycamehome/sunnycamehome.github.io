@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -536,8 +539,8 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>밝은 낮일 경우에 채광 모드로 사용하더라도 외부에서 내부가 잘 보이지 않습니다.</p><p>사생활 보호 모드입니다.</p><p>스마트커튼 유니슬렛의 경우, 가로 폭 약 43 cm 원단이 1미터에 9장이 들어갑니다.</p><p>그래서 사생활 보호 모드로 했을 시에 원단이 모두 포개져 있기 때문에</p><p>화이트 컬러로 선택했다고 해도 외부에서 내부를 볼 수 없습니다.</p><p>타인의 시선에서 완전 자유롭습니다.</p></div>
 <figure><img src="03.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>또한 스마트커튼 유니슬렛은 가로 43cm 짜리 낱장으로 구성되어 있기 때문에, 1장으로 되어 있는 일반 커튼 보다 먼지에 덜 오염됩니다. 평소 관리는 공기 청소기로 1달에 1번 정도 먼지를 가볍게 제거해 주시면 됩니다.</p><p>작동 방법도 커튼 손잡이를 통해 조작할 수 있습니다.</p><p>스마트커튼 유니슬렛은 커튼손잡이 하나로 열기와 닫기, 그리고 180도 범위로 회전할 수 있기 때문에 원하는 각도로 채광을 조절하고, 완전히 닫아 사생활 보호가 가능합니다.</p></div>
-<div class="pair"><figure><img src="04.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure><figure><img src="05.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure></div>
-<div class="pair"><figure><img src="06.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure><figure><img src="07.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="04.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="05.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="06.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="07.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure></div>
 <figure><img src="08.jpg" alt="종로구 경희궁자이 유니슬렛 커튼 화이트 시공 사례 — 거실 공간에 특정 부분 빛 반사를 줄이고 싶은 경우" loading="lazy" width="1280" height="720"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222683650261" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%ED%8F%89%EC%B0%BD%EB%8F%99-%EB%A1%AF%EB%8D%B0%EB%B9%8C%EB%9D%BC-2025/"><span class="ph"><img src="../%ED%8F%89%EC%B0%BD%EB%8F%99-%EB%A1%AF%EB%8D%B0%EB%B9%8C%EB%9D%BC-2025/thumb.jpg" alt="평창동 유니슬렛 슬림 수동 소프트화이트, 블라인드 시공 사례" loading="lazy"></span><b>평창동</b><small>서울특별시 종로구</small></a><a href="../%EA%B2%BD%ED%9D%AC%EA%B6%81%EC%9E%90%EC%9D%B42%EC%B0%A8-2024/"><span class="ph"><img src="../%EA%B2%BD%ED%9D%AC%EA%B6%81%EC%9E%90%EC%9D%B42%EC%B0%A8-2024/thumb.jpg" alt="종로구 경희궁자이2 아파트1층 유니슬렛 커튼 써니케임홈 시공사례" loading="lazy"></span><b>종로구 경희궁자이2 아파트1층</b><small>서울특별시 종로구</small></a><a href="../%EA%B2%BD%ED%9D%AC%EA%B6%81%EC%9E%90%EC%9D%B4-2026/"><span class="ph"><img src="../%EA%B2%BD%ED%9D%AC%EA%B6%81%EC%9E%90%EC%9D%B4-2026/thumb.jpg" alt="종로구 경희궁 자이 25평 유니슬렛 커튼 써니케임홈 시공사례" loading="lazy"></span><b>종로구 경희궁 자이 25평</b><small>서울특별시 종로구</small></a></div></nav>

@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -531,7 +534,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/2y-YMwhNKCc" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>용산 나인원 한남</p><p>유니슬랫 커튼 화이트 컬러</p><p>스톤 패턴 시공사례입니다.</p><p>유니슬랫은 시각적으로 아름다울 뿐 아니라</p><p>상황에 맞게 각도조절을 통해</p><p>채광량 조절이 가능합니다.</p><p>사생활 보호를 중요하게 생각하는 주거환경일수록</p><p>가장 적합한 커튼입니다.</p></div>
-<div class="pair"><figure><img src="02.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 사생활 보호를 중요하게 생각하는 주거환경일수록" loading="lazy" width="1280" height="960"></figure><figure><img src="01.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 사생활 보호를 중요하게 생각하는 주거환경일수록" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="02.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 사생활 보호를 중요하게 생각하는 주거환경일수록" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="01.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 사생활 보호를 중요하게 생각하는 주거환경일수록" loading="lazy" width="1280" height="960"></figure></div>
 <figure><img src="03.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 사생활 보호를 중요하게 생각하는 주거환경일수록" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>영상을 통해 유니슬렛의 장점을 확인해 보세요.</p><p>망사가 정면을 바라보는 풀 채광 모습입니다.</p><p>내부에서 외부 조망이 가능해서 쉬폰이나 겉커튼 처럼 답답하지 않습니다.</p><p>낮에 외부에서 내부가 보이지 않기 때문에 풀채광에서도 사생활 보호 가능.</p><p>(밝기 차이 때문)</p></div>
 <figure><img src="04.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — (밝기 차이 때문)" loading="lazy" width="960" height="1280"></figure>
@@ -550,9 +553,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>거실 작은 창문</p></div>
 <figure><img src="11.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 거실 작은 창문" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>다른 침실의 경우</p><p>암막 커튼으로 진행</p><p>나비주름 형상기억 처리</p></div>
-<div class="pair"><figure><img src="12.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="883"></figure><figure><img src="13.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="793"></figure></div>
-<div class="pair"><figure><img src="14.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="1280"></figure><figure><img src="15.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="720"></figure></div>
-<div class="pair"><figure><img src="16.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="960"></figure><figure><img src="17.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.4496"><img src="12.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="883"></figure><figure style="--r:1.6141"><img src="13.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="793"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="14.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.7778"><img src="15.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="16.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="17.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="960" height="1280"></figure></div>
 <figure><img src="18.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례 — 나비주름 형상기억 처리" loading="lazy" width="1280" height="800"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223343426611" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99%EB%B9%8C%EB%9D%BC-2024/"><span class="ph"><img src="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99%EB%B9%8C%EB%9D%BC-2024/thumb.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈" loading="lazy"></span><b>용산구 후암동 빌라</b><small>서울특별시 용산구</small></a><a href="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99-2023/"><span class="ph"><img src="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99-2023/thumb.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례" loading="lazy"></span><b>용산구 후암동 빌라</b><small>서울특별시 용산구</small></a><a href="../%ED%95%9C%EB%82%A8%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/"><span class="ph"><img src="../%ED%95%9C%EB%82%A8%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/thumb.jpg" alt="기역자 거실 유니슬렛 커튼 슬림, 한남아이파크 시공사례" loading="lazy"></span><b>기역자 거실</b><small>서울특별시 용산구</small></a></div></nav>

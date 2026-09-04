@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -535,16 +538,16 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>정중앙 이분할로 시공 했습니다.</p><p>왼쪽은 사생황 보호, 오른쪽은 풀 채광</p><p>상황에 맞게 좌우면의 각도를 조절하여 사용.</p></div>
 <figure><img src="03.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 사생황 보호, 오른쪽은 풀 채광" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>왼쪽은 풀 채광, 오른쪽은 사생활 보호</p></div>
-<div class="pair"><figure><img src="04.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure><img src="01.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="04.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="01.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>근접 촬영한 영상입니다.</p><p>총 180도 각도로 채광량을 조절할 수 있고, 커튼봉으로 손쉽게 컨트롤이 가능합니다.</p><p>왼쪽 풀 채광,가운데는 각도 조절한 모습, 오른쪽은 사생활 보호.</p></div>
-<div class="pair"><figure><img src="05.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="06.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="05.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="06.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
 <figure><img src="07.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>사생활 보호 모습. 낮에는 채광량을 확~ 줄여주고 사생활도 완벽하게 보호해 줍니다.</p></div>
 <figure><img src="08.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>유니슬렛만의 반짝이는 볼륨감.</p></div>
-<div class="pair"><figure><img src="09.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="10.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="09.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="10.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 왼쪽은 풀 채광, 오른쪽은 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>분할 부분 커튼봉 숨김 처리</p></div>
-<div class="pair"><figure><img src="11.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 분할 부분 커튼봉 숨김 처리" loading="lazy" width="1280" height="960"></figure><figure><img src="12.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 분할 부분 커튼봉 숨김 처리" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="11.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 분할 부분 커튼봉 숨김 처리" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.7778"><img src="12.jpg" alt="고덕 그라시움 거실 유니슬렛 커튼 화이트 컬러 써니케임홈 시공사례 — 분할 부분 커튼봉 숨김 처리" loading="lazy" width="1280" height="720"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223906133199" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/thumb.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례" loading="lazy"></span><b>기역자거실</b><small>서울특별시 강동구</small></a><a href="../%EA%B3%A0%EB%8D%95%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/"><span class="ph"><img src="../%EA%B3%A0%EB%8D%95%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/thumb.jpg" alt="유니슬렛 화이트 강동구 고덕센트럴아이파크 30평대 시공사례" loading="lazy"></span><b>유니슬렛 화이트 강동구 고덕센트럴아이파크</b><small>서울특별시 강동구</small></a><a href="../%EB%8D%94%EC%83%B5%EB%91%94%EC%B4%8C%ED%8F%AC%EB%A0%88-2025/"><span class="ph"><img src="../%EB%8D%94%EC%83%B5%EB%91%94%EC%B4%8C%ED%8F%AC%EB%A0%88-2025/thumb.jpg" alt="강동구 더샵둔촌포레 유니슬렛 커튼 소프트화이트 컬러 써니케임홈 시공사례" loading="lazy"></span><b>강동구 더샵둔촌포레</b><small>서울특별시 강동구</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/분할-시공/">분할 시공</a><a href="../../모아보기/서울-강동구/">서울특별시 강동구</a></nav>

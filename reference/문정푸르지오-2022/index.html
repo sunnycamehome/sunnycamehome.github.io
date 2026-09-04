@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -530,13 +533,13 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 </div></main>
 <div class="wrap narrow case"><div class="flow">
 <div class="say"><p>시공 전 실측을 하면서</p><p>늘 단순하게 생각을 합니다.</p><p>어떻게 시공을 해야 이쁘고</p><p>조금 더 편리하게 사용할 수 있을지.</p><p>제가 올리는 시공사례는 그런 생각과</p><p>고객님의 생각을 합친 결과물입니다.</p><p>풀채광 상태의 모습입니다.</p><p>빛이 실내로 들어오면서 부드럽게 퍼지는 게 보이시나요?</p><p>실제로 사용해 보시면 커튼을 통한 빛의 연출이</p><p>인테리어에 얼마나 큰 영향을 끼치는지 알게 됩니다.</p></div>
-<div class="pair"><figure><img src="01.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 실제로 사용해 보시면 커튼을 통한 빛의 연출이" loading="lazy" width="1280" height="960"></figure><figure><img src="02.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 실제로 사용해 보시면 커튼을 통한 빛의 연출이" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="01.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 실제로 사용해 보시면 커튼을 통한 빛의 연출이" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="02.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 실제로 사용해 보시면 커튼을 통한 빛의 연출이" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>화이트 컬러는 집 안을 밝고, 부드럽게</p><p>그리고 더 넓어 보이게 만듭니다.</p></div>
 <figure><img src="03.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 화이트 컬러는 집 안을 밝고, 부드럽게" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>가까이에서 보면 야외 조망이 가능합니다.</p><p>그러나 낮에도 외부에서 내부가 잘 보이지 않습니다.</p></div>
-<div class="pair"><figure><img src="04.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 화이트 컬러는 집 안을 밝고, 부드럽게" loading="lazy" width="1280" height="720"></figure><figure><img src="05.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 화이트 컬러는 집 안을 밝고, 부드럽게" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="04.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 화이트 컬러는 집 안을 밝고, 부드럽게" loading="lazy" width="1280" height="720"></figure><figure style="--r:0.7500"><img src="05.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 화이트 컬러는 집 안을 밝고, 부드럽게" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>아래 영상을 통해 채광, 반채광, 사생활 보호 등의 모습과</p><p>작동하는 방법을 확인해 보세요.</p><p>유니슬렛 커튼은 좌 90도 우 90도 등</p><p>총 180도로 회전해서 각도 조절을 할 수 있습니다.</p><p>각도를 45도로 했을 때 모습입니다.</p><p>낮에 채광량을 유지하면서 사생활을 보호를 해주는</p><p>최적의 각도입니다. 물론 사용자가 원하는 각도로 조절해 사용하시면 됩니다.</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 낮에 채광량을 유지하면서 사생활을 보호를 해주는" loading="lazy" width="1280" height="960"></figure><figure><img src="07.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 낮에 채광량을 유지하면서 사생활을 보호를 해주는" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="06.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 낮에 채광량을 유지하면서 사생활을 보호를 해주는" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="07.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 낮에 채광량을 유지하면서 사생활을 보호를 해주는" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>사생활 보호 모드입니다.</p><p>화이트 컬러로 선택했다고 해도 외부에서 내부를 볼 수 없습니다.</p><p>타인의 시선에서 완전 자유로울 수 있습니다.</p></div>
 <figure><img src="08.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례 — 낮에 채광량을 유지하면서 사생활을 보호를 해주는" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>밤에도 당연히 내부가 보이지 않습니다. 사생활 보호로 커튼을 눕혀놨을 때, 커튼 원단이 4겹이 되기 때문입니다.</p></div>

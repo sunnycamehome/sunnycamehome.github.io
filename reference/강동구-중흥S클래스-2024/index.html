@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -533,11 +536,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>강동구 중흥S클래스 30평대 시공사례입니다.</p><p>유니슬렛 커튼은 커튼의 부드러움과</p><p>블라인드 편의성을 결합한 커튼입니다.</p><p>각도 조절을 통해 채광량을 조절할 수 있어, 채광과 사생활 보호가 동시에 가능합니다.</p><p>파치먼트 컬러는 웜 그레이 계열 컬러입니다.</p><p>베이지 / 플래티넘 / 파치먼트</p></div>
 <figure><img src="02.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 베이지 / 플래티넘 / 파치먼트" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>쉬폰 같이 보이는 풀채광</p></div>
-<div class="pair"><figure><img src="01.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 쉬폰 같이 보이는 풀채광" loading="lazy" width="1280" height="720"></figure><figure><img src="03.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 쉬폰 같이 보이는 풀채광" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="01.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 쉬폰 같이 보이는 풀채광" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="03.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 쉬폰 같이 보이는 풀채광" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>우측 샷시 기준으로 분할.</p><p>분할 부분 커튼봉 숨김 처리.</p><p>각도 조절을 통해 좌우면의 채광량 조절이 가능합니다.</p><p>좌측은 사생활 보호 우측은 풀 채광.</p></div>
 <figure><img src="04.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 쉬폰 같이 보이는 풀채광" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>90도 각도로 조절한 사생활 보호 모드는</p><p>낮에 채광량을 많이 줄여주고</p><p>밤에는 사생활 완벽하게 보호합니다.</p></div>
-<div class="pair"><figure><img src="05.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="720"></figure><figure><img src="06.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="05.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="06.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>사진에는 잘 안보이는 유니슬렛만의 볼륨감과 각도조절을 확인해 보세요.</p></div>
 <figure><img src="07.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>바닥 띄움.</p></div>
@@ -545,14 +548,14 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>커튼박스 처리.</p></div>
 <figure><img src="09.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 낮에 채광량을 많이 줄여주고" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>풀 채광 / 각도 조절 / 사생활 보호</p></div>
-<div class="pair"><figure><img src="10.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="11.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="10.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="11.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
 <figure><img src="12.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>분할 부분 커튼봉 숨김 처리.</p></div>
 <figure><img src="13.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>일반커튼은 스냅 작업 선행.</p></div>
-<div class="pair"><figure><img src="14.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="1280"></figure><figure><img src="15.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="14.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="15.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>침실은 암막 커튼. 라이트 베이지 컬러. 나비주름, 형상기억.</p></div>
-<div class="pair"><figure><img src="16.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="17.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="16.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="17.jpg" alt="강동구 중흥S클래스 유니슬렛 커튼 파치먼트 컬러 써니케임홈 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223840677366" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2024/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2024/thumb.jpg" alt="올림픽파크 포레온 25평 유니슬렛 커튼 소프트화이트 컬러 거실 &amp; 침실 시공사례" loading="lazy"></span><b>올림픽파크 포레온 25평</b><small>서울특별시 강동구</small></a><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/thumb.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례" loading="lazy"></span><b>기역자거실</b><small>서울특별시 강동구</small></a><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025-2/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025-2/thumb.jpg" alt="강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례" loading="lazy"></span><b>강동구 올림픽파크 포레온 43평 거실</b><small>서울특별시 강동구</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/서울-강동구/">서울특별시 강동구</a></nav>

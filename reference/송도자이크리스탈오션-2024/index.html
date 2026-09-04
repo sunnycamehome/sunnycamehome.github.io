@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -531,7 +534,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/c-SdKkl8jFg" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>송도자이 크리스탈오션 거실을</p><p>유니슬렛 커튼 스톤 패턴으로 진행했습니다.</p><p>스톤 패턴은 플레인 패턴과 비교해서</p><p>원단이 1.5배 두껍고 망사 패턴이 더 촘촘합니다.</p><p>스톤 패턴은 온라인 취급점에서 써니케임홈만 가능합니다!</p><p>아래 왼쪽은 스톤패턴</p><p>오른쪽은 플레인 패턴</p></div>
-<div class="pair"><figure><img src="02.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 오른쪽은 플레인 패턴" loading="lazy" width="960" height="1280"></figure><figure><img src="03.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 오른쪽은 플레인 패턴" loading="lazy" width="933" height="1244"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="02.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 오른쪽은 플레인 패턴" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="03.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 오른쪽은 플레인 패턴" loading="lazy" width="933" height="1244"></figure></div>
 <div class="say"><p>스톤 패턴은 더 두껍고 망사 패턴이 촘촘하기에</p><p>채광 시에 매우 부드럽고</p><p>사생활 보호 시에 빛 차단율이 더 좋아</p><p>사생활 보호도 더 완벽합니다.</p><p>밤에 실루엣 조차 보이지 않습니다.</p><p>유니슬렛 스톤 패턴 풀 채광 모습, 거실 전경</p></div>
 <figure><img src="01.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 유니슬렛 스톤 패턴 풀 채광 모습, 거실 전경" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>써니케임홈을 통해 시공하는 유니슬렛의 경우</p><p>1년간 무상 AS, 그 외 기간은 유상 진행 가능합니다.</p><p>또한 이사하실 때, 유상 이전설치 가능합니다.</p><p>영상을 통해 유니슬렛의 장점을 확인해 보세요.</p><p>풀 채광 모습</p><p>햇빛이 촘촘한 망사를 거쳐 비추기 때문에</p><p>실내를 매우 부드럽고 화사하게 만들어 줍니다.</p></div>
@@ -541,24 +544,24 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>왼쪽, 중간, 오른쪽 사생활 보호</p></div>
 <figure><img src="06.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 왼쪽, 중간, 오른쪽 사생활 보호" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>45도로 각도 조절</p></div>
-<div class="pair"><figure><img src="07.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도로 각도 조절" loading="lazy" width="1280" height="720"></figure><figure><img src="08.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도로 각도 조절" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="07.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도로 각도 조절" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="08.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도로 각도 조절" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>45도 각도 조절</p></div>
 <figure><img src="09.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도 각도 조절" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>완벽하게 사생활 보호</p></div>
 <figure><img src="10.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 완벽하게 사생활 보호" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>가까이에서 본 모습</p><p>풀채광 / 반채광/ 사생활 보호</p></div>
-<div class="pair"><figure><img src="11.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 풀채광 / 반채광/ 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="12.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 풀채광 / 반채광/ 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="11.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 풀채광 / 반채광/ 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="12.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 풀채광 / 반채광/ 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>창턱이 있는 박스형 창문이라</p><p>유니슬렛 커튼을 창턱 안으로 집어넣어 시공했습니다.</p><p>생활 공간은 더 넓게 사용할 수 있고</p><p>무엇 보다 실내가 깔끔해 보입니다.</p></div>
-<div class="pair"><figure><img src="13.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure><figure><img src="14.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="15.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure><figure><img src="16.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="13.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="14.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="15.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="16.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 생활 공간은 더 넓게 사용할 수 있고" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>바닥 띄움 디테일 ^^</p></div>
-<div class="pair"><figure><img src="17.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 바닥 띄움 디테일 ^^" loading="lazy" width="1280" height="565"></figure><figure><img src="18.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 바닥 띄움 디테일 ^^" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:2.2655"><img src="17.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 바닥 띄움 디테일 ^^" loading="lazy" width="1280" height="565"></figure><figure style="--r:1.3333"><img src="18.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 바닥 띄움 디테일 ^^" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>45도 각도 조절</p></div>
 <figure><img src="19.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 45도 각도 조절" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>사생활 보호</p></div>
-<div class="pair"><figure><img src="20.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure><figure><img src="21.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure></div>
-<div class="pair"><figure><img src="22.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure><figure><img src="23.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure></div>
-<div class="pair"><figure><img src="24.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure><img src="25.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="20.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.5625"><img src="21.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.5625"><img src="22.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure><figure style="--r:0.5625"><img src="23.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="720" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="24.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.3333"><img src="25.jpg" alt="송도자이 크리스탈오션 유니슬렛 커튼 스톤 패턴 화이트 컬러 써니케임홈 시공사례 — 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223575647820" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%86%A1%EB%8F%84%EB%A7%88%EB%A6%AC%EB%82%98%EB%B2%A0%EC%9D%B4-2024/"><span class="ph"><img src="../%EC%86%A1%EB%8F%84%EB%A7%88%EB%A6%AC%EB%82%98%EB%B2%A0%EC%9D%B4-2024/thumb.jpg" alt="송도 마리나베이 유니슬렛 커튼 암막커튼 써니케임홈 시공사례" loading="lazy"></span><b>송도 마리나베이</b><small>인천광역시 연수구</small></a><a href="../%EC%B2%AD%EB%9D%BC%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2024/"><span class="ph"><img src="../%EC%B2%AD%EB%9D%BC%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2024/thumb.jpg" alt="유니슬랫 커튼 스톤 패턴 화이트, 청라푸르지오 라이트그레이, 알리미늄 블라인드, 차르르커튼 시공사례" loading="lazy"></span><b>유니슬랫 커튼 스톤 패턴 화이트, 청라푸</b><small>인천광역시 서구</small></a><a href="../%EC%9A%A9%EC%9D%B8%EB%8C%80%EC%A3%BC%ED%94%BC%EC%98%A4%EB%A0%88-2024/"><span class="ph"><img src="../%EC%9A%A9%EC%9D%B8%EB%8C%80%EC%A3%BC%ED%94%BC%EC%98%A4%EB%A0%88-2024/thumb.jpg" alt="용인 대주피오레 유니슬렛 커튼 알리미늄 차르르 써니케임홈 시공사례 써니케임홈" loading="lazy"></span><b>용인 대주피오레</b><small>경기도 용인시</small></a></div></nav>
 

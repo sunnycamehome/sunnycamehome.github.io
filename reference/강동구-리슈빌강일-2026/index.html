@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -531,7 +534,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="wrap narrow case"><div class="flow">
 <div class="vid"><iframe src="https://www.youtube.com/embed/EvY9QWxUQok" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>거실은 화이트 유니슬렛 화이트, 안방은 암막커튼, 아이놀이방은 쉬폰커튼으로 시공했습니다.</p></div>
-<div class="pair"><figure><img src="01.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="02.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 시공" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="01.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.0000"><img src="02.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 시공" loading="lazy" width="1280" height="1280"></figure></div>
 <figure><img src="03.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 시공" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>유니슬랫의 각도 조절로 빛의 방향이 바뀌고, 공간의 느낌이 달라집니다.</p><p>풀 채광 시, 자연광은 망사 원단에서 한 번 굴절되어</p><p>실내 전체를 감싸는 확산광으로 퍼집니다.</p><p>거실은 밝지만 부드럽고, 개방감 속에서도 아늑한 표정을 갖게 됩니다.</p><p>풀 채광 모습</p></div>
 <figure><img src="04.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 모습" loading="lazy" width="1280" height="720"></figure>
@@ -540,14 +543,14 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>햇살이 강한 낮에는 슬랫 각도를 조절해 빛을 은은하게 들여오면서 사생활을 보호할 수 있습니다. 밤에는 실내 조명을 켜도 밖에서 실루엣이 전혀 보이지 않아 안심하셔도 됩니다. 낮과 밤, 언제나 완벽한 프라이버시를 보장하는 스마트한 솔루션입니다.</p></div>
 <figure><img src="06.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 모습" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>가까이에서 바라 본 유니슬렛 커튼</p><p>풀 채광 / 각도 조절 / 사생활 보호</p></div>
-<div class="pair"><figure><img src="07.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="08.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="07.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:0.7500"><img src="08.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure></div>
 <figure><img src="09.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>유니슬렛만의 투명한 볼륨감.</p></div>
-<div class="pair"><figure><img src="10.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure><img src="11.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="10.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="11.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 풀 채광 / 각도 조절 / 사생활 보호" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>안방은 암막 커튼으로 시공</p></div>
 <figure><img src="12.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 안방은 암막 커튼으로 시공" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>아이 놀이방은 도톰한 쉬폰으로 마무리</p></div>
-<div class="pair"><figure><img src="13.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 아이 놀이방은 도톰한 쉬폰으로 마무리" loading="lazy" width="1280" height="1280"></figure><figure><img src="14.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 아이 놀이방은 도톰한 쉬폰으로 마무리" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="13.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 아이 놀이방은 도톰한 쉬폰으로 마무리" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.7778"><img src="14.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 아이 놀이방은 도톰한 쉬폰으로 마무리" loading="lazy" width="1280" height="720"></figure></div>
 <figure><img src="15.jpg" alt="강동구 유니슬렛 커튼 화이트 힐스테이트 리슈빌강일 시공사례 — 아이 놀이방은 도톰한 쉬폰으로 마무리" loading="lazy" width="1280" height="1280"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/224278527838" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/thumb.jpg" alt="기역자거실 유니슬렛 슬림 커튼 안방 암막커튼 올림픽파크 포레온 30평대 써니케임홈 시공사례" loading="lazy"></span><b>기역자거실</b><small>서울특별시 강동구</small></a><a href="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025-2/"><span class="ph"><img src="../%EC%98%AC%EB%A6%BC%ED%94%BD%ED%8C%8C%ED%81%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025-2/thumb.jpg" alt="강동구 올림픽파크 포레온 43평 거실 유니슬렛 커튼 화이트 안방 소프트화이트 슬림 써니케임홈 시공사례" loading="lazy"></span><b>강동구 올림픽파크 포레온 43평 거실</b><small>서울특별시 강동구</small></a><a href="../%EA%B0%95%EB%8F%99%EA%B5%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/"><span class="ph"><img src="../%EA%B0%95%EB%8F%99%EA%B5%AC%ED%8F%AC%EB%A0%88%EC%98%A8-2025/thumb.jpg" alt="강동구 올림픽파크 포레온 아파트1층 유니슬렛 커튼 써니케임홈 시공사례" loading="lazy"></span><b>강동구 올림픽파크 포레온 아파트1층</b><small>서울특별시 강동구</small></a></div></nav>

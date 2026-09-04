@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -533,7 +536,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>거실 전면창 가로 4.33미터,</p><p>세로 2.34미터로 제작했습니다.</p><p>거실은 유니슬렛 화이트 플레인 패턴, 거실 측면창은 허니콤 화이트로 거실의 컬러톤을 맞췄습니다.</p><p>위 영상에서 조작과 채광별 모습, 유니슬렛의 아름다움을 확인해 보세요.</p><p>채광은 네 단계로 조절됩니다.</p><p>풀 채광입니다. 망사면이 정면에 옵니다.</p></div>
 <figure><img src="02.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>각도 조절. 좌우면을 기후와 상황에 맞게 컨트롤 할 수 있습니다.</p></div>
-<div class="pair"><figure><img src="03.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="720"></figure><figure><img src="04.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="03.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="04.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>반채광. 빛은 들이면서 시선은 걸러줍니다.</p></div>
 <figure><img src="05.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 시공" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>사생활 보호. 외부에서 내부가 보이지 않습니다. 밤에 조명을 켜도 실루엣이 드러나지 않습니다.</p></div>
@@ -549,7 +552,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>세탁은 오염된 낱장만 빼서 하시면 됩니다.</p><p>낱장으로 구성되어 있어 오염된 부분만 분리해 세탁할 수 있습니다. 커튼 전체를 떼어낼 필요가 없습니다. 세탁 후 다시 끼우면 됩니다. 한 장만 교체하는 것도 가능합니다. 일반 커튼은 전체를 떼서 세탁소에 맡겨야 하는데, 이 부분을 편하다고 하시는 분이 많습니다. 평상시에는 월 1회 청소기 매트리스툴로 약한 바람에 정리해 주시면 됩니다.</p><p>공간마다 다른 제품을 넣었습니다.</p><p>거실 유니슬렛과 측면 허니콤이 함께 보이는 모습입니다.</p></div>
 <figure><img src="01.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 — 25cm — 전동도 간섭 없이" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>거실 측면창 허니콤 프리미엄 화이트로 시공했습니다.</p></div>
-<div class="pair"><figure><img src="11.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 — 25cm — 전동도 간섭 없이" loading="lazy" width="1280" height="960"></figure><figure><img src="12.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 — 25cm — 전동도 간섭 없이" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="11.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 — 25cm — 전동도 간섭 없이" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="12.jpg" alt="수원 아이파크시티 유니슬렛 커튼 화이트 시공사례 — 25cm — 전동도 간섭 없이" loading="lazy" width="960" height="1280"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/224372030304" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%88%98%EC%9B%90%EA%B4%91%EA%B5%90%ED%98%B8%EB%B0%98%EC%8D%A8%EB%B0%8B-2025/"><span class="ph"><img src="../%EC%88%98%EC%9B%90%EA%B4%91%EA%B5%90%ED%98%B8%EB%B0%98%EC%8D%A8%EB%B0%8B-2025/thumb.jpg" alt="아파트 1층 전체 유니슬렛 커튼 수원 광교호수마을 호반써밋 40평대 _ 네이버 카페" loading="lazy"></span><b>아파트 1층 전체</b><small>경기도 수원시</small></a><a href="../%EC%88%98%EC%9B%90-%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EC%8B%9C%ED%8B%B04%EB%8B%A8%EC%A7%80-2025/"><span class="ph"><img src="../%EC%88%98%EC%9B%90-%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EC%8B%9C%ED%8B%B04%EB%8B%A8%EC%A7%80-2025/thumb.jpg" alt="수원 권선구 아파트 2층 기역자 거실 유니슬렛 슬림 커튼, 타공 알리미늄 시공사례 써니케임홈 시공 사례" loading="lazy"></span><b>수원 권선구 아파트 2층 기역자 거실</b><small>경기도 수원시</small></a><a href="../%EC%98%81%ED%86%B5%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%8A%B8%EB%A0%88%EC%84%BC%EC%B8%A0-2025/"><span class="ph"><img src="../%EC%98%81%ED%86%B5%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%8A%B8%EB%A0%88%EC%84%BC%EC%B8%A0-2025/thumb.jpg" alt="41평 거실 유니슬렛 커튼 화이트 시공사례 - 영통 푸르지오 트레센츠" loading="lazy"></span><b>41평 거실</b><small>경기도 수원시</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/경기도-수원시/">경기도 수원시</a></nav>

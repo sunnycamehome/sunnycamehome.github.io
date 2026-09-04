@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -530,16 +533,16 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 </div></main>
 <div class="wrap narrow case"><div class="flow">
 <div class="say"><p>스마트커튼 유니슬렛 슬림 커튼</p><p>소프트화이트 컬러 플레인 패턴 시공사례입니다.</p><p>아주 이쁜 빌라에 시공을 진행했습니다.</p><p>창턱이 있는 창문은 커튼에 참 잘 어울립니다.</p><p>망사가 정면을 바라보는 풀 채광.</p></div>
-<div class="pair"><figure><img src="01.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 스마트커튼 유니슬렛 슬림 커튼" loading="lazy" width="1280" height="960"></figure><figure><img src="02.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 스마트커튼 유니슬렛 슬림 커튼" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="01.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 스마트커튼 유니슬렛 슬림 커튼" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="02.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 스마트커튼 유니슬렛 슬림 커튼" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>유니슬랫 커튼은 아파트. 단독, 빌라 등 어떤 공간에도 잘 어울립니다. 유니슬랫 커튼은 어떤 공간이든 스타일리시하게 변신시켜 줍니다.</p><p>유니슬랫 커튼은 슬랫을 회전시켜 빛의 양을 조절하거나, 완전히 열어 시원한 바람을 들여보낼 수도 있습니다. 이러한 조작의 편리함은 유니슬랫 커튼의 큰 장점 중 하나입니다.</p></div>
 <figure><img src="03.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 스마트커튼 유니슬렛 슬림 커튼" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>아래처럼 모두 닫지 않고 45도 각도로 조절하여</p><p>채광량을 줄이고, 사생활을 보호할 수 있습니다.</p></div>
 <figure><img src="04.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 아래처럼 모두 닫지 않고 45도 각도로 조절하여" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>각도 조절을 통해 사생활을 보호 합니다.</p><p>주로 더운 여름, 저녁 시간에 사생활 보호가 필요할 떄</p><p>각도를 모두 닫아 사용합니다.</p></div>
-<div class="pair"><figure><img src="05.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 주로 더운 여름, 저녁 시간에 사생활 보호가 필요할 떄" loading="lazy" width="1280" height="960"></figure><figure><img src="06.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 주로 더운 여름, 저녁 시간에 사생활 보호가 필요할 떄" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="05.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 주로 더운 여름, 저녁 시간에 사생활 보호가 필요할 떄" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="06.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 주로 더운 여름, 저녁 시간에 사생활 보호가 필요할 떄" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>다른 침실의 경우</p><p>타공 알리미늄 아이보리로 시공했습니다.</p><p>실물이 이쁜 블라인드입니다.</p></div>
-<div class="pair"><figure><img src="07.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="1280" height="1280"></figure><figure><img src="08.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="960" height="1280"></figure></div>
-<div class="pair"><figure><img src="09.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="960" height="1280"></figure><figure><img src="10.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="07.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="1280" height="1280"></figure><figure style="--r:0.7500"><img src="08.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="09.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="10.jpg" alt="용산구 후암동 빌라 유니슬렛 슬림 커튼 소프트화이트 컬러, 타공 알리미늄 아이보리 시공사례 써니케임홈 — 다른 침실의 경우" loading="lazy" width="1280" height="960"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223575133184" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%ED%95%9C%EB%82%A8%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/"><span class="ph"><img src="../%ED%95%9C%EB%82%A8%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-2025/thumb.jpg" alt="기역자 거실 유니슬렛 커튼 슬림, 한남아이파크 시공사례" loading="lazy"></span><b>기역자 거실</b><small>서울특별시 용산구</small></a><a href="../%EB%82%98%EC%9D%B8%EC%9B%90%ED%95%9C%EB%82%A8-2024/"><span class="ph"><img src="../%EB%82%98%EC%9D%B8%EC%9B%90%ED%95%9C%EB%82%A8-2024/thumb.jpg" alt="나인원 한남 유니슬렛 커튼 스톤 패턴, 암막 커튼 시공 사례" loading="lazy"></span><b>나인원 한남</b><small>서울특별시 용산구</small></a><a href="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99-2023/"><span class="ph"><img src="../%EC%9A%A9%EC%82%B0%EA%B5%AC%ED%9B%84%EC%95%94%EB%8F%99-2023/thumb.jpg" alt="용산구 후암동 빌라 유니슬렛 커튼 소프트 화이트 컬러, 허니콤 심플리시티 시공 사례" loading="lazy"></span><b>용산구 후암동 빌라</b><small>서울특별시 용산구</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/서울-용산구/">서울특별시 용산구</a><a href="../../모아보기/유니슬렛-슬림/">유니슬렛 슬림</a></nav>

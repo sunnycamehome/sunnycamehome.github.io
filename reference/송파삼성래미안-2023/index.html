@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -541,7 +544,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>완전 사생활 보호</p><p>내부가 절대로 보이지 않습니다.</p></div>
 <figure><img src="05.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 완전 사생활 보호" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>측면에서 바라 본 모습</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 측면에서 바라 본 모습" loading="lazy" width="1280" height="720"></figure><figure><img src="07.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 측면에서 바라 본 모습" loading="lazy" width="1280" height="798"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="06.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 측면에서 바라 본 모습" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.6040"><img src="07.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 측면에서 바라 본 모습" loading="lazy" width="1280" height="798"></figure></div>
 <div class="say"><p>실내 채광량을 유지하고</p><p>외부 조망을 할 때~</p><p>풀채광 상태에서 쉬폰 처럼</p><p>절대 답답하지 않습니다.</p></div>
 <figure><img src="08.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 풀채광 상태에서 쉬폰 처럼" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>사생활 보호 근접 모습</p></div>
@@ -551,23 +554,23 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>우측으로 45도</p></div>
 <figure><img src="11.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 우측으로 45도" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>영상으로 확인해 보세요~</p><p>작동 방법은 커튼 손잡이 하나로 간편하게 컨트롤 합니다.</p><p>영상으로 확인해 보세요~</p></div>
-<div class="pair"><figure><img src="12.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 영상으로 확인해 보세요~" loading="lazy" width="1280" height="720"></figure><figure><img src="13.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 영상으로 확인해 보세요~" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="12.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 영상으로 확인해 보세요~" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="13.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 영상으로 확인해 보세요~" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>측면에서 바라보거나, 하단을 바라보면</p><p>유니슬렛만의 풍성하고 부드러운 볼륨감을</p><p>확인할 수 있습니다.</p></div>
-<div class="pair"><figure><img src="14.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛만의 풍성하고 부드러운 볼륨감을" loading="lazy" width="1280" height="1280"></figure><figure><img src="15.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛만의 풍성하고 부드러운 볼륨감을" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="14.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛만의 풍성하고 부드러운 볼륨감을" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.7778"><img src="15.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛만의 풍성하고 부드러운 볼륨감을" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>침실의 경우</p><p>커피 컬러 플레인으로 시공</p><p>실내를 부드럽게 만들어주고</p><p>90% 이상 암막 가능</p></div>
-<div class="pair"><figure><img src="16.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure><figure><img src="17.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="18.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure><figure><img src="19.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="16.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="17.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="18.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="19.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 90% 이상 암막 가능" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>롯데월드타워가 보이는 작은 방은</p><p>유니슬렛 커튼 화이트로 시공</p></div>
-<div class="pair"><figure><img src="20.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="21.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="22.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="23.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="20.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="21.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="22.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="23.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>알리미늄 블라인드로 시공했습니다.</p></div>
-<div class="pair"><figure><img src="24.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="960" height="1280"></figure><figure><img src="25.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="24.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.0000"><img src="25.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 유니슬렛 커튼 화이트로 시공" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>작은 방은 콤비 고급형인</p><p>바이오클린쉐이드 올리브골드로 시공</p></div>
-<div class="pair"><figure><img src="26.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure><figure><img src="27.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure></div>
-<div class="pair"><figure><img src="28.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure><figure><img src="29.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1052" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="26.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="27.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="28.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1280" height="1280"></figure><figure style="--r:0.8219"><img src="29.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 바이오클린쉐이드 올리브골드로 시공" loading="lazy" width="1052" height="1280"></figure></div>
 <div class="say"><p>아이방은 레이저 롤스크린</p><p>나비와 아이 패턴으로 시공</p></div>
-<div class="pair"><figure><img src="30.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="31.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="32.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="33.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="30.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="31.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="32.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.7778"><img src="33.jpg" alt="송파구 삼성래미안 유니슬렛 커튼 화이트 컬러 커피 컬러 시공 사례 — 나비와 아이 패턴으로 시공" loading="lazy" width="1280" height="720"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222985201196" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EB%AC%B8%EC%A0%95%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2022/"><span class="ph"><img src="../%EB%AC%B8%EC%A0%95%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4-2022/thumb.jpg" alt="송파구 문정 푸르지오 유니슬렛 커튼 화이트 플레인 시공 사례" loading="lazy"></span><b>송파구 문정 푸르지오</b><small>서울특별시 송파구</small></a><a href="../%ED%97%AC%EB%A6%AC%EC%98%A4%EC%8B%9C%ED%8B%B0-%EC%A0%84%EB%8F%99-2025/"><span class="ph"><img src="../%ED%97%AC%EB%A6%AC%EC%98%A4%EC%8B%9C%ED%8B%B0-%EC%A0%84%EB%8F%99-2025/thumb.jpg" alt="유니슬렛 전동 커튼 화이트 헬리오시티 시공사례" loading="lazy"></span><b>유니슬렛 전동 커튼 화이트 헬리오시티 시</b><small>서울특별시 송파구</small></a><a href="../%EC%86%A1%ED%8C%8C%EA%B5%AC-%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%95%84%ED%8C%B0%EB%A6%AC%EC%8A%A4-2025/"><span class="ph"><img src="../%EC%86%A1%ED%8C%8C%EA%B5%AC-%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%95%84%ED%8C%B0%EB%A6%AC%EC%8A%A4-2025/thumb.jpg" alt="거실 유니슬렛 전동 커튼, 침실 알리미늄 화이트 송파구 갤러리아팰리스 시공사례 써니케임홈" loading="lazy"></span><b>거실</b><small>서울특별시 송파구</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/서울-송파구/">서울특별시 송파구</a></nav>

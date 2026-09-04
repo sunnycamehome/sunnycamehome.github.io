@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -537,9 +540,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>출 채광 시에 망사 부분만 보이게 됩니다.</p></div>
 <figure><img src="03.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 플레인 패턴의 경우, 햇빛을 부드럽게 여과시켜" loading="lazy" width="1280" height="722"></figure>
 <div class="say"><p>아래 영상을 통해 채광, 반채광, 사생활 보호 등의 모습도 확인해 보세요.</p></div>
-<div class="pair"><figure><img src="04.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 플레인 패턴의 경우, 햇빛을 부드럽게 여과시켜" loading="lazy" width="1280" height="960"></figure><figure><img src="05.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 플레인 패턴의 경우, 햇빛을 부드럽게 여과시켜" loading="lazy" width="1280" height="722"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="04.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 플레인 패턴의 경우, 햇빛을 부드럽게 여과시켜" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.7729"><img src="05.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 플레인 패턴의 경우, 햇빛을 부드럽게 여과시켜" loading="lazy" width="1280" height="722"></figure></div>
 <div class="say"><p>이번 분할의 경우 정중앙 이분할이 아니라</p><p>좌측 창틀 기준으로 진행했습니다.</p><p>분할할 경우</p><p>창의 일부분은 사생활 보호</p><p>나머지 부분은 채광을 유지합니다.</p><p>유니슬렛은 180도 각도 범위로 조절이 가능하기에</p><p>다양한 상황에 맞게 이용이 가능합니다.</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="720"></figure><figure><img src="07.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.7778"><img src="06.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="720"></figure><figure style="--r:1.7778"><img src="07.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="720"></figure></div>
 <div class="say"><p>사생활 보호 모드입니다.</p><p>스마트커튼 유니슬렛의 경우, 가로 폭 약 43 cm 원단이 1미터에 9장이 들어갑니다.</p><p>그래서 사생활 보호 모드로 했을 시에 원단이 모두 포개지기 때문에</p><p>화이트 컬러로 선택했다고 해도 외부에서 내부를 볼 수 없습니다.</p><p>타인의 시선에서 완전 자유롭습니다.</p></div>
 <figure><img src="08.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="722"></figure>
 <div class="say"><p>또한 스마트커튼 유니슬렛은 가로 43cm 짜리 낱장으로 구성되어 있기 때문에, 1장으로 되어 있는 일반 커튼 보다 먼지에 덜 오염됩니다. 평소 관리는 공기 청소기로 1달에 1번 정도 먼지를 가볍게 제거해 주시면 됩니다. 그리고 유니슬렛은 바닥에서 커튼을 약 2~3 cm 정도 띄어줍니다. 바닥 먼지로 인한 오염을 방지하기 위해서 입니다.</p></div>
@@ -547,7 +550,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>작동 방법은 커튼 손잡이 하나로 간편하게 컨트롤 합니다.</p></div>
 <figure><img src="10.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛은 180도 각도 범위로 조절이 가능하기에" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>스마트커튼 유니슬렛은 커튼손잡이 하나로 열기와 닫기, 그리고 180도 범위로 회전할 수 있기 때문에 원하는 각도로 채광을 조절하고, 완전히 닫아 사생활 보호가 가능합니다.</p><p>아래 영상을 통해 작동 방법을 확인해 보세요.</p><p>유니슬렛 커튼 청소 및 세탁 방법</p></div>
-<div class="pair"><figure><img src="11.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛 커튼 청소 및 세탁 방법" loading="lazy" width="1280" height="722"></figure><figure><img src="12.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛 커튼 청소 및 세탁 방법" loading="lazy" width="1280" height="722"></figure></div>
+<div class="pair"><figure style="--r:1.7729"><img src="11.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛 커튼 청소 및 세탁 방법" loading="lazy" width="1280" height="722"></figure><figure style="--r:1.7729"><img src="12.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛 커튼 청소 및 세탁 방법" loading="lazy" width="1280" height="722"></figure></div>
 <figure><img src="13.jpg" alt="중구 남산타운 스마트커튼 유니슬렛 화이트 시공사례 — 유니슬렛 커튼 청소 및 세탁 방법" loading="lazy" width="1280" height="722"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222809920056" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%84%B8%EC%9A%B4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%97%A4%EB%A6%AC%EC%8B%9C%ED%8B%B0-2023/"><span class="ph"><img src="../%EC%84%B8%EC%9A%B4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%97%A4%EB%A6%AC%EC%8B%9C%ED%8B%B0-2023/thumb.jpg" alt="중구 세운푸르지오헤리시티 유니슬렛 그레이 커튼 및 쉬폰 커튼 시공사례" loading="lazy"></span><b>중구 세운푸르지오헤리시티</b><small>서울특별시 중구</small></a><a href="../%EC%84%B8%EC%9A%B4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%97%A4%EB%A6%AC%EC%8B%9C%ED%8B%B0-23-3-2023/"><span class="ph"><img src="../%EC%84%B8%EC%9A%B4%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%ED%97%A4%EB%A6%AC%EC%8B%9C%ED%8B%B0-23-3-2023/thumb.jpg" alt="중구 세운푸르지오헤리시티 유니슬렛 커튼 파치먼트 컬러 플레인 패턴 시공 사례" loading="lazy"></span><b>중구 세운푸르지오헤리시티</b><small>서울특별시 중구</small></a><a href="../%EB%82%A8%EC%82%B0%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%EB%B0%9C%EB%9D%BC%EB%93%9C-2024/"><span class="ph"><img src="../%EB%82%A8%EC%82%B0%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%EB%B0%9C%EB%9D%BC%EB%93%9C-2024/thumb.jpg" alt="중구 남산 푸르지오 발라드 복층 유니슬렛 커튼 알리미늄 블라인드 써니케임홈 시공사례" loading="lazy"></span><b>중구 남산 푸르지오 발라드 복층</b><small>서울특별시 중구</small></a></div></nav>

@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -535,15 +538,15 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>풀 채광은 어떤 상태인가요?</p><p>망사면이 정면을 향하도록 슬랫을 열어둔 상태입니다.</p><p>맞은편 동이 가까운 구조라도 한낮에 거실 조명을 켤 필요가 없습니다.</p></div>
 <figure><img src="01.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>왜 거실 커튼을 왜 둘로 나눴나요?</p><p>독립적인 각도 조절 때문입니다.</p><p>왼쪽은 열어 뷰를 보고, 해가 깊게 드는 쪽만 돌려 빛을 거릅니다.</p><p>나뉘는 틈새의 커튼봉은 숨김 처리했습니다.</p></div>
-<div class="pair"><figure><img src="03.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure><figure><img src="04.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="03.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="04.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>사생활 보호는 어느 정도 되나요?</p><p>슬랫을 닫으면 밤에 조명을 켜도 실루엣이 보이지 않습니다. 동간에 짧은 거리를 생각해 보면, 유니슬렛 커튼의 사생활 보호 기능은 확실한 솔루션입니다.</p></div>
 <figure><img src="05.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 시공" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>커튼인데 각도가 조절되는 이유는 무엇인가요</p><p>암막면과 망사면이 교차로 짜인 구조 때문입니다.</p><p>부드러운 원단으로 블라인드처럼 각도를 만듭니다.</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 커튼인데 각도가 조절되는 이유는 무엇인가요" loading="lazy" width="1280" height="1280"></figure><figure><img src="07.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 커튼인데 각도가 조절되는 이유는 무엇인가요" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="06.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 커튼인데 각도가 조절되는 이유는 무엇인가요" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="07.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 커튼인데 각도가 조절되는 이유는 무엇인가요" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>사진에서 보이는 볼륨감은 어디서 생기나요</p><p>사진 속 도톰함은 원단이 아니라 빛입니다.</p><p>거실 커튼은 바닥에서 2cm 띄워 마감합니다.</p></div>
 <figure><img src="08.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 사진에서 보이는 볼륨감은 어디서 생기나요" loading="lazy" width="1280" height="1280"></figure>
 <div class="say"><p>주름과 실제로 어떤가요</p><p>주름 간격은 11cm입니다.</p><p>왼쪽 끝부터 오른쪽 끝까지 결이 같습니다.</p></div>
-<div class="pair"><figure><img src="09.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 주름과 실제로 어떤가요" loading="lazy" width="1280" height="1280"></figure><figure><img src="10.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 주름과 실제로 어떤가요" loading="lazy" width="1280" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.0000"><img src="09.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 주름과 실제로 어떤가요" loading="lazy" width="1280" height="1280"></figure><figure style="--r:1.0000"><img src="10.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 주름과 실제로 어떤가요" loading="lazy" width="1280" height="1280"></figure></div>
 <div class="say"><p>커튼박스는 폭이 몇 센티나 필요한가요</p><p>수동이 박스 안으로 완전히 접혀 들어가려면 폭 20cm가 필요합니다.</p><p>전동은 23cm 이상을 권합니다.</p><p>이 집 서재에는 왜 유니슬렛을 넣지 않았나요</p><p>서재에는 도톰한 쉬폰을 넣었습니다. 나비주름, 형상기억.</p></div>
 <figure><img src="11.jpg" alt="역삼 래미안 18평 거실 유니슬렛 커튼 화이트 이분할 시공사례 — 이 집 서재에는 왜 유니슬렛을 넣지 않았나요" loading="lazy" width="1280" height="1280"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/224379469714" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>

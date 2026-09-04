@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -538,13 +541,13 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>채광 상태에서 창문을 살짝 열어놨을 때</p><p>바람에 커튼이 나부끼는 모습</p></div>
 <figure><img src="04.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>밝은 낮이라도 채광 모드에서 외부에서 내부가 보이지 않습니다.</p><p>반채광일 때 모습입니다.</p><p>유니슬렛은 미세한 각도 조절을 통해 채광량 조절이 가능합니다.</p><p>좌우 이분할로 시공할 경우, 반은 사생활 보호, 나머지 반은 실내로 채광을 유지합니다. 다양한 상황에 맞게 이용하면 됩니다.</p></div>
-<div class="pair"><figure><img src="05.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="960"></figure><figure><img src="06.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="720"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="05.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.7778"><img src="06.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="720"></figure></div>
 <figure><img src="07.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 바람에 커튼이 나부끼는 모습" loading="lazy" width="1280" height="720"></figure>
 <div class="say"><p>사생활 보호일 때 모습</p><p>밝은 컬러를 선택하더라도</p><p>외부에서 내부가 절대 보이지 않으며</p><p>낮에는 빛의 양을 현저하게 줄이며</p><p>밤에는 아예 내부가 보일 수 없도록</p><p>철저하게 사생활을 지켜줍니다.</p></div>
 <figure><img src="08.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>채광 모드에서 옆에서 바라본 모습입니다. 폭이 약 17cm 정도입니다.</p><p>콤비 블라인드로 깔끔하게 마무리 했습니다.</p></div>
-<div class="pair"><figure><img src="09.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="960" height="1280"></figure><figure><img src="10.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="11.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure><figure><img src="12.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:0.7500"><img src="09.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="960" height="1280"></figure><figure style="--r:1.3333"><img src="10.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="11.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="12.jpg" alt="여주역 푸르지오 클라테르 유니슬렛 커튼 코튼우드 컬러 플레인 패턴 시공 사례 후기 — 밤에는 아예 내부가 보일 수 없도록" loading="lazy" width="1280" height="960"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222672081014" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%97%AC%EC%A3%BC-%EC%A0%84%EC%9B%90%EC%A3%BC%ED%83%9D-2022/"><span class="ph"><img src="../%EC%97%AC%EC%A3%BC-%EC%A0%84%EC%9B%90%EC%A3%BC%ED%83%9D-2022/thumb.jpg" alt="여주시 금사면 전원주택 유니슬렛 커튼 플래티넘 컬러 플레인 시공 사례" loading="lazy"></span><b>여주시 금사면 전원주택</b><small>경기도 여주시</small></a><a href="../%ED%9E%90%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%EC%83%81%EB%8F%84%EC%84%BC%ED%8A%B8%EB%9F%B4%ED%8C%8C%ED%81%AC-%EC%BB%A4%ED%8A%BC-2022/"><span class="ph"><img src="../%ED%9E%90%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8%EC%83%81%EB%8F%84%EC%84%BC%ED%8A%B8%EB%9F%B4%ED%8C%8C%ED%81%AC-%EC%BB%A4%ED%8A%BC-2022/thumb.jpg" alt="동작구 힐스테이트상도센트럴파크 유니슬렛 커튼 아파트2층 시공사례 화이트, 커피 컬러" loading="lazy"></span><b>동작구 힐스테이트상도센트럴파크</b><small>서울특별시 동작구</small></a><a href="../%EB%B6%84%EB%8B%B9%EA%B5%AC%EB%8C%80%EC%9E%A5%EB%8F%99-%ED%8C%90%EA%B5%90%ED%92%8D%EA%B2%BD%EC%B1%84%EC%96%B4%EB%B0%94%EB%8B%88%ED%8B%B0-2022/"><span class="ph"><img src="../%EB%B6%84%EB%8B%B9%EA%B5%AC%EB%8C%80%EC%9E%A5%EB%8F%99-%ED%8C%90%EA%B5%90%ED%92%8D%EA%B2%BD%EC%B1%84%EC%96%B4%EB%B0%94%EB%8B%88%ED%8B%B0-2022/thumb.jpg" alt="분당구 대장동 판교풍경채어바니티 유니슬렛 커튼 화이트 30평대 시공사례" loading="lazy"></span><b>분당구 대장동 판교풍경채어바니티</b><small>경기도 성남시</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/분할-시공/">분할 시공</a></nav>

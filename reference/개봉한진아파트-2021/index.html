@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -530,7 +533,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 </div></main>
 <div class="wrap narrow case"><div class="flow">
 <div class="say"><p>가장 인기가 많은</p><p>스마트커튼 유니슬렛</p><p>화이트 컬러 플레인 시공사례입니다.</p><p>채광과 사생활 보호를</p><p>커튼봉 하나로 쉽게 바꿀 수 있는 게</p><p>유니슬렛의 강정입니다.</p><p>그러나 실제 강점은</p><p>스마트커튼 유니슬렛의</p><p>아름다운 채광 연출입니다.</p><p>빛을 부드럽게 여과시켜</p><p>거실을 우아한 분위기로 연출합니다.</p><p>아래는 풀채광 모습</p></div>
-<div class="pair"><figure><img src="02.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="1280" height="960"></figure><figure><img src="03.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="738" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="02.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.5766"><img src="03.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 아래는 풀채광 모습" loading="lazy" width="738" height="1280"></figure></div>
 <div class="say"><p>슬랫을 45도 각도로 눕혔을 때</p><p>반 채광 느낌입니다.</p></div>
 <figure><img src="04.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 슬랫을 45도 각도로 눕혔을 때" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>커튼 일부분만 걷어 실내 환기를 손쉽게 할 수 있습니다.</p></div>
@@ -538,8 +541,8 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>스마트커튼 유니슬렛의</p><p>프라이버시 보호</p><p>슬랫을 모두 닫아 버리면</p><p>외부에서 내부가 절대로 보이지 않습니다.</p></div>
 <figure><img src="05.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 슬랫을 모두 닫아 버리면" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>또한 커튼 손잡이를 통해</p><p>커튼의 각도와 개폐 등의 조작을 쉽게 할 수 있습니다.</p><p>작동 영상을 통해 확인하세요.</p><p>관심 고객 대상으로</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure><figure><img src="07.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure></div>
-<div class="pair"><figure><img src="08.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure><figure><img src="09.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="06.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="07.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="08.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="09.jpg" alt="구로 개봉한진아파트 스마트커튼 유니슬렛 화이트 시공사례 — 관심 고객 대상으로" loading="lazy" width="1280" height="960"></figure></div>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222548314056" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
 <nav class="near" aria-label="비슷한 집"><div class="near-t">비슷한 집</div><div class="near-g"><a href="../%EC%8B%A0%EB%8F%84%EB%A6%BC-%EB%8C%80%EB%A6%BC%EC%95%84%ED%8C%8C%ED%8A%B8-2022/"><span class="ph"><img src="../%EC%8B%A0%EB%8F%84%EB%A6%BC-%EB%8C%80%EB%A6%BC%EC%95%84%ED%8C%8C%ED%8A%B8-2022/thumb.jpg" alt="신도림 대림아파트 유니슬렛 소프트화이트 플레인 시공 사례" loading="lazy"></span><b>신도림 대림아파트</b><small>서울특별시 구로구</small></a><a href="../%EA%B5%AC%EB%A1%9C-%EB%B9%8C%EB%9D%BC-%EC%82%AC%EB%A1%80-2023/"><span class="ph"><img src="../%EA%B5%AC%EB%A1%9C-%EB%B9%8C%EB%9D%BC-%EC%82%AC%EB%A1%80-2023/thumb.jpg" alt="구로구 빌라 복층 유니슬렛 소프트화이트 커튼, 허니콤, 차르르 커튼 시공 사례" loading="lazy"></span><b>구로구 빌라 복층</b><small>서울특별시 구로구</small></a><a href="../%EC%8B%A0%EB%8F%84%EB%A6%BC-2026/"><span class="ph"><img src="../%EC%8B%A0%EB%8F%84%EB%A6%BC-2026/thumb.jpg" alt="유니슬렛 전동커튼  화이트 서울 신도림 시공사례" loading="lazy"></span><b>유니슬렛 전동커튼  화이트 서울 신도림 </b><small>서울특별시 구로구</small></a></div></nav>
 <nav class="chips" aria-label="이 집이 속한 모아보기"><span class="chips-t">이런 집 더 보기</span><a href="../../모아보기/1층-저층/">1층·저층</a><a href="../../모아보기/서울-구로구/">서울특별시 구로구</a></nav>

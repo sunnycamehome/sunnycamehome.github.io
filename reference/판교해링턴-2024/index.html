@@ -299,8 +299,11 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
 .flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
-.flow .pair{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12)}
-@media(max-width:700px){.flow .pair{grid-template-columns:1fr}}
+/* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
+   각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+.flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
+@media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
 .chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;
   margin:clamp(26px,3vw,40px) auto 0;max-width:var(--measure-say);
@@ -533,13 +536,13 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>유니슬렛 커튼은 #unislat 커튼만의 부드럽고 세련된 스타일과 블라인드의 편리함을 결합한 커튼입니다.</p><p>호주에서는 veri shades로 불리기도 합니다. 써니케임홈은 허즈로 수출하는 유니슬렛 커튼 정품만을 사용합니다.</p><p>거실과 안방 모두 유니슬렛 커튼으로 진행했습니다.</p><p>거실은 화이트, 안방은 라이트 그레이, 참고로 안방 사진을 못찍었습니다.</p><p>풀채광 모습입니다. 우측 샷시 기준으로 분할 했습니다. 샷시 기준으로 분할하는 이유는 틈새를 최대한 자연스럽게 연출하기 위함입니다.</p></div>
 <figure><img src="02.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>유니슬렛 커튼은 빛을 촘촘하게 분해하여 실내 분위기를 부드럽고 아늑하게 만들어 줍니다.</p><p>또한 풀 채광 상태에서 내부에서 외부 조망이 가능하며, 낮 시간 동안에는 외부에서 실내가 보이지 않습니다.</p></div>
-<div class="pair"><figure><img src="01.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="03.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="01.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="03.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>거실 창문 우측 창틀에 맞춰 분할하였으며, 날씨와 분위기에 따라 좌우 면의 각도 조절을 개별적으로 할 수 있습니다.</p><p>아래 사진에서 왼쪽 창문은 사생활 보호 각도로 조절되어 있습니다.</p></div>
 <figure><img src="04.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>좌우 각각 90도로 각도를 조절하여 적절한 채광 조절 및 사생활 보호가 가능하빈다.</p></div>
 <figure><img src="05.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="960" height="1280"></figure>
 <div class="say"><p>90도 각도로 조절된 모드는 낮에 채광을 완전히 차단하고, 밤에는 완벽한 사생활 보호를 제공합니다.</p></div>
-<div class="pair"><figure><img src="06.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure><img src="07.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="960" height="1280"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="06.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure><figure style="--r:0.7500"><img src="07.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="960" height="1280"></figure></div>
 <div class="say"><p>유니슬렛 커튼 조작을 근접 촬영한 영상으로 확인해 보세요.</p></div>
 <div class="vid"><iframe src="https://www.youtube.com/embed/eM8AieVEda8" loading="lazy" title="시공 영상" allowfullscreen></iframe></div>
 <div class="say"><p>분할 부분은 커튼봉을 커튼 뒤로 숨김 처리하였습니다.</p></div>
@@ -547,7 +550,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 <div class="say"><p>유니슬렛 커튼 시공은 써니케임홈이 가장 꼼꼼하게 완성도를 추구한다고 말씀드립니다. 관심있게 읽어주셔서 감사합니다.</p></div>
 <figure><img src="09.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 시공" loading="lazy" width="1280" height="960"></figure>
 <div class="say"><p>Before &amp; After</p></div>
-<div class="pair"><figure><img src="10.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 — Before &amp; After" loading="lazy" width="1280" height="960"></figure><figure><img src="11.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 — Before &amp; After" loading="lazy" width="1280" height="960"></figure></div>
+<div class="pair"><figure style="--r:1.3333"><img src="10.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 — Before &amp; After" loading="lazy" width="1280" height="960"></figure><figure style="--r:1.3333"><img src="11.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 — Before &amp; After" loading="lazy" width="1280" height="960"></figure></div>
 <div class="say"><p>커튼을 열지 않고, 창문을 열 수 있습니다. 하나 처럼 보이지만, 실제로 낱장이 연결되어 있기 때문입니다.</p></div>
 <figure><img src="12.jpg" alt="판교 해링턴플레이스 20평대 아파트 유니슬렛 커튼 화이트 써니케임홈 시공사례 — Before &amp; After" loading="lazy" width="1280" height="720"></figure>
 <p style="margin-top:26px"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/223664282894" target="_blank" rel="noopener">네이버 블로그에서 자세히 보기</a></p>
