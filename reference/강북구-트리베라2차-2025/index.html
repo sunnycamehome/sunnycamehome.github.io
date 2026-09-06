@@ -304,7 +304,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
 /* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
    각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
-.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start}
+/* 2026-09-06 사장님 지시 — 「사진과 사진 간격 붙지 않게, 나란히 있을 때 띄우는 간격만큼」.
+   짝 밑에 여백이 없어 다음 사진과 붙어 있었습니다. 가로 틈(--space-12)과 같은 값을 아래에도 둡니다. */
+.flow .pair{display:flex;gap:var(--space-12);align-items:flex-start;margin:0 0 var(--space-12)}
 .flow .pair figure{flex:var(--r,1) 1 0%;min-width:0;margin:0}
 @media(max-width:700px){.flow .pair{flex-direction:column}.flow .pair figure{flex:none;width:100%}}
 /* ── 모아보기 (2026-09-01 지시) ── 낱장끼리 잇는 길이자, 지역·특징 검색을 받는 자리 */
