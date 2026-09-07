@@ -324,7 +324,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .chips a:hover{border-color:var(--ink);color:var(--ink)}
 /* ── 자주 묻는 질문 (2026-09-03) ── 읽는 글이므로 접지 않고 그대로 폅니다.
    AI·검색이 통째로 읽어 가야 하고, 손님도 Ctrl+F 로 찾습니다. */
-.faq{max-width:var(--narrow);margin:0 auto}
+/* ⚠ 2026-09-07 — 쪽의 폭은 <main> 의 «case» 하나가 정합니다. 여기서 다시 좁히면
+   상세페이지와 어긋납니다 (사장님 「상세페이지 가로 길이로 통일」). */
+.faq{max-width:100%;margin:0 auto}
 .faq-g{padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line)}
 .faq-g:first-child{border-top:0;padding-top:var(--space-8)}
 .faq-g h2{font-size:var(--fs-h2-prose);letter-spacing:var(--ls-h2);line-height:var(--lh-head);
@@ -372,7 +374,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .cp:hover{border-color:var(--line-strong);color:var(--ink)}
 .cp.done{border-color:var(--ink);color:var(--ink)}
 @media (max-width:560px){.cp{font-size:11px;padding:5px 9px}}
-.faq-end{max-width:var(--narrow);margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
+.faq-end{max-width:100%;margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
   border-top:1px solid var(--line);text-align:center}
 .faq-end p{font-size:var(--fs-body);color:var(--ink-2)}
 .faq-end p + p{margin-top:var(--space-16)}
@@ -525,7 +527,14 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 </style>
 <style>
 .est{margin:0}
-.est-guide{margin:0 0 30px}
+.est-guide{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 30px}
+/* ⭐ 2026-09-07 사장님 — 「버튼 옆에 … 문구를 넣어줘. 클릭을 유도하는 아이콘이나 방향 화살표」 */
+.est-guide-say{display:inline-flex;align-items:center;gap:8px;
+  font-size:var(--fs-body-sm);font-weight:700;color:var(--ink-2)}
+.est-arrow{font-size:19px;line-height:1;color:var(--accent);
+  animation:est-nudge 1.5s ease-in-out infinite}
+@keyframes est-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+@media(prefers-reduced-motion:reduce){.est-arrow{animation:none}}
 .est-region{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}
 .est-region .lb{font-size:var(--fs-body-sm);font-weight:700;color:var(--ink);margin-right:4px}
 .est-rows{display:flex;flex-direction:column;gap:10px}
@@ -563,13 +572,15 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   font-weight:600;color:var(--ink)}
 .est-after{margin-top:26px;display:flex;flex-direction:column;gap:14px}
 .est-after p{font-size:var(--fs-body-sm);color:var(--ink-2);line-height:1.65}
-.est-after .say{border-left:2px solid var(--ink);padding-left:14px;color:var(--ink);
+/* ⚠ 이름을 «say» 로 쓰면 안 됩니다 — 쪽에 case 가 붙어 있어 «.case .say» (760px 가운데)
+   가 걸립니다. 실제로 고지 문장이 안으로 밀렸습니다 (2026-09-07). */
+.est-after .est-say{border-left:2px solid var(--ink);padding-left:14px;color:var(--ink);
   font-family:var(--font-display);font-size:var(--fs-prose);line-height:var(--lh-prose)}
 .est-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .est-empty{color:var(--ink-4);font-size:var(--fs-body-sm);padding:18px 0}
 /* 계산기 아래 «문의» 본문 — 폭은 쪽과 같습니다(820px). 선으로만 나눕니다.
    ⚠ 2026-09-07 사장님 — 「견적과 문의의 가로 사이즈가 다른 것 같아」. 여기에 따로
-     max-width 를 주면 다시 어긋납니다. 폭은 <main class="wrap narrow"> 하나가 정합니다. */
+     max-width 를 주면 다시 어긋납니다. 폭은 main 의 class 하나가 정합니다. */
 .est-prose{margin:46px auto 0;padding-top:36px;border-top:1px solid var(--line)}
 @media(max-width:860px){
   .est-row{grid-template-columns:1fr 1fr;row-gap:8px}
@@ -587,12 +598,13 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <button class="burger" aria-label="메뉴" aria-expanded="false">☰</button>
   <nav><a href="../reference/">Reference</a><a href="../visualize/">Visualize</a><a href="../unislat/">Unislat</a><a href="../contact/" aria-current=page>견적&amp;문의</a><a href="../faq/">FAQ</a></nav>
 </div></header>
-<main class="wrap" style="padding-top:34px;padding-bottom:60px">
+<main class="wrap narrow case" style="padding-top:34px;padding-bottom:60px">
 <div class="art-hd"><div class="eyebrow">Contact</div>
   <h1>유니슬렛 예상 견적</h1><p class="sub">설치하고자 하는 창문의 가로/세로 길이를 입력해 보시면 예상 가격을 알 수 있습니다.</p></div>
 <div class="est">
 <div class="est-guide">
   <a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222062111180" target="_blank" rel="noopener">사이즈 실측방법 안내</a>
+  <span class="est-guide-say"><span class="est-arrow" aria-hidden="true">&#8592;</span>사이즈 실측 방법을 참조하세요</span>
 </div>
 
 <div class="est-region"><span class="lb">지역</span>
@@ -677,7 +689,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <div id="lines"><div class="est-empty">창 크기를 넣으면 여기에 계산이 나옵니다.</div></div>
   <div class="est-sum"><div class="k">예상 견적 합계</div><div class="v" id="sum">0원</div></div>
   <div class="est-after">
-    <p class="say">화면의 금액은 예상 견적입니다. 제품마다 계산 방식도 달라서, 창을 보기 전에 말씀드리는 금액은 대개 틀립니다.</p>
+    <p class="est-say">화면의 금액은 예상 견적입니다. 제품마다 계산 방식도 달라서, 창을 보기 전에 말씀드리는 금액은 대개 틀립니다.</p>
     <p id="rgline"></p>
     <p>추가 문의는 써니케임홈으로 연락해 주십시오. 전화나 네이버 톡톡으로 받습니다.</p>
     <div class="est-btns" id="btns"></div>
@@ -771,7 +783,7 @@ document.getElementById('rg').addEventListener('change', 계산);
 <div class="prose est-prose">
 
 <h2>연락</h2>
-<p><a class="btn btn-d" href="tel:01096675130">010-9667-5130 전화</a></p><p class="hours">연중무휴 · 오전 10시 ~ 오후 7시</p><p class="talkbtns"><a class="btn btn-d" href="https://talk.naver.com/ct/wce67e" target="_blank" rel="noopener">네이버 톡톡으로 문의</a></p><p>카카오톡 아이디 <strong>sch2010</strong> 로도 문의하실 수 있습니다.</p><p style="color:var(--ink3)">※ 온라인 문의 양식은 준비 중입니다. 지금은 전화가 가장 빠릅니다.</p>
+<p><a class="btn btn-d" href="tel:01096675130">010-9667-5130 전화</a></p><p class="talkbtns"><a class="btn btn-d" href="https://talk.naver.com/ct/wce67e" target="_blank" rel="noopener">네이버 톡톡으로 문의</a></p><p class="hours">연중무휴 · 오전 10시 ~ 오후 7시</p>
 <h2>공간별로 알려주시면 정확한 상담이 됩니다</h2>
 <div class="tblwrap"><table><tr><th>알려 주실 것</th><th>어디에서 어디까지</th></tr><tr><td>가로</td><td>좌측 벽에서 우측 벽까지</td></tr><tr><td>세로</td><td>천장에서 바닥까지</td></tr><tr><td>커튼박스</td><td>높이와 폭</td></tr></table></div>
 <p>정확하지 않아도 괜찮습니다. 대략만 알아도 방향은 잡힙니다.</p>

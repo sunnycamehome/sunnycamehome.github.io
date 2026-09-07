@@ -324,7 +324,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .chips a:hover{border-color:var(--ink);color:var(--ink)}
 /* ── 자주 묻는 질문 (2026-09-03) ── 읽는 글이므로 접지 않고 그대로 폅니다.
    AI·검색이 통째로 읽어 가야 하고, 손님도 Ctrl+F 로 찾습니다. */
-.faq{max-width:var(--narrow);margin:0 auto}
+/* ⚠ 2026-09-07 — 쪽의 폭은 <main> 의 «case» 하나가 정합니다. 여기서 다시 좁히면
+   상세페이지와 어긋납니다 (사장님 「상세페이지 가로 길이로 통일」). */
+.faq{max-width:100%;margin:0 auto}
 .faq-g{padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line)}
 .faq-g:first-child{border-top:0;padding-top:var(--space-8)}
 .faq-g h2{font-size:var(--fs-h2-prose);letter-spacing:var(--ls-h2);line-height:var(--lh-head);
@@ -372,7 +374,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .cp:hover{border-color:var(--line-strong);color:var(--ink)}
 .cp.done{border-color:var(--ink);color:var(--ink)}
 @media (max-width:560px){.cp{font-size:11px;padding:5px 9px}}
-.faq-end{max-width:var(--narrow);margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
+.faq-end{max-width:100%;margin:clamp(24px,3vw,40px) auto 0;padding-top:var(--space-25);
   border-top:1px solid var(--line);text-align:center}
 .faq-end p{font-size:var(--fs-body);color:var(--ink-2)}
 .faq-end p + p{margin-top:var(--space-16)}
