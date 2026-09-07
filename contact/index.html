@@ -2,8 +2,8 @@
 <html lang="ko"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://hangeul.pstatic.net" crossorigin>
-<title>실측 · 견적 문의 — 유니슬렛 써니케임홈</title>
-<meta name="description" content="유니슬렛 커튼 실측·견적 문의. 사장이 직접 실측합니다. 010-9667-5130. 서울 전 지역과 경기·인천.">
+<title>유니슬렛 예상 견적 — 써니케임홈</title>
+<meta name="description" content="설치하고자 하는 창문의 가로/세로 길이를 입력해 보시면 예상 가격을 알 수 있습니다. 유니슬렛 커튼 실측 · 견적 문의 010-9667-5130.">
 <link rel="canonical" href="https://sunnycamehome.com/contact/">
 <!-- 네이버 서치어드바이저 소유확인 (2026-09-05 등록 · 이상수 계정).
      ⚠ 지우면 소유확인이 풀립니다. 화면에는 안 보입니다. -->
@@ -17,7 +17,7 @@
 <link rel="icon" href="https://sunnycamehome.com/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="https://sunnycamehome.com/apple-touch-icon.png">
 <meta property="og:type" content="website"><meta property="og:site_name" content="유니슬렛 써니케임홈">
-<meta property="og:title" content="실측 · 견적 문의 — 유니슬렛 써니케임홈"><meta property="og:description" content="유니슬렛 커튼 실측·견적 문의. 사장이 직접 실측합니다. 010-9667-5130. 서울 전 지역과 경기·인천.">
+<meta property="og:title" content="유니슬렛 예상 견적 — 써니케임홈"><meta property="og:description" content="설치하고자 하는 창문의 가로/세로 길이를 입력해 보시면 예상 가격을 알 수 있습니다. 유니슬렛 커튼 실측 · 견적 문의 010-9667-5130.">
 <meta property="og:locale" content="ko_KR"><meta property="og:url" content="https://sunnycamehome.com/contact/">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "써니케임홈", "item": "https://sunnycamehome.com/"}, {"@type": "ListItem", "position": 2, "name": "실측 · 견적 문의", "item": "https://sunnycamehome.com/contact/"}]}]}</script>
@@ -523,6 +523,59 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   display:flex;gap:var(--space-16);flex-wrap:wrap;justify-content:space-between;
   font-size:var(--fs-meta);color:var(--ink-3)}
 </style>
+<style>
+.est{margin:0}
+.est-guide{margin:0 0 30px}
+.est-region{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}
+.est-region .lb{font-size:var(--fs-body-sm);font-weight:700;color:var(--ink);margin-right:4px}
+.est-rows{display:flex;flex-direction:column;gap:10px}
+.est-row{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);
+  padding:12px 14px;display:grid;gap:10px;
+  grid-template-columns:76px 92px 92px minmax(120px,1fr) minmax(150px,1.2fr) auto;align-items:center}
+.est-row.on{border-color:var(--line-strong);background:var(--paper-2)}
+.est-row .nm{font-size:var(--fs-body-sm);font-weight:700;color:var(--ink)}
+.est-row.main .nm{font-size:var(--fs-h3-card)}
+.est-row input[type=number],.est-row select,.est-region select{
+  width:100%;min-height:40px;padding:0 10px;font:inherit;font-size:var(--fs-body-sm);
+  color:var(--ink);background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-xs);appearance:none}
+.est-row input:focus,.est-row select:focus,.est-region select:focus{
+  outline:none;border-color:var(--ink);transition:border-color .12s}
+.est-row select:disabled{color:var(--ink-4);background:var(--paper-3)}
+.est-row .mt{display:flex;align-items:center;gap:6px;font-size:var(--fs-caption);
+  color:var(--ink-2);white-space:nowrap;cursor:pointer}
+.est-row .mt input{accent-color:var(--ink);width:16px;height:16px}
+.est-unit{position:relative}
+.est-unit::after{content:'cm';position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  font-size:var(--fs-meta);color:var(--ink-4);pointer-events:none}
+.est-hint{margin-top:12px;font-size:var(--fs-caption);color:var(--ink-3)}
+.est-out{margin-top:32px;border-top:2px solid var(--ink);padding-top:22px}
+.est-line{display:flex;justify-content:space-between;gap:16px;padding:11px 0;
+  border-bottom:1px solid var(--line-soft);font-size:var(--fs-body-sm);align-items:baseline}
+.est-line .l{color:var(--ink-2)}
+.est-line .l b{color:var(--ink);font-weight:700;margin-right:8px}
+.est-line .v{font-weight:700;color:var(--ink);white-space:nowrap}
+.est-min{color:var(--accent);font-weight:700}
+.est-sum{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.est-sum .k{font-size:var(--fs-body-sm);color:var(--ink-2)}
+.est-sum .v{font-family:var(--font-display);font-size:var(--fs-h2);letter-spacing:var(--ls-h2);
+  font-weight:600;color:var(--ink)}
+.est-after{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+.est-after p{font-size:var(--fs-body-sm);color:var(--ink-2);line-height:1.65}
+.est-after .say{border-left:2px solid var(--ink);padding-left:14px;color:var(--ink);
+  font-family:var(--font-display);font-size:var(--fs-prose);line-height:var(--lh-prose)}
+.est-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.est-empty{color:var(--ink-4);font-size:var(--fs-body-sm);padding:18px 0}
+/* 계산기 아래 «문의» 본문 — 읽기 좋은 너비로 되돌리고 선으로 나눕니다 */
+.est-prose{max-width:var(--narrow);margin:46px auto 0;padding-top:36px;border-top:1px solid var(--line)}
+@media(max-width:860px){
+  .est-row{grid-template-columns:1fr 1fr;row-gap:8px}
+  .est-row .nm{grid-column:1/-1}
+  .est-row .pd,.est-row .cl{grid-column:1/-1}
+  .est-row .mt{grid-column:1/-1}
+}
+</style>
 </head><body>
 <header class="bar"><div class="bar-in">
   <a class="brand" href="../" aria-label="써니케임홈 Sunny came home">
@@ -530,12 +583,192 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
     <img class="w" src="../wordmark-white.png" alt="" width="1945" height="387" aria-hidden="true">
   </a>
   <button class="burger" aria-label="메뉴" aria-expanded="false">☰</button>
-  <nav><a href="../reference/">Reference</a><a href="../visualize/">Visualize</a><a href="../unislat/">Unislat</a><a href="../contact/" aria-current=page>문의</a><a href="../faq/">FAQ</a></nav>
+  <nav><a href="../reference/">Reference</a><a href="../visualize/">Visualize</a><a href="../unislat/">Unislat</a><a href="../contact/" aria-current=page>견적&amp;문의</a><a href="../faq/">FAQ</a></nav>
 </div></header>
-<main class="wrap narrow">
+<main class="wrap" style="padding-top:34px;padding-bottom:60px;max-width:940px">
 <div class="art-hd"><div class="eyebrow">Contact</div>
-  <h1>실측 · 견적</h1><p class="sub">실측은 사장이 직접 나갑니다. 창을 보고, 커튼박스를 재고, 되는 것과 안 되는 것을 말씀드립니다.</p></div>
-<div class="prose">
+  <h1>유니슬렛 예상 견적</h1><p class="sub">설치하고자 하는 창문의 가로/세로 길이를 입력해 보시면 예상 가격을 알 수 있습니다.</p></div>
+<div class="est">
+<div class="est-guide">
+  <a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222062111180" target="_blank" rel="noopener">사이즈 실측방법 안내</a>
+</div>
+
+<div class="est-region"><span class="lb">지역</span>
+  <select id="rg" aria-label="지역" style="max-width:200px"><option value="서울경기">서울 · 경기</option><option value="경기외곽">경기 외곽</option><option value="그밖">그 밖</option></select>
+</div>
+
+<div class="est-rows"><div class="est-row main" data-i="0">
+  <div class="nm">거실</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="거실 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="거실 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="거실 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="거실 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div>
+<div class="est-row" data-i="1">
+  <div class="nm">방 1</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 1 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 1 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="방 1 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="방 1 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div>
+<div class="est-row" data-i="2">
+  <div class="nm">방 2</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 2 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 2 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="방 2 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="방 2 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div>
+<div class="est-row" data-i="3">
+  <div class="nm">방 3</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 3 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 3 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="방 3 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="방 3 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div>
+<div class="est-row" data-i="4">
+  <div class="nm">방 4</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 4 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 4 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="방 4 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="방 4 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div>
+<div class="est-row" data-i="5">
+  <div class="nm">방 5</div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 5 가로(cm)"></div>
+  <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 5 세로(cm)"></div>
+  <div class="pd"><select data-f="p" aria-label="방 5 제품">
+    <option value="유니슬렛">유니슬렛</option>
+    <option value="슬림">유니슬렛 슬림</option>
+    <option value="스톤">유니슬렛 스톤</option>
+  </select></div>
+  <div class="cl"><select data-f="c" aria-label="방 5 컬러"></select></div>
+  <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+</div></div>
+<p class="est-hint">한 줄이 창 하나입니다. 한 방에 창이 둘이면 두 줄에 나눠 넣으십시오. 다 채우지 않으셔도 됩니다.</p>
+
+<div class="est-out">
+  <div id="lines"><div class="est-empty">창 크기를 넣으면 여기에 계산이 나옵니다.</div></div>
+  <div class="est-sum"><div class="k">예상 견적 합계</div><div class="v" id="sum">0원</div></div>
+  <div class="est-after">
+    <p class="say">화면의 금액은 예상 견적입니다. 제품마다 계산 방식도 달라서, 창을 보기 전에 말씀드리는 금액은 대개 틀립니다.</p>
+    <p id="rgline"></p>
+    <p>추가 문의는 써니케임홈으로 연락해 주십시오. 전화나 네이버 톡톡으로 받습니다.</p>
+    <div class="est-btns" id="btns"></div>
+  </div>
+</div>
+</div>
+
+<script>
+(function(){
+const D = {"단가": {"기본": 70000, "프리미엄": 80000, "슬림": 80000, "스톤": 100000}, "모터값": 400000, "모터폭": 600, "최소면적": 3.0, "플레인": [{"이름": "화이트", "코드": "#1", "등급": "기본"}, {"이름": "소프트화이트", "코드": "#2", "등급": "프리미엄"}, {"이름": "아이보리", "코드": "#4", "등급": "기본"}, {"이름": "베이지", "코드": "#5", "등급": "기본"}, {"이름": "커피", "코드": "#6", "등급": "기본"}, {"이름": "슬레이트", "코드": "#7", "등급": "프리미엄"}, {"이름": "차콜", "코드": "#8", "등급": "기본"}, {"이름": "D-그레이", "코드": "#19", "등급": "기본"}, {"이름": "파치먼트", "코드": "#47", "등급": "프리미엄"}, {"이름": "노르딕", "코드": "#52", "등급": "프리미엄"}, {"이름": "브라운", "코드": "#65", "등급": "기본"}, {"이름": "L-그레이", "코드": "#95", "등급": "프리미엄"}, {"이름": "그린", "코드": "#99", "등급": "프리미엄"}, {"이름": "그레이", "코드": "#120", "등급": "프리미엄"}, {"이름": "W-그레이", "코드": "#121", "등급": "프리미엄"}, {"이름": "네이비", "코드": "#151", "등급": "프리미엄"}, {"이름": "메탈네이비", "코드": "#152", "등급": "프리미엄"}, {"이름": "Y-그린", "코드": "#161", "등급": "프리미엄"}, {"이름": "코튼우드", "코드": "#250", "등급": "프리미엄"}, {"이름": "플래티넘", "코드": "#251", "등급": "프리미엄"}], "스톤": [{"이름": "화이트", "코드": "", "등급": "스톤"}, {"이름": "라이트그레이", "코드": "", "등급": "스톤"}, {"이름": "웜그레이", "코드": "", "등급": "스톤"}, {"이름": "W그레이", "코드": "", "등급": "스톤"}, {"이름": "네이비", "코드": "", "등급": "스톤"}, {"이름": "다크그레이", "코드": "", "등급": "스톤"}], "스토어": {"유니슬렛": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "슬림": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "스톤": "https://smartstore.naver.com/sunnycamehome/products/10894783055"}, "지역": {"서울경기": {"이름": "서울 · 경기", "시공": "시공비 무료", "실측": "실측비 50,000원 — 구매하시면 면제"}, "경기외곽": {"이름": "경기 외곽", "시공": "시공비 150,000원", "실측": "실측비 70,000원 — 구매하시면 면제"}, "그밖": {"이름": "그 밖", "시공": "시공비 협의", "실측": "실측비 협의"}}, "전화": "010-9667-5130", "전화링크": "tel:01096675130", "톡톡": "https://talk.naver.com/ct/wce67e", "빈말": "창 크기를 넣으면 여기에 계산이 나옵니다."};
+const won = n => n.toLocaleString('ko-KR') + '원';
+const 방 = ["거실", "방 1", "방 2", "방 3", "방 4", "방 5"];
+
+function 색채우기(row){
+  const p = row.querySelector('[data-f=p]').value;
+  const sel = row.querySelector('[data-f=c]');
+  const 전 = sel.value;
+  let 목록 = [];
+  if (p === '유니슬렛') 목록 = D.플레인;
+  else if (p === '스톤') 목록 = D.스톤;
+  else 목록 = D.플레인.filter(c => c.이름 === '소프트화이트');
+  sel.innerHTML = 목록.map(c => {
+    const 값 = p === '유니슬렛' ? (c.등급 === '기본' ? '7만' : '8만') : '';
+    const 코 = c.코드 ? ' ' + c.코드 : '';
+    return `<option value="${c.이름}" data-t="${c.등급}">${c.이름}${코}${값 ? ' · ' + 값 : ''}</option>`;
+  }).join('');
+  if ([...sel.options].some(o => o.value === 전)) sel.value = 전;
+  sel.disabled = (p === '슬림');
+}
+
+function 계산(){
+  let 합 = 0, 줄들 = [], 쓴제품 = new Set();
+  document.querySelectorAll('.est-row').forEach((row, i) => {
+    const w = parseFloat(row.querySelector('[data-f=w]').value) || 0;
+    const h = parseFloat(row.querySelector('[data-f=h]').value) || 0;
+    row.classList.toggle('on', w > 0 && h > 0);
+    if (!(w > 0 && h > 0)) return;
+    const p = row.querySelector('[data-f=p]').value;
+    const csel = row.querySelector('[data-f=c]');
+    const 등급 = p === '유니슬렛'
+      ? (csel.selectedOptions[0] ? csel.selectedOptions[0].dataset.t : '기본')
+      : (p === '슬림' ? '슬림' : '스톤');
+    const 단 = D.단가[등급];
+    const 생 = (w / 100) * (h / 100);
+    let 넓 = Math.round(생 * 2) / 2;
+    const 최소적용 = 넓 < D.최소면적;
+    if (최소적용) 넓 = D.최소면적;
+    let 금 = Math.round(넓 * 단);
+    const 전동 = row.querySelector('[data-f=m]').checked;
+    const 모터 = 전동 ? Math.ceil(w / D.모터폭) : 0;
+    금 += 모터 * D.모터값;
+    합 += 금;
+    쓴제품.add(p);
+    const 색 = csel.value ? ' · ' + csel.value : '';
+    const 면 = 최소적용
+      ? `${생.toFixed(3)}㎡ → <span class="est-min">최소 ${D.최소면적}㎡</span>`
+      : `${생.toFixed(3)}㎡ → ${넓}㎡`;
+    const 모 = 모터 ? ` + 전동 ${모터}대 ${won(모터 * D.모터값)}` : '';
+    줄들.push(`<div class="est-line"><div class="l"><b>${방[i]}</b>`
+      + `${w} × ${h}cm · ${p}${색}<br>${면} × ${단.toLocaleString('ko-KR')}원${모}</div>`
+      + `<div class="v">${won(금)}</div></div>`);
+  });
+  document.getElementById('lines').innerHTML = 줄들.length ? 줄들.join('')
+    : `<div class="est-empty">${D.빈말}</div>`;
+  document.getElementById('sum').textContent = won(합);
+
+  const r = D.지역[document.getElementById('rg').value];
+  document.getElementById('rgline').innerHTML =
+    `<b>${r.이름}</b> — ${r.시공} · ${r.실측}`;
+
+  const b = [];
+  쓴제품.forEach(p => {
+    const 이름 = p === '유니슬렛' ? '유니슬렛' : (p === '슬림' ? '유니슬렛 슬림' : '유니슬렛 스톤');
+    b.push(`<a class="btn btn-o" href="${D.스토어[p]}" target="_blank" rel="noopener">${이름} 구매 페이지</a>`);
+  });
+  b.push(`<a class="btn btn-d" href="${D.전화링크}">${D.전화} 전화</a>`);
+  if (D.톡톡) b.push(`<a class="btn btn-o" href="${D.톡톡}" target="_blank" rel="noopener">네이버 톡톡 메시지 보내기</a>`);
+  document.getElementById('btns').innerHTML = b.join('');
+}
+
+document.querySelectorAll('.est-row').forEach(row => {
+  색채우기(row);
+  row.querySelector('[data-f=p]').addEventListener('change', () => { 색채우기(row); 계산(); });
+  row.querySelectorAll('input,select').forEach(el => {
+    el.addEventListener('input', 계산); el.addEventListener('change', 계산);
+  });
+});
+document.getElementById('rg').addEventListener('change', 계산);
+계산();
+})();
+</script>
+
+<div class="prose est-prose">
 
 <h2>연락</h2>
 <p><a class="btn btn-d" href="tel:01096675130">010-9667-5130 전화</a></p><p class="hours">연중무휴 · 오전 10시 ~ 오후 7시</p><p class="talkbtns"><a class="btn btn-d" href="https://talk.naver.com/ct/wce67e" target="_blank" rel="noopener">네이버 톡톡으로 문의</a></p><p>카카오톡 아이디 <strong>sch2010</strong> 로도 문의하실 수 있습니다.</p><p style="color:var(--ink3)">※ 온라인 문의 양식은 준비 중입니다. 지금은 전화가 가장 빠릅니다.</p>
@@ -570,7 +803,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
     <p class="co" style="color:var(--ink)"><b>010-9667-5130</b> · 서울 전 지역 · 경기 · 인천</p>
     <p class="biz"><b>상호명</b> 써니케임홈<br><b>대표자명</b> 이상수<br><b>사업장 주소</b> 서울시 서대문구 가재울미래로2 DMC파크뷰자이 123동<br><b>사업자 등록번호</b> 892-23-00994<br></p>
   </div>
-  <div><h5>Menu</h5><ul><li><a href="../reference/">Reference</a></li><li><a href="../visualize/">Visualize</a></li><li><a href="../unislat/">Unislat</a></li><li><a href="../contact/">문의</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
+  <div><h5>Menu</h5><ul><li><a href="../reference/">Reference</a></li><li><a href="../visualize/">Visualize</a></li><li><a href="../unislat/">Unislat</a></li><li><a href="../contact/">견적&amp;문의</a></li><li><a href="../faq/">FAQ</a></li></ul></div>
   <div><h5>Channels</h5><ul><li><a href="https://blog.naver.com/sunnycamehome" target="_blank" rel="noopener">Blog</a></li><li><a href="https://smartstore.naver.com/sunnycamehome" target="_blank" rel="noopener">Store</a></li><li><a href="https://www.youtube.com/@unislat" target="_blank" rel="noopener">YouTube</a></li><li style="color:var(--ink3)">Instagram 준비 중</li></ul></div>
  </div>
  <div class="btm"><span>© 써니케임홈 SUNNY CAME HOME</span><span>유니슬렛 커튼 실측 · 시공</span></div>
