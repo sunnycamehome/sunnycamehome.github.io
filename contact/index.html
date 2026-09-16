@@ -545,7 +545,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .est-rows{display:flex;flex-direction:column;gap:10px}
 .est-row{border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);
   padding:12px 14px;display:grid;gap:10px;
-  grid-template-columns:76px 92px 92px minmax(120px,1fr) minmax(150px,1.2fr) auto;align-items:center}
+  grid-template-columns:76px 92px 92px minmax(120px,1fr) minmax(150px,1.2fr) auto auto;align-items:center}
 .est-row.on{border-color:var(--line-strong);background:var(--paper-2)}
 .est-row .nm{font-size:var(--fs-body-sm);font-weight:700;color:var(--ink)}
 .est-row.main .nm{font-size:var(--fs-h3-card)}
@@ -563,6 +563,25 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .est-unit::after{content:'cm';position:absolute;right:10px;top:50%;transform:translateY(-50%);
   font-size:var(--fs-meta);color:var(--ink-4);pointer-events:none}
 .est-hint{margin-top:12px;font-size:var(--fs-caption);color:var(--ink-3)}
+.est-add{margin-top:10px}
+.est-add button{font:inherit;font-size:var(--fs-body-sm);font-weight:700;color:var(--ink);
+  background:var(--paper);border:1px dashed var(--line-strong);border-radius:var(--radius-sm);
+  min-height:44px;padding:0 18px;cursor:pointer;width:100%}
+.est-add button:hover{border-style:solid}
+.est-add button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.est-add button[hidden]{display:none}
+.est-row .rm{font:inherit;font-size:var(--fs-caption);color:var(--ink-3);background:none;border:0;
+  cursor:pointer;padding:4px 6px;justify-self:end}
+.est-row .rm:hover{color:var(--ink)}
+.est-row.main .rm{display:none}
+.est-row[hidden]{display:none}
+.est-steps{margin-top:6px}
+.est-steps ol{margin:10px 0 0;padding-left:0;list-style:none;display:grid;gap:10px}
+.est-steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;
+  font-size:var(--fs-body-sm);color:var(--ink);line-height:1.6}
+.est-steps li b{font-weight:700;color:var(--ink);white-space:nowrap}
+.est-steps h3{font-family:var(--font-display);font-size:var(--fs-h3-card);font-weight:600;margin:0}
+.est-steps p{margin:12px 0 0}
 .est-out{margin-top:32px;border-top:2px solid var(--ink);padding-top:22px}
 .est-line{display:flex;justify-content:space-between;gap:16px;padding:11px 0;
   border-bottom:1px solid var(--line-soft);font-size:var(--fs-body-sm);align-items:baseline}
@@ -590,8 +609,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 @media(max-width:860px){
   .est-row{grid-template-columns:1fr 1fr;row-gap:8px}
   .est-row .nm{grid-column:1/-1}
+  .est-row .mt{grid-column:1/2}
+  .est-row .rm{grid-column:2/3;justify-self:end}
   .est-row .pd,.est-row .cl{grid-column:1/-1}
-  .est-row .mt{grid-column:1/-1}
 }
 </style>
 </head><body>
@@ -611,7 +631,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <select id="rg" aria-label="지역" style="max-width:200px"><option value="서울경기">서울 · 경기</option><option value="경기외곽">경기 외곽</option><option value="그밖">그 밖</option></select>
 </div>
 
-<div class="est-rows"><div class="est-row main" data-i="0">
+<div class="est-rows" id="rows"><div class="est-row main" data-i="0">
   <div class="nm">거실</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="거실 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="거실 세로(cm)"></div>
@@ -622,8 +642,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="거실 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="거실 지우기">지우기</button>
 </div>
-<div class="est-row" data-i="1">
+<div class="est-row" data-i="1" hidden>
   <div class="nm">방 1</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 1 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 1 세로(cm)"></div>
@@ -634,8 +655,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="방 1 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="방 1 지우기">지우기</button>
 </div>
-<div class="est-row" data-i="2">
+<div class="est-row" data-i="2" hidden>
   <div class="nm">방 2</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 2 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 2 세로(cm)"></div>
@@ -646,8 +668,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="방 2 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="방 2 지우기">지우기</button>
 </div>
-<div class="est-row" data-i="3">
+<div class="est-row" data-i="3" hidden>
   <div class="nm">방 3</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 3 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 3 세로(cm)"></div>
@@ -658,8 +681,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="방 3 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="방 3 지우기">지우기</button>
 </div>
-<div class="est-row" data-i="4">
+<div class="est-row" data-i="4" hidden>
   <div class="nm">방 4</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 4 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 4 세로(cm)"></div>
@@ -670,8 +694,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="방 4 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="방 4 지우기">지우기</button>
 </div>
-<div class="est-row" data-i="5">
+<div class="est-row" data-i="5" hidden>
   <div class="nm">방 5</div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="가로" data-f="w" aria-label="방 5 가로(cm)"></div>
   <div class="est-unit"><input type="number" min="0" step="1" placeholder="세로" data-f="h" aria-label="방 5 세로(cm)"></div>
@@ -682,7 +707,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   </select></div>
   <div class="cl"><select data-f="c" aria-label="방 5 컬러"></select></div>
   <label class="mt"><input type="checkbox" data-f="m"> 전동</label>
+  <button type="button" class="rm" data-rm aria-label="방 5 지우기">지우기</button>
 </div></div>
+<div class="est-add"><button type="button" id="add">+ 방 추가</button></div>
 <p class="est-hint">한 줄이 창 하나입니다. 한 방에 창이 둘이면 두 줄에 나눠 넣으십시오. 다 채우지 않으셔도 됩니다.</p>
 
 <div class="est-out">
@@ -690,9 +717,17 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <div class="est-sum"><div class="k">예상 견적 합계</div><div class="v" id="sum">0원</div></div>
   <div class="est-after">
     <p class="est-say">화면의 금액은 예상 견적입니다.</p>
-    <p id="rgline"></p>
-    <p>추가 문의는 전화 혹은 네이버 톡톡으로.</p>
     <div class="est-btns" id="btns"></div>
+    <div class="est-steps">
+      <h3>진행 절차 — 두 차례 방문합니다</h3>
+      <ol>
+        <li><b>1차 방문</b><span>실측, 원단 샘플 안내, 시공사례 소개, 견적, 네이버 결제</span></li>
+        <li><b>2차 방문</b><span>결제 후 1주 이내 시공 방문</span></li>
+      </ol>
+      <p>진행을 원하시면 방문 주소와 원하는 방문 일시를 알려주세요.</p>
+      <p>서울 · 경기 지역은 실구매 고객의 경우 실측과 시공이 무료입니다.</p>
+      <p>방문 상담만 진행하고 결제와 시공이 이루어지지 않을 경우, 방문 출장비 5만원이 발생합니다. 이 점 참고 부탁드립니다.</p>
+    </div>
   </div>
 </div>
 </div>
@@ -723,6 +758,7 @@ function 색채우기(row){
 function 계산(){
   let 합 = 0, 줄들 = [], 쓴제품 = new Set();
   document.querySelectorAll('.est-row').forEach((row, i) => {
+    if (row.hidden) return;
     const w = parseFloat(row.querySelector('[data-f=w]').value) || 0;
     const h = parseFloat(row.querySelector('[data-f=h]').value) || 0;
     row.classList.toggle('on', w > 0 && h > 0);
@@ -756,10 +792,6 @@ function 계산(){
     : `<div class="est-empty">${D.빈말}</div>`;
   document.getElementById('sum').textContent = won(합);
 
-  const r = D.지역[document.getElementById('rg').value];
-  document.getElementById('rgline').innerHTML =
-    `<b>${r.이름}</b> — ${r.시공} · ${r.실측}`;
-
   const b = [];
   쓴제품.forEach(p => {
     const 이름 = p === '유니슬렛' ? '유니슬렛' : (p === '슬림' ? '유니슬렛 슬림' : '유니슬렛 스톤');
@@ -776,6 +808,40 @@ document.querySelectorAll('.est-row').forEach(row => {
   });
 });
 document.getElementById('rg').addEventListener('change', 계산);
+
+// ⭐ 2026-09-16 — 거실만 보이고, «+ 방 추가» 로 방 1·2·… 을 하나씩 폅니다. «지우기» 는 그 줄을 비우고 다시 숨깁니다.
+const 줄전부 = [...document.querySelectorAll('.est-row')];
+const 추가 = document.getElementById('add');
+function 단추상태(){ 추가.hidden = !줄전부.some(r => r.hidden); }
+추가.addEventListener('click', () => {
+  const r = 줄전부.find(x => x.hidden);
+  if (!r) return;
+  r.hidden = false; 단추상태();
+  r.querySelector('[data-f=w]').focus();
+});
+줄전부.forEach(r => {
+  const b = r.querySelector('[data-rm]');
+  if (!b) return;
+  b.addEventListener('click', () => {
+    r.querySelectorAll('input[type=number]').forEach(i => i.value = '');
+    r.querySelector('[data-f=m]').checked = false;
+    r.hidden = true; r.classList.remove('on');
+    // 빈 줄이 가운데 남지 않게 — 보이는 줄을 앞으로 당깁니다
+    const 보임 = 줄전부.filter(x => !x.hidden && x !== 줄전부[0]);
+    const 값들 = 보임.map(x => ({w:x.querySelector('[data-f=w]').value, h:x.querySelector('[data-f=h]').value,
+      p:x.querySelector('[data-f=p]').value, c:x.querySelector('[data-f=c]').value, m:x.querySelector('[data-f=m]').checked}));
+    줄전부.slice(1).forEach((x, k) => {
+      const v = 값들[k];
+      x.hidden = !v;
+      if (v) { x.querySelector('[data-f=w]').value = v.w; x.querySelector('[data-f=h]').value = v.h;
+        x.querySelector('[data-f=p]').value = v.p; 색채우기(x); x.querySelector('[data-f=c]').value = v.c;
+        x.querySelector('[data-f=m]').checked = v.m; }
+      else { x.querySelectorAll('input[type=number]').forEach(i => i.value = ''); x.querySelector('[data-f=m]').checked = false; x.classList.remove('on'); }
+    });
+    단추상태(); 계산();
+  });
+});
+단추상태();
 계산();
 })();
 </script>
