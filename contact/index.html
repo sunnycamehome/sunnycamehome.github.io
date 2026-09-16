@@ -575,6 +575,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .est-row .rm:hover{color:var(--ink)}
 .est-row.main .rm{display:none}
 .est-row[hidden]{display:none}
+.est-rg{color:var(--ink)}
 .est-steps{margin-top:6px}
 .est-steps ol{margin:10px 0 0;padding-left:0;list-style:none;display:grid;gap:10px}
 .est-steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;
@@ -630,7 +631,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <h1>유니슬렛 예상 견적</h1><p class="sub">설치하고자 하는 창문의 가로/세로 길이를 입력해보시면 예상 가격을 알 수 있습니다.</p></div>
 <div class="est">
 <div class="est-region"><span class="lb">지역</span>
-  <select id="rg" aria-label="지역" style="max-width:200px"><option value="서울경기">서울 · 경기</option><option value="경기외곽">경기 외곽</option><option value="그밖">그 밖</option></select>
+  <select id="rg" aria-label="지역" style="max-width:200px"><option value="서울경기">서울 · 경기</option><option value="그외">그 외 지역</option></select>
 </div>
 
 <div class="est-rows" id="rows"><div class="est-row main" data-i="0">
@@ -719,6 +720,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
   <div class="est-sum"><div class="k">예상 견적 합계</div><div class="v" id="sum">0원</div></div>
   <div class="est-after">
     <div class="est-btns" id="btns"></div>
+    <p id="rgline" class="est-rg"></p>
     <div class="est-steps">
       <h3>진행 절차</h3>
       <p class="lead">두 차례 방문합니다.</p>
@@ -736,7 +738,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 
 <script>
 (function(){
-const D = {"단가": {"기본": 70000, "프리미엄": 80000, "슬림": 80000, "스톤": 100000}, "모터값": 400000, "모터폭": 600, "최소면적": 3.0, "플레인": [{"이름": "화이트", "코드": "#1", "등급": "기본"}, {"이름": "소프트화이트", "코드": "#2", "등급": "프리미엄"}, {"이름": "아이보리", "코드": "#4", "등급": "기본"}, {"이름": "베이지", "코드": "#5", "등급": "기본"}, {"이름": "커피", "코드": "#6", "등급": "기본"}, {"이름": "슬레이트", "코드": "#7", "등급": "프리미엄"}, {"이름": "차콜", "코드": "#8", "등급": "기본"}, {"이름": "D-그레이", "코드": "#19", "등급": "기본"}, {"이름": "파치먼트", "코드": "#47", "등급": "프리미엄"}, {"이름": "노르딕", "코드": "#52", "등급": "프리미엄"}, {"이름": "브라운", "코드": "#65", "등급": "기본"}, {"이름": "L-그레이", "코드": "#95", "등급": "프리미엄"}, {"이름": "그린", "코드": "#99", "등급": "프리미엄"}, {"이름": "그레이", "코드": "#120", "등급": "프리미엄"}, {"이름": "W-그레이", "코드": "#121", "등급": "프리미엄"}, {"이름": "네이비", "코드": "#151", "등급": "프리미엄"}, {"이름": "메탈네이비", "코드": "#152", "등급": "프리미엄"}, {"이름": "Y-그린", "코드": "#161", "등급": "프리미엄"}, {"이름": "코튼우드", "코드": "#250", "등급": "프리미엄"}, {"이름": "플래티넘", "코드": "#251", "등급": "프리미엄"}], "스톤": [{"이름": "화이트", "코드": "", "등급": "스톤"}, {"이름": "라이트그레이", "코드": "", "등급": "스톤"}, {"이름": "웜그레이", "코드": "", "등급": "스톤"}, {"이름": "W그레이", "코드": "", "등급": "스톤"}, {"이름": "네이비", "코드": "", "등급": "스톤"}, {"이름": "다크그레이", "코드": "", "등급": "스톤"}], "스토어": {"유니슬렛": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "슬림": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "스톤": "https://smartstore.naver.com/sunnycamehome/products/10894783055"}, "지역": {"서울경기": {"이름": "서울 · 경기", "시공": "시공비 무료", "실측": "실측비 50,000원 — 구매하시면 면제"}, "경기외곽": {"이름": "경기 외곽", "시공": "시공비 150,000원", "실측": "실측비 70,000원 — 구매하시면 면제"}, "그밖": {"이름": "그 밖", "시공": "시공비 협의 필요", "실측": "실측비 협의 필요"}}, "빈말": "창 크기를 넣으면 여기에 계산이 나옵니다."};
+const D = {"단가": {"기본": 70000, "프리미엄": 80000, "슬림": 80000, "스톤": 100000}, "모터값": 400000, "모터폭": 600, "최소면적": 3.0, "플레인": [{"이름": "화이트", "코드": "#1", "등급": "기본"}, {"이름": "소프트화이트", "코드": "#2", "등급": "프리미엄"}, {"이름": "아이보리", "코드": "#4", "등급": "기본"}, {"이름": "베이지", "코드": "#5", "등급": "기본"}, {"이름": "커피", "코드": "#6", "등급": "기본"}, {"이름": "슬레이트", "코드": "#7", "등급": "프리미엄"}, {"이름": "차콜", "코드": "#8", "등급": "기본"}, {"이름": "D-그레이", "코드": "#19", "등급": "기본"}, {"이름": "파치먼트", "코드": "#47", "등급": "프리미엄"}, {"이름": "노르딕", "코드": "#52", "등급": "프리미엄"}, {"이름": "브라운", "코드": "#65", "등급": "기본"}, {"이름": "L-그레이", "코드": "#95", "등급": "프리미엄"}, {"이름": "그린", "코드": "#99", "등급": "프리미엄"}, {"이름": "그레이", "코드": "#120", "등급": "프리미엄"}, {"이름": "W-그레이", "코드": "#121", "등급": "프리미엄"}, {"이름": "네이비", "코드": "#151", "등급": "프리미엄"}, {"이름": "메탈네이비", "코드": "#152", "등급": "프리미엄"}, {"이름": "Y-그린", "코드": "#161", "등급": "프리미엄"}, {"이름": "코튼우드", "코드": "#250", "등급": "프리미엄"}, {"이름": "플래티넘", "코드": "#251", "등급": "프리미엄"}], "스톤": [{"이름": "화이트", "코드": "", "등급": "스톤"}, {"이름": "라이트그레이", "코드": "", "등급": "스톤"}, {"이름": "웜그레이", "코드": "", "등급": "스톤"}, {"이름": "W그레이", "코드": "", "등급": "스톤"}, {"이름": "네이비", "코드": "", "등급": "스톤"}, {"이름": "다크그레이", "코드": "", "등급": "스톤"}], "스토어": {"유니슬렛": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "슬림": "https://smartstore.naver.com/sunnycamehome/products/10908813870", "스톤": "https://smartstore.naver.com/sunnycamehome/products/10894783055"}, "지역": {"서울경기": {"이름": "서울 · 경기", "시공": "실구매 고객은 실측과 시공 무료", "실측": "방문 상담만 진행 시 출장비 50,000원"}, "그외": {"이름": "그 외 지역", "시공": "실측 · 시공비는 고객과 협의", "실측": ""}}, "빈말": "창 크기를 넣으면 여기에 계산이 나옵니다."};
 const won = n => n.toLocaleString('ko-KR') + '원';
 const 방 = ["거실", "방 1", "방 2", "방 3", "방 4", "방 5"];
 
@@ -793,6 +795,9 @@ function 계산(){
   document.getElementById('lines').innerHTML = 줄들.length ? 줄들.join('')
     : `<div class="est-empty">${D.빈말}</div>`;
   document.getElementById('sum').textContent = won(합);
+
+  const r = D.지역[document.getElementById('rg').value];
+  document.getElementById('rgline').innerHTML = `<b>${r.이름}</b> — ${r.시공}${r.실측 ? ' · ' + r.실측 : ''}`;
 
   const b = [];
   쓴제품.forEach(p => {
@@ -853,9 +858,6 @@ function 단추상태(){ 추가.hidden = !줄전부.some(r => r.hidden); }
 <h2>Contact Point</h2>
 <p><b>써니케임홈서울</b> : 서울 &amp; 경기 실측 및 시공<br>010-9667-5130 / 연중 무휴 오전 10시 ~ 오후 7시</p>
 <p><b>써니케임홈원주</b> : 강원 &amp; 충청 실측 및 시공<br>010-5224-7171 / 연중 무휴 오전 10시 ~ 오후 7시</p>
-<h2>구매고객 대상 실측 &amp; 시공 무료</h2>
-<p>실측은 구매를 생각하고 계신 분께 서울·경기 무료로 나갑니다.</p>
-<p>실측만 진행하고 구매 안할 경우, 출장비 5만원 발생.</p>
 <h2>거실 기준 실측 안내</h2>
 <div class="est-guide"><a class="btn btn-o" href="https://blog.naver.com/sunnycamehome/222062111180" target="_blank" rel="noopener">사이즈 실측방법 안내</a><span class="est-guide-say"><span class="est-arrow" aria-hidden="true">&#8592;</span>사이즈 실측 방법을 참조하세요</span></div>
 <div class="tblwrap"><table><tr><th>알려주실 것</th><th>어디에서 어디까지</th></tr><tr><td>가로</td><td>좌측 벽에서 우측 벽까지</td></tr><tr><td>세로</td><td>천장에서 바닥까지</td></tr><tr><td>커튼박스</td><td>높이와 폭</td></tr></table></div>
