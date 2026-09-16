@@ -581,7 +581,8 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .est-steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;
   font-size:var(--fs-body-sm);color:var(--ink);line-height:1.6}
 .est-steps li b{font-weight:700;color:var(--ink);white-space:nowrap}
-.est-steps h3{font-family:var(--font-display);font-size:var(--fs-h3-card);font-weight:600;margin:0}
+/* 2026-09-16 사장님 「진행 절차를 소제목으로」 — 본문 소제목(.prose h2)과 같은 급 */
+.est-steps h2{font-family:var(--font-display);font-size:var(--fs-h2-prose);letter-spacing:var(--ls-h1);line-height:var(--lh-head);color:var(--ink);font-weight:600;margin:14px 0 0}
 .est-steps p{margin:12px 0 0}
 .est-steps p.lead{margin-top:8px;color:var(--ink)}
 .est-steps ol{margin-top:14px}
@@ -722,7 +723,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
     <div class="est-btns" id="btns"></div>
     <p id="rgline" class="est-rg"></p>
     <div class="est-steps">
-      <h3>진행 절차</h3>
+      <h2>진행 절차</h2>
       <p class="lead">두 차례 방문합니다.</p>
       <ol>
         <li><b>1. 1차 방문</b><span>실측, 원단 샘플 안내, 시공사례 소개, 견적, 네이버 결제</span></li>
