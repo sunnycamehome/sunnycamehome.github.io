@@ -298,7 +298,9 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .flow table.spec td{color:var(--ink-2)}
 .flow .say{max-width:var(--measure-say);margin:var(--say-gap) auto;font-size:var(--fs-say);
   line-height:var(--lh-say);color:var(--ink-2);text-align:center}
-.flow .say p{margin-top:2px}
+/* 2026-09-19 사장님 「글 14와 꼬리 셋을 띄어줘」 — 구분선(관리자 ＋ 구분선)은 짧은 실선 하나에 위아래 여백. 첫 쓰임 헬리오시티 전동 */
+.flow hr{width:48px;height:0;border:0;border-top:1px solid var(--line);margin:calc(var(--say-gap) * 1.5) auto}
+.flow .say p{margin-top:var(--space-16)}   /* 2026-09-19 사장님 「글과 글 사이는 띄워줘」 — 2px 이던 것을 한 줄 띄움 */
 .flow .say p:first-child{margin-top:0}
 /* h3.sh(제가 추측하던 소제목)는 2026-09-01 사장님 지시로 없앴습니다.
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
