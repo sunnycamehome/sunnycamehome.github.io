@@ -305,7 +305,8 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .flow .say p:first-child{margin-top:0}
 /* h3.sh(제가 추측하던 소제목)는 2026-09-01 사장님 지시로 없앴습니다.
    관리자에서 «## » 로 직접 적으시는 .say h2 는 그대로 둡니다. */
-.flow .say h2{margin-top:var(--space-25);font-size:23px;color:var(--ink);
+/* 2026-09-27 사장님 「소제목 폰트 사이즈를 본문 폰트 사이즈로 맞춰줘」 — 23px 이던 것을 본문(--fs-say)과 같게. 굵기로만 가른다. 첫 쓰임 광교 호반써밋 */
+.flow .say h2{margin-top:var(--space-25);font-size:var(--fs-say);color:var(--ink);
   letter-spacing:var(--ls-h3);line-height:1.4;text-align:center}
 /* 2026-09-05 사장님 지시 — 두 장의 가로세로비가 다르면 «높이를 맞춘다». 비율은 그대로.
    각 figure 의 --r(가로÷세로)만큼 너비를 나누면 두 장의 높이가 같아집니다. 치수를 모르면 1:1. */
