@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://hangeul.pstatic.net" crossorigin>
 <title>유니슬렛 커튼 용인 수지구청역 롯데캐슬하이브엘 34평 시공사례 — 유니슬렛 써니케임홈</title>
 <meta name="description" content="유니슬렛은 한눈에 시선을 사로잡는 디자인의 커튼입니다. 낮에는 실내를 환하게 밝힙니다. 날씨와 시간대에 맞춰 빛의 양도 섬세하게 조절합니다. 프라이버시가 필요한 밤에는 사생활을 확실하게 보호합니다. 그래서 이 집은 거실과 안방에 유니슬렛을 시공했습니다.">
 <link rel="canonical" href="https://sunnycamehome.com/reference/%EC%9A%A9%EC%9D%B8%EB%A1%AF%EB%8D%B0%EC%BA%90%EC%8A%AC%ED%95%98%EC%9D%B4%EB%B8%8C%EC%97%98-2025/">
@@ -31,10 +30,14 @@
    맑은 고딕은 윈도우에만 있습니다. 맥·모바일은 Apple SD Gothic Neo 가 받습니다. */
 @font-face{font-family:'Malgun Gothic';src:local('Malgun Gothic'),local('맑은 고딕'),local('Apple SD Gothic Neo'),local('Noto Sans KR');font-weight:400;font-style:normal}
 @font-face{font-family:'Malgun Gothic';src:local('Malgun Gothic Bold'),local('맑은 고딕'),local('Apple SD Gothic Neo Bold'),local('Apple SD Gothic Neo');font-weight:700;font-style:normal}
-@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format('woff2');font-weight:300;font-display:swap}
-@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format('woff2');font-weight:600;font-display:swap}
-@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(/fonts/MaruBuri-Light.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'MaruBuriFull';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(/fonts/MaruBuri-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'MaruBuriFull';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(/fonts/MaruBuri-SemiBold.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'MaruBuriFull';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(/fonts/MaruBuri-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'MaruBuriFull';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
@@ -54,7 +57,7 @@
   --bg:var(--paper);--bg2:var(--paper-2);--ink2:var(--ink-2);--ink3:var(--ink-3);--line2:var(--line-strong);
 
   /* 글꼴 — fonts.css · typography.css */
-  --font-display:'MaruBuri','Nanum Myeongjo','Apple SD Gothic Neo',serif;
+  --font-display:'MaruBuri','MaruBuriFull','Nanum Myeongjo','Apple SD Gothic Neo',serif;  /* 2026-11-28 — MaruBuri 는 사이트에 쓰인 글자만 남긴 판(/fonts/). 빠진 글자만 Full(네이버 원본)이 받칩니다 */
   --font-sans:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
   --fw-light:300;--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;
   /* 2026-09-01 사장님 지시 — 「메인 헤드카피 2/3 사이즈로, 폰트는 조금 더 얇게」 */
@@ -63,6 +66,9 @@
   --fs-h1:clamp(28px,3.2vw,46px);
   --fs-h2:clamp(26px,2.9vw,42px);
   --fs-h2-cta:clamp(28px,3.2vw,46px);
+  /* 2026-11-28 사장님 — 「메인 소제목(Reference·상황으로 고르기·Unislat·실측 & 시공 상담) 한 단계 줄이고 통일」.
+     42(h2)·46(cta) → 34 한 단계 아래로, 넷이 같은 크기. 휴대폰에서는 26·28 → 23 */
+  --fs-h2-sec:clamp(23px,2.4vw,34px);
   --fs-h2-prose:clamp(23px,2.2vw,30px);
   --fs-h3-feature:clamp(23px,2.4vw,34px);
   --fs-lead:clamp(16px,1.5vw,19px);
@@ -210,7 +216,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 .sec.tight{padding-top:var(--sec-y-tight)}
 .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-20);
   padding-bottom:var(--space-14);margin-bottom:var(--sec-head-gap);border-bottom:1px solid var(--line)}
-.sec-hd h2{font-size:var(--fs-h2);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
+.sec-hd h2{font-size:var(--fs-h2-sec);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
 .sec-hd .r{font-size:var(--fs-nav);font-weight:var(--fw-bold);color:var(--ink-3);white-space:nowrap}
 .sec-hd .r:hover{color:var(--accent)}
 .lead{max-width:var(--measure-lead);font-size:var(--fs-lead);line-height:1.6;color:var(--ink-2);margin-bottom:var(--space-20)}
@@ -510,7 +516,7 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 
 /* ══ 문의 띠 ══ */
 .cta{background:var(--ink);color:var(--paper);padding:clamp(36px,4.6vw,72px) 0}
-.cta h2{font-size:var(--fs-h2-cta);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
+.cta h2{font-size:var(--fs-h2-sec);letter-spacing:var(--ls-h2);line-height:var(--lh-head)}
 .cta p{margin-top:var(--space-12);font-size:var(--fs-lead);opacity:.78;max-width:540px;line-height:1.6}
 .cta .btns{margin-top:var(--space-20);display:flex;gap:var(--space-8);flex-wrap:wrap}
 .cta .btn-p{background:var(--paper);color:var(--ink)}
@@ -541,8 +547,8 @@ h1,h2,h3,h4{word-break:keep-all;overflow-wrap:anywhere}
 </head><body>
 <header class="bar"><div class="bar-in">
   <a class="brand" href="../../" aria-label="써니케임홈 Sunny came home">
-    <img class="b" src="../../wordmark-black.png" alt="써니케임홈" width="1945" height="387">
-    <img class="w" src="../../wordmark-white.png" alt="" width="1945" height="387" aria-hidden="true">
+    <img class="b" src="../../wordmark-black-sm.png" alt="써니케임홈" width="482" height="96">
+    <img class="w" src="../../wordmark-white-sm.png" alt="" width="482" height="96" aria-hidden="true">
   </a>
   <button class="burger" aria-label="메뉴" aria-expanded="false">☰</button>
   <nav><a href="../../reference/">Reference</a><a href="../../visualize/">Visualize</a><a href="../../unislat/">Unislat</a><a href="../../contact/">견적&amp;문의</a><a href="../../faq/">FAQ</a></nav>
